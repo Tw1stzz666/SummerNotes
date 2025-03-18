@@ -1,29 +1,103 @@
-site_name: notes
+site_name: Summer & Capoo's Home
+
 theme:
-    name: material
-    logo: assets/mmc.jpg
-    language: zh
-    favicon: assets/mmc.jpg
+    name: material # 主题名称
+    logo: assets/mmc.jpg # logo 图片
+    language: zh # 默认语言
+    favicon: assets/mmc.jpg # 网站图标
+    icon:
+      logo: fontawesome/solid/mug-hot
     features:
-      - navigation.tabs
-      - navigation.expand
-      - navigation.path
-      - navigation.top
+      - navigation.tabs # 导航栏
+      - navigation.expand # 导航栏展开
+      - navigation.path   # 导航栏路径
+      - navigation.top  # 回到顶部
       # - toc.integrate
     palette: 
-
         # Palette toggle for light mode
         - scheme: default
           toggle:
             icon: material/brightness-7 
             name: Switch to dark mode
-
         # Palette toggle for dark mode
         - scheme: slate
           toggle:
             icon: material/brightness-4
             name: Switch to light mode
-nav:
-    - algebre:
 
-        - Lec1 置换群: algebre/permutations.md
+markdown_extensions:
+    - admonition
+    - pymdownx.details
+    - pymdownx.superfences
+    - md_in_html 
+    - pymdownx.arithmatex:
+        generic: true
+    - pymdownx.tabbed:
+        alternate_style: true
+    - abbr
+    - admonition
+    - attr_list
+    - def_list
+    - footnotes
+    - md_in_html
+    - toc:
+        permalink: true
+        toc_depth: 4
+    - pymdownx.arithmatex:
+        generic: true
+    - pymdownx.betterem:
+        smart_enable: all
+    - pymdownx.caret
+    - pymdownx.details
+    - pymdownx.emoji:
+        emoji_generator: !!python/name:material.extensions.emoji.to_svg
+        emoji_index: !!python/name:material.extensions.emoji.twemoji
+    - pymdownx.highlight:
+        anchor_linenums: true
+        line_spans: __span
+        pygments_lang_class: true
+    - pymdownx.inlinehilite
+    - pymdownx.keys
+    - pymdownx.magiclink:
+        normalize_issue_symbols: true
+        repo_url_shorthand: true
+        user: squidfunk
+        repo: mkdocs-material
+    - pymdownx.mark
+    - pymdownx.smartsymbols
+    - pymdownx.snippets:
+        auto_append:
+          - includes/mkdocs.md
+    - pymdownx.superfences:
+        custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_code_format
+    - pymdownx.tabbed:
+        alternate_style: true
+        combine_header_slug: true
+        slugify: !!python/object/apply:pymdownx.slugs.slugify
+          kwds:
+            case: lower
+    - pymdownx.tasklist:
+        custom_checkbox: true
+    - pymdownx.tilde
+    - pymdownx.critic:
+        mode: view
+        
+extra_javascript:
+  - javascripts/katex.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+nav:
+    - Homepage: index.md
+    - Algèbre:
+        - Chapitre 4 Permutations: Algèbre/Permutations.md
+    - Analyse:
+        - Chapitre 7 Intégration: Analyse/Intégration.md
+    - Géométrie:
+        - Chapitre 1 Espace Vectoriels: Géométrie/Espace Vectoriels.md

@@ -1,17 +1,29 @@
-# Homepage
+# Welcome to My Homepage
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+> **My desire to cross Yellow River is stopped by frozen water.**                            
 
-## Commands
+> **An attempt to go up Mount Taihang is frustrated by snow.**
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
 
-## Project layout
+<div align="center">
+  <img align="center" src="https://readme-typing-svg.demolab.com?font=Protest+Revolution&pause=1000&color=F77878FF&background=FFAFDF00&center=true&width=500&lines=My desire to cross Yellow River is stopped by frozen water."/>
+</div>
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+<div align="center">
+  <img align="center" src="https://readme-typing-svg.demolab.com?font=Protest+Revolution&pause=1000&color=F77878FF&background=FFAFDF00&center=true&width=500&lines=An attempt to go up Mount Taihang is frustrated by snow."/>
+</div>
+-->
+
+[源码仓库](https://github.com/Tw1stzz666/SummerNotes)
+
+<div class="grid cards" markdown>
+
+-   :material-github:{ .lg .middle } __Github__
+
+    ---
+
+    源码仓库
+
+    [:octicons-arrow-right-24: Click to visit](https://github.com/Tw1stzz666/SummerNotes)
+
+</div>
