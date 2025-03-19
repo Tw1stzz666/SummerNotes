@@ -2,6 +2,8 @@
 
 ## 1.Espace vectoriels
 
+### 1.1 Espace vectoriels
+
 <div class="grid cards" markdown>
 
 -   **Définition: Espace Vectoriel** 
@@ -56,6 +58,8 @@ $\mathbb{K}$中的元素被称为标量
     更进一步说, 若 $\mathbb{K}$ 是 $\mathbb{L}$ 的子域, 则 $\mathbb{L}$ 是在 $\mathbb{K}$ 上的向量空间
     * 同样的, 对于多项式, 矩阵, 函数以及数列都可以构造这样的向量空间
 
+### 1.2 Sous-espace Vectoriel
+
 <div class="grid cards" markdown>
 
 -   **Définition: Sous-espace Vectoriel**
@@ -102,6 +106,8 @@ $\mathbb{K}$中的元素被称为标量
 
 ## 2.Combinaisons linéaires
 
+### 2.1 Définitions
+
 <div class="grid cards" markdown>
 
 -   **Définition: Combinaison linéaire d'un nombre fini de vecteurs**
@@ -145,6 +151,9 @@ $\mathbb{K}$中的元素被称为标量
 
 </div>
 
+### 2.2 Propositions
+
+<p id="1"></p>
 !!! note "Proposition"
     === "Contenu"
         $E$ 的非空子集 $A$ , $A$ 中的所有线性组合所构成的集合 $vect(A)$ , 是 $E$ 的一个子向量空间
@@ -152,6 +161,7 @@ $\mathbb{K}$中的元素被称为标量
         - $0_E = \sum_{i \in I} 0_\mathbb{K} \cdot u_i$ , 有 $0_E \in vect(A)$
         - 设 $u = \sum_{i \in I} \lambda_i u_i , v = \sum_{j \in J} \nu_j v_j$ , $\lambda \in \mathbb{K}$ , 有 $\lambda u + v = \sum_{i \in I} (\lambda \lambda_i) u_i + \sum_{j \in J} \nu_j v_j$ , 形如以上定义中的线性组合, 故有 $\lambda u + v \in vect(A)$                
         故命题得证
+
 
 <div class="grid cards" markdown>
 
@@ -185,7 +195,7 @@ $\mathbb{K}$中的元素被称为标量
         $\subset$ :                      
         设 $v \in vect(A)$, 整数 $n \geq 1$, $\lambda_1,..\lambda_n \in \mathbb{K}, u_1,...,u_n \in A$, 使得 $v = \lambda_1 u_1+...+\lambda_n u_n$, 因为子向量空间 $F \in E$ 使得 $A \in F$, 所以有 $u_1,...,u_n \in F$, 又因为向量空间的性质(对于标量乘法和向量加法封闭), 可以得出$v = \lambda_1 u_1+...+\lambda_n u_n \in F$, 所以有 $v \in \bigcup_{f \in \mathcal{C}} F$, 故有 $vect(A) \in \bigcup_{F \in \mathcal{C}} F$              
         $\supset$ :                           
-        由定理, $vect(A) \in \mathcal{C}$, 所以 $\forall u \in \bigcup_{F \in \mathcal{C}} F$, 有 $u \in vect(A)$ , 故有 $vect(A) \ni \bigcup_{F \in \mathcal{C}} F$                      
+        由 [命题](#1), $vect(A) \in \mathcal{C}$, 所以 $\forall u \in \bigcup_{F \in \mathcal{C}} F$, 有 $u \in vect(A)$ , 故有 $vect(A) \ni \bigcup_{F \in \mathcal{C}} F$                      
         故命题得证
 
 !!! note "Proposition"
@@ -197,6 +207,8 @@ $\mathbb{K}$中的元素被称为标量
 
 ## 3.Familles de vecteurs
 > 我们将探讨对于一个向量 $u$ 是否可以写成 $u = \sum_{i \in I} \lambda_i u_i$ 的形式                     
+
+### 3.1 Famille génératrice
 
 <div class="grid cards" markdown>
 
@@ -213,3 +225,118 @@ $\mathbb{K}$中的元素被称为标量
 ??? example "Exemples"
     * $u_1=(1,0,0), u_2=(0,1,0), u_3=(0,0,1)$, 易知 $\mathbb{R}^3 = vect(u_1,u_2,u_3)$, 则 $(u_1,u_2,u_3)$ 是 $\mathbb{R}^3$ 的 "Famille génératrice"
     * 同样的 $(v_1=(-1,0,0),v_2=(-1,-1,0),v_3=(-1,-1,-1))$ 也是 $\mathbb{R}^3$ 的 "Famille génératrice", 而 $(w_1=(2,0,1),w_2=(-1,0,1))$ 则不是
+
+### 3.2 Famille libre
+
+<div class="grid cards" markdown>
+
+-   **Définition: Famille libre et partie libre**
+
+    ---
+
+    * 设 $(u_i)_{i \in I} \in E^I$, 我们称 $(u_i)_{i \in I}$ 为 "Famille libre" ("线性无关的族"), 当且仅当:                 
+    
+    \[
+        \forall (\lambda_i)_{i \in I} \in \mathbb{K}^I (support fini), 若 \sum_{i \in I} \lambda_i u_i = 0, 有 \forall i \in I, \lambda_i = 0
+    \]                         
+    
+    * 设 $A \in E$, 若 $A$ 中的向量可以构成一个 "Famille libre", 则称 $A$ 为 "Partie libre" ("线性无关的集合")
+
+</div>
+
+??? example "Exemples"
+    * $u_1=(1,0,0), u_2=(0,1,0), u_3=(0,0,1)$, 易知 $\lambda_1 u_1 + \lambda_2 u_2 + \lambda_3 u_3 = 0$, 则 $\lambda_1 = \lambda_2 = \lambda_3 = 0$ , 所以 $(u_1,u_2,u_3)$ 是 "Famille libre"
+    * 同样的 $(v_1=(-1,0,0),v_2=(-1,-1,0),v_3=(-1,-1,-1))$ 也是 "Famille libre", 而 $(w_1=(2,0,1),w_2=(-1,0,1))$ 则不是
+
+<p id="2"></p>
+!!! note "Proposition"
+    === "Contenu"
+        当 $(u_i)_{i \in I}$ 是 "Famille libre" , 有:             
+
+        \[
+            若 \sum_{i \in I} \lambda_i u_i = \sum_{i \in I} \mu_i u_i, 则 \forall i \in I, \lambda_i = \mu_i
+        \]
+
+    === "Démonstration"
+        根据命题, $\sum_{i \in I} (\lambda_i - \mu_i) u_i = 0$, 又有 $(u_i)_{i \in I}$ 是 "Famille libre" , 所以 $\forall i \in I, \lambda_i - \mu_i = 0$
+        故命题得证
+
+<div class="grid cards" markdown>
+
+-   **Définition: Famille liée et partie liée**
+
+    ---
+
+    * 设 $(u_i)_{i \in I} \in E^I$, 我们称 $(u_i)_{i \in I}$ 为 "Famille liée" ("线性相关的族"), 当且仅当:                 
+    
+    \[
+        \exists (\lambda_i)_{i \in I} \in \mathbb{K}^I (support fini), 使得 \sum_{i \in I} \lambda_i u_i = 0, 且 \exists i \in I, \lambda_i \neq 0
+    \]                         
+    
+    换一种说法 $(u_i)_{i \in I}$ 为 "Famille liée" 当且仅当 $(u_i)_{i \in I}$ 不是 "Famille libre"                                  
+
+    * 设 $A \in E$, 若 $A$ 中的向量可以构成一个 "Famille liée", 则称 $A$ 为 "Partie liée" ("线性相关的集合")
+
+</div>
+
+需要注意的是, 以上定义中都为有限个向量的和                      
+
+??? example "Exemples"
+    $u_1=(2,0,2), u_2=(1,0,0), u_3=(2,0,1)$, 易知 $- \frac{1}{2} u_1 - u_2 + u_3 = 0$, 系数不全为零 , 所以 $(u_1,u_2,u_3)$ 是 "Famille liée"
+
+### 3.3 Famille à coefficients dans un sous-corps
+
+对于域 $\mathbb{K}$ , 我们可以取其子域 $\mathbb{L} \in \mathbb{K}$ , 在构造 $(u_i)_{i \in I}$ 的线性组合时, 我们可以要求系数 $(\lambda_i)_{i \in I} \in \mathbb{I}$
+
+??? example "Exemples"
+    证明 $\sqrt{3}$ 是无理数, 也就是证明 $\sqrt{3} \ni \mathbb{Q}$ , 不难得出 $\forall (\lambda_1,\lambda_2) \in \mathbb{Q}^2, \lambda_1 \cdot 1 + \lambda_2 \cdot \sqrt{3} = 0$ , 则 $\lambda_1 = \lambda_2 = 0$
+    相反的, 若取系数 $(\lambda_1,\lambda_2) \in \mathbb{R}^2$, 对于 $\lambda_1 = - \sqrt{3}, \lambda_2 = 1$, 有 $\lambda_1 \cdot 1 + \lambda_2 \cdot \sqrt{3} = 0$
+    总的来说,                                      
+
+    * $(1,\sqrt{3})$ 在 $\mathbb{Q}$ 上线性无关                          
+  
+    * $(1,\sqrt{3})$ 在 $\mathbb{R}$ 上线性相关                        
+
+### 3.4 Bases et coordonnées                
+
+<div class="grid cards" markdown>
+
+-   **Définition: Base**
+
+    ---
+
+    我们称 $(u_i)_{i \in I}$ 是 $E$ 的一组基底, 当且仅当以下两个条件满足:       
+
+    * $(u_i)_{i \in I}$ 在 $\mathbb{K}$ 上, 是 $E$ 的 "Famille libre"                  
+                                 
+    * $(u_i)_{i \in I}$ 在 $\mathbb{K}$ 是 $E$ 的 "Famille génératrice"                                
+
+</div>
+
+??? example "Exemples"
+    * $e_1=(1,0,..,0),e_2=(0,1,...,0),...,e_n=(0,0,...,1)$ 是 $\mathbb{K}^n$ 的一组基底, 且被称为 "La base canonique"           
+    * $(E_{i,j})_{1 \leq i \leq n, 1 \leq j \leq p}$ 是 $M_{n,p}(\mathbb{K})$ 的一组 "base canonique"
+    * $(1,X,X^2,..,X^n)$ 是 $\mathbb{K}[X]$ 的一组 "base canonique"
+ 
+!!! note "Proposition"
+    === "Contenu"
+        若 $(u_i)_{i \in I}$ 是 $E$ 的一组基底, 则对于所有 $v \in E$, 存在且仅存在一组 $(\lambda_i)_{i \in I} \in \mathbb{K}^{I}$, 使得 $v = \sum_{i \in I} \lambda_i u_i$
+
+    === "Démonstration"
+        * 由基底定义可以得到存在性                                         
+        * 由 [命题](#2) 可以得到唯一性                                        
+        故命题得证
+
+<div class="grid cards" markdown>
+
+-   **Définition: Coordonnées d'un vecteur dans une base**
+
+    ---
+
+    $(u_i)_{i \in I}$ 是 $E$ 的一组基底, $v = \sum_{i \in I} \lambda_i u_i$, 称系数 $\lambda_i$ 为向量 $v$ 在基底 $(u_i)_{i \in I}$ 上的坐标
+
+</div>
+
+??? example "Exemples"
+    * 在 $\mathbb{R}^4$ 的 "base canonique" 上, 向量 $v=(3,0,-1,3)$ 的坐标是 $3,0,-1,3$     
+    * 在 $\mathbb{R}_5[X]$ 的 "base canonique" 上, 多项式 $X^4-X^2+3$ 的坐标是 $3,0,-1,0,1,0$       
