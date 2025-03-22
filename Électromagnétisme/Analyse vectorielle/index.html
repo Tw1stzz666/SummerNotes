@@ -1,0 +1,1411 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../G%C3%A9om%C3%A9trie/Espace%20Vectoriels/">
+      
+      
+      
+      <link rel="icon" href="../../assets/mmc.jpg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.6">
+    
+    
+      
+        <title>Chapitre 1 Analyse vectorielle - Summer & Capoo's Home</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#analyse-vectorielle" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="Summer &amp; Capoo&#39;s Home" class="md-header__button md-logo" aria-label="Summer & Capoo's Home" data-md-component="logo">
+      
+  <img src="../../assets/mmc.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Summer & Capoo's Home
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapitre 1 Analyse vectorielle
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Homepage
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Alg%C3%A8bre/Permutations/" class="md-tabs__link">
+          
+  
+  Algèbre
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Analyse/Int%C3%A9gration/" class="md-tabs__link">
+          
+  
+  Analyse
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../G%C3%A9om%C3%A9trie/Espace%20Vectoriels/" class="md-tabs__link">
+          
+  
+  Géométrie
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  Électromagnétisme
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Summer &amp; Capoo&#39;s Home" class="md-nav__button md-logo" aria-label="Summer & Capoo's Home" data-md-component="logo">
+      
+  <img src="../../assets/mmc.jpg" alt="logo">
+
+    </a>
+    Summer & Capoo's Home
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Homepage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Algèbre
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Algèbre
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Alg%C3%A8bre/Permutations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 4 Permutations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Analyse
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Analyse
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Analyse/Int%C3%A9gration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 7 Intégration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Géométrie
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Géométrie
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../G%C3%A9om%C3%A9trie/Espace%20Vectoriels/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 1 Espace Vectoriels
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Électromagnétisme
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Électromagnétisme
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Chapitre 1 Analyse vectorielle
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 1 Analyse vectorielle
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1referentiel-et-systemes-de-coordonnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.Référentiel et systèmes de coordonnées
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.Référentiel et systèmes de coordonnées">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-referentiel" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Référentiel (参考系)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-coordonnees-cartesiennes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Coordonnées cartésiennes (笛卡尔坐标系)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-coordonnees-cylindriques" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Coordonnées cylindriques (圆柱坐标系)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-coordonnees-spheriques" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 Coordonnées sphériques (球坐标系)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2notion-de-champ" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.Notion de champ
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.Notion de champ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-champ-scalaire-et-champ-vectoriel" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Champ scalaire et champ vectoriel (标量场和向量场)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-ligne-de-champ-et-tube-de-champ" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Ligne de champ et tube de champ (场线和"场管")
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-circulation-et-flux" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Circulation et flux (环量和通量)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3operateurs-danalyse-vectorielle" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.Opérateurs d’analyse vectorielle
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.Opérateurs d’analyse vectorielle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-le-gradient" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Le gradient (梯度)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-le-rotationnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Le rotationnel (旋度)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-la-divergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 La divergence (散度)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-le-laplacien" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 Le laplacien (拉普拉斯算子)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1referentiel-et-systemes-de-coordonnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.Référentiel et systèmes de coordonnées
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.Référentiel et systèmes de coordonnées">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-referentiel" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Référentiel (参考系)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-coordonnees-cartesiennes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Coordonnées cartésiennes (笛卡尔坐标系)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-coordonnees-cylindriques" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Coordonnées cylindriques (圆柱坐标系)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-coordonnees-spheriques" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 Coordonnées sphériques (球坐标系)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2notion-de-champ" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.Notion de champ
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.Notion de champ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-champ-scalaire-et-champ-vectoriel" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Champ scalaire et champ vectoriel (标量场和向量场)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-ligne-de-champ-et-tube-de-champ" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Ligne de champ et tube de champ (场线和"场管")
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-circulation-et-flux" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Circulation et flux (环量和通量)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3operateurs-danalyse-vectorielle" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.Opérateurs d’analyse vectorielle
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.Opérateurs d’analyse vectorielle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-le-gradient" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Le gradient (梯度)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-le-rotationnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Le rotationnel (旋度)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-la-divergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 La divergence (散度)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-le-laplacien" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 Le laplacien (拉普拉斯算子)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="analyse-vectorielle">Analyse vectorielle<a class="headerlink" href="#analyse-vectorielle" title="Permanent link">&para;</a></h1>
+<h2 id="1referentiel-et-systemes-de-coordonnees">1.Référentiel et systèmes de coordonnées<a class="headerlink" href="#1referentiel-et-systemes-de-coordonnees" title="Permanent link">&para;</a></h2>
+<h3 id="11-referentiel">1.1 Référentiel (参考系)<a class="headerlink" href="#11-referentiel" title="Permanent link">&para;</a></h3>
+<p>一个系统如何运动是由观察者决定的, 这是一个相对的概念, 所以我们会选择一个自身不发生改变的物体作为 <strong>参考系</strong>                           <br />
+地表参考系(le référentiel terrestre), 地心参考系(le référentiel géocentrique), 日心参考系(le référentiel héliocentrique), 这些都是参考系的例子                  <br />
+对于满足惯性定律(物体做匀直运动时合外力为零)的参考系, 我们称其为 <strong>惯性参考系</strong> (référentiel galiléen ou référentiel inertiel)                     <br />
+为了描述物体在参考系中的运动, 我们会选择一个坐标系, 坐标系在参考系中相对静止              </p>
+<h3 id="12-coordonnees-cartesiennes">1.2 Coordonnées cartésiennes (笛卡尔坐标系)<a class="headerlink" href="#12-coordonnees-cartesiennes" title="Permanent link">&para;</a></h3>
+<p><img alt="1" src="../c1img/1.png" title="1" /></p>
+<!-- <div align=center><img src="../Électromagnétisme/c1img/1.png" width=50%/></div> -->
+
+<p>点 <span class="arithmatex">\(M\)</span> 在 <span class="arithmatex">\(t\)</span> 时刻, 坐标系中的坐标为 <span class="arithmatex">\((x,y,z)\)</span>           <br />
+<span class="arithmatex">\((\vec{e_x},\vec{e_y},\vec{e_z})\)</span> 是该坐标系的基底, 有如下性质:                         </p>
+<ul>
+<li>三个向量两两正交</li>
+<li><span class="arithmatex">\(||\vec{e_x}|| = ||\vec{e_y}|| = ||\vec{e_z}|| = 1\)</span>                      </li>
+<li><span class="arithmatex">\(\vec{e_z} = \vec{e_x} \wedge \vec{e_z}\)</span>            </li>
+</ul>
+<p>那么:             </p>
+<ul>
+<li>点 <span class="arithmatex">\(M\)</span> 的位置可以表示为 <span class="arithmatex">\(\vec{OM} = x\vec{e_x} + y\vec{e_y} + z\vec{e_z}\)</span>              </li>
+<li>点 <span class="arithmatex">\(M\)</span> 的微小位移可以表示为 <span class="arithmatex">\(\vec{dOM} = dx\vec{e_x} + dy\vec{e_y} + dz\vec{e_z}\)</span>                       </li>
+<li>点 <span class="arithmatex">\(M\)</span> 的速度可以表示为 <span class="arithmatex">\(\vec{v} = \frac{\vec{dOM}}{dt} = \frac{dx}{dt}\vec{e_x} + \frac{dy}{dt}\vec{e_y} + \frac{dz}{dt}\vec{e_z} = \dot{x}\vec{e_x} + \dot{y}\vec{e_y} + \dot{z}\vec{e_z}\)</span>            </li>
+</ul>
+<h3 id="13-coordonnees-cylindriques">1.3 Coordonnées cylindriques (圆柱坐标系)<a class="headerlink" href="#13-coordonnees-cylindriques" title="Permanent link">&para;</a></h3>
+<p><img alt="2" src="../c1img/2.png" title="2" /></p>
+<!--<div align=center><img src="../Électromagnétisme/c1img/2.png" width=50%/></div> -->
+
+<p>点 <span class="arithmatex">\(M\)</span> 在坐标系中的坐标为 <span class="arithmatex">\((r,\theta,z)\)</span>, 其中, <span class="arithmatex">\(r\)</span> 是 <span class="arithmatex">\(OM\)</span> 投影在 <span class="arithmatex">\(Oxy\)</span> 上的 <span class="arithmatex">\(HM\)</span> 的长度, 角 <span class="arithmatex">\(\theta\)</span> 是 <span class="arithmatex">\(x\)</span> 轴与 <span class="arithmatex">\(HM\)</span> 的夹角, <span class="arithmatex">\(z\)</span> 是高度                                  <br />
+<span class="arithmatex">\((\vec{e_r},\vec{e_\theta},\vec{e_z})\)</span> 是该坐标系的基底, 有如下性质 :                                          </p>
+<ul>
+<li><span class="arithmatex">\(\vec{e_r} = \frac{\vec{HM}}{||\vec{HM}||} = \frac{\vec{HM}}{r}\)</span>           </li>
+<li><span class="arithmatex">\(\vec{e_\theta}\)</span> 与 <span class="arithmatex">\(\vec{e_r}, \vec{e_z}\)</span> 分别正交                  </li>
+<li>将 <span class="arithmatex">\(\vec{e_r}\)</span> 和 <span class="arithmatex">\(\vec{e_\theta}\)</span> 根据笛卡尔坐标系分解:   </li>
+</ul>
+<div class="arithmatex">\[
+    \vec{e_r} = cos(\theta) \vec{e_x} + sin(\theta) \vec{e_y}
+\]</div>
+<div class="arithmatex">\[
+    \vec{e_\theta} = - sin(\theta) \vec{e_x} + cos(\theta) \vec{e_y}
+\]</div>
+<p>进而得出: <span class="arithmatex">\(d \vec{e_r} = d \theta \vec{e_\theta}\)</span> (因为 <span class="arithmatex">\(\vec{e_r}\)</span> 会随 <span class="arithmatex">\(M\)</span> 位置改变而改变, 所以 <span class="arithmatex">\(d\vec{e_r}\)</span> 不为零, 而对于基底中的 <span class="arithmatex">\(z\)</span> 方向的分量, 因为 <span class="arithmatex">\(\vec{e_z}\)</span> 不会发生改变, 所以有 <span class="arithmatex">\(d\vec{e_z} = 0\)</span>)</p>
+<p>那么:                       </p>
+<ul>
+<li>点 <span class="arithmatex">\(M\)</span> 的微小位移可以表示为 <span class="arithmatex">\(\vec{dOM} = d(r\vec{e_r} + z\vec{e_z}) = dr\vec{e_r} + rd\vec{e_r} + dz\vec{e_z} = dr\vec{e_r} + rd\theta \vec{e_\theta} + dz\vec{e_z}\)</span>              </li>
+<li>点 <span class="arithmatex">\(M\)</span> 的速度可以表示为 <span class="arithmatex">\(\vec{v} = \frac{d\vec{OM}}{td} = \frac{dr}{dt}\vec{e_r} + r \frac{d\theta}{dt} \vec{e_\theta} + \frac{dz}{dt}\vec{e_z} = \dot{r}\vec{e_r} + r \dot{\theta} \vec{e_\theta} + \dot{z}\vec{e_z}\)</span>          </li>
+</ul>
+<h3 id="14-coordonnees-spheriques">1.4 Coordonnées sphériques (球坐标系)<a class="headerlink" href="#14-coordonnees-spheriques" title="Permanent link">&para;</a></h3>
+<p><img alt="3" src="../c1img/3.png" title="3" /></p>
+<!-- <div align=center><img src="../Électromagnétisme/c1img/3.png" width=50%/></div> -->
+
+<p>点 <span class="arithmatex">\(M\)</span> 在坐标系中的坐标为 <span class="arithmatex">\((r,\theta,\phi)\)</span> , 其中, <span class="arithmatex">\(r = OM\)</span> , 角 <span class="arithmatex">\(\theta\)</span> 是 <span class="arithmatex">\(\vec{e_z}\)</span> 轴与 <span class="arithmatex">\(\vec{OM}\)</span> 的夹角 (在地表, 这个角度被称为余纬度, 而纬度等于 <span class="arithmatex">\(\frac{\pi}{2} - \theta\)</span>), 角 <span class="arithmatex">\(\phi\)</span> 是 <span class="arithmatex">\(\vec{e_x}\)</span> 轴与 <span class="arithmatex">\(\vec{OI}\)</span> 的夹角, 点 <span class="arithmatex">\(I\)</span> 是点 <span class="arithmatex">\(M\)</span> 在平面 <span class="arithmatex">\(Oxy\)</span> 上的投影       <br />
+<span class="arithmatex">\((\vec{e_r},\vec{e_\theta},\vec{e_\phi})\)</span> 是该坐标系的基底, 有如下性质 :   </p>
+<ul>
+<li><span class="arithmatex">\(\vec{e_r} = \frac{\vec{OM}}{||\vec{OM}||} = \frac{\vec{OM}}{r}\)</span>     </li>
+<li><span class="arithmatex">\(\vec{e_\theta}\)</span> 位于平面 <span class="arithmatex">\((\vec{e_r},\vec{e_z})\)</span> 中, 与 <span class="arithmatex">\(\vec{e_r}\)</span> 垂直</li>
+</ul>
+<p>那么:            </p>
+<ul>
+<li>点 <span class="arithmatex">\(M\)</span> 的微小位移可以表示为 <span class="arithmatex">\(\vec{dOM} = dr\vec{e_r} + rd\theta \vec{e_\theta} + rsin(\theta)d \phi\vec{e_\phi}\)</span>              </li>
+<li>点 <span class="arithmatex">\(M\)</span> 的速度可以表示为 <span class="arithmatex">\(\vec{v} = \frac{d\vec{OM}}{dt} = \frac{dr}{dt}\vec{e_r} + r \frac{d\theta}{dt} \vec{e_\theta} + rsin(\theta) \frac{d\phi}{dt} \vec{e_\phi} = \dot{r}\vec{e_r} + r \dot{\theta} \vec{e_\theta} + rsin(\theta)\dot{\phi} \vec{e_\phi}\)</span></li>
+</ul>
+<h2 id="2notion-de-champ">2.Notion de champ<a class="headerlink" href="#2notion-de-champ" title="Permanent link">&para;</a></h2>
+<h3 id="21-champ-scalaire-et-champ-vectoriel">2.1 Champ scalaire et champ vectoriel (标量场和向量场)<a class="headerlink" href="#21-champ-scalaire-et-champ-vectoriel" title="Permanent link">&para;</a></h3>
+<p>场是关于位置 <span class="arithmatex">\(M\)</span> 和时间 <span class="arithmatex">\(t\)</span> 的函数, 可以是标量场 (champ scalaire) 或者矢量场 (champ vectoriel)            <br />
+压力场, 温度场 (标量场) , 重力场 (矢量场) , 这些都是场的例子                        <br />
+当场与位置 <span class="arithmatex">\(M\)</span> 无关时, 称其为均匀场 (champ 
+uniforme); 当场与时间 <span class="arithmatex">\(t\)</span> 无关时, 称其为静态场、永久场或稳态场 (champ stationnaire, 
+permanent ou statique )                       </p>
+<h3 id="22-ligne-de-champ-et-tube-de-champ">2.2 Ligne de champ et tube de champ (场线和"场管")<a class="headerlink" href="#22-ligne-de-champ-et-tube-de-champ" title="Permanent link">&para;</a></h3>
+<p>向量场 <span class="arithmatex">\(\vec{A}\)</span> 的场线是每一点上都与场 <span class="arithmatex">\(\vec{A}\)</span> 相切并且方向与 <span class="arithmatex">\(\vec{A}\)</span> 一致的曲线             <br />
+为了得到场 <span class="arithmatex">\(\vec{A}\)</span> 的场线方程, 可以使用公式 <span class="arithmatex">\(\vec{A} \wedge d\vec{OM} = \vec{0}\)</span> , 其中 <span class="arithmatex">\(\vec{dOM}\)</span> 是沿着场线的微小位移              </p>
+<ul>
+<li>在笛卡尔坐标系中 <span class="arithmatex">\(\vec{dOM} = dx\vec{e_x} + dy\vec{e_y} + dz\vec{e_z}\)</span>   </li>
+<li>在圆柱坐标系中 <span class="arithmatex">\(\vec{dOM} = dr\vec{e_r} + rd\theta \vec{e_\theta} + dz\vec{e_z}\)</span>       </li>
+<li>在球坐标系中 <span class="arithmatex">\(\vec{dOM} = dr\vec{e_r} + rd\theta \vec{e_\theta} + rsin(\theta)d \phi\vec{e_\phi}\)</span>         </li>
+</ul>
+<p>若场在某点 <span class="arithmatex">\(M\)</span> 处为零, 则该点 <span class="arithmatex">\(M\)</span> 的场线会缩减为点 <span class="arithmatex">\(M\)</span> 本身                   </p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="22-ligne-de-champ-et-tube-de-champ-problème" name="__tabbed_1" type="radio" /><input id="22-ligne-de-champ-et-tube-de-champ-solution" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="22-ligne-de-champ-et-tube-de-champ-problème">Problème</label><label for="22-ligne-de-champ-et-tube-de-champ-solution">Solution</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>确定由矢量场 <span class="arithmatex">\(\vec{A} = k_1\vec{e_x} + k_2\vec{e_y}\)</span> (其中 <span class="arithmatex">\(k_1, k_2 &gt; 0\)</span> 且为常数) 在笛卡尔坐标系下定义的场线方程。             </p>
+</div>
+<div class="tabbed-block">
+<div class="arithmatex">\[
+    \vec{A} \wedge \vec{dOM} = \vec{0}
+\]</div>
+<div class="arithmatex">\[
+    \vec{0} = (k_1\vec{e_x} + k_2\vec{e_y}) \wedge (dx\vec{e_x} + dy\vec{e_y} + dz\vec{e_z})
+\]</div>
+<div class="arithmatex">\[
+    = k_1 d_x \vec{e_x} \wedge \vec{e_x} + k_1 d_y \vec{e_x} \wedge \vec{e_y} + k_1 d_z \vec{e_x} \wedge \vec{e_z} + k_2 d_x \vec{e_y} \wedge \vec{e_x} + k_2 d_y \vec{e_y} \wedge \vec{e_y} + k_2 d_z \vec{e_y} \wedge \vec{e_z}
+\]</div>
+<div class="arithmatex">\[
+    = k_1 d_y \vec{e_z} - k_1 d_z \vec{e_y} - k_2 d_x \vec{e_z} + k_2 d_z \vec{e_x}
+\]</div>
+<div class="arithmatex">\[
+\begin{cases}
+    k_2 dz = 0 \\                  
+    k_1 dz = 0 \\                    
+    k_1 dy - k_2 dx = 0                      
+\end{cases}
+\Rightarrow 
+\begin{cases} 
+    dz = 0 \\
+    k_2 dy - k_2 dx = 0 
+\end{cases} 
+\Rightarrow 
+dy = \frac{k_2}{k_1} dx 
+\Rightarrow 
+y = \frac{k_2}{k_1} x + C
+\]</div>
+<p><img alt="4" src="../c1img/4.png" title="4" /></p>
+<!-- <div align=center><img src="../Électromagnétisme/c1img/4.png" width=50%/></div> -->
+</div>
+</div>
+</div>
+</div>
+<p><img alt="2" src="../c1img/5.png" title="5" /></p>
+<p>tube de champ</p>
+<h3 id="23-circulation-et-flux">2.3 Circulation et flux (环量和通量)<a class="headerlink" href="#23-circulation-et-flux" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>环量</strong> : 流体的速度沿着一条闭曲线的路径积分                <br />
+若 <span class="arithmatex">\(M\)</span> 和 <span class="arithmatex">\(M'\)</span> 是两个无限接近的点, 则矢量场 <span class="arithmatex">\(\vec{A}\)</span> 沿着其路径微小分量 <span class="arithmatex">\(\vec{dl} = \vec{MM'}\)</span> 的环量为标量: <span class="arithmatex">\(dC = \vec{A} \cdot \vec{dl}\)</span>               <br />
+沿任意路径 <span class="arithmatex">\(\Gamma\)</span> 的 <span class="arithmatex">\(\vec{A}\)</span> 的环量 <span class="arithmatex">\(C\)</span> , 可以通过将路径分割成无数个微小路径 <span class="arithmatex">\(\vec{dl}\)</span> , 并对它们求和计算得出: <span class="arithmatex">\(C = \int_\Gamma dC = \int_\Gamma \vec{A} \cdot \vec{dl}\)</span>         </li>
+<li><strong>通量</strong> : 通过一个面或一个物质的量              <br />
+同样, 矢量场 <span class="arithmatex">\(\vec{A}\)</span> 穿过一个微小面 <span class="arithmatex">\(\vec{dS} = dS\vec{n}\)</span> (其中 <span class="arithmatex">\(\vec{n}\)</span> 是 <span class="arithmatex">\(\vec{dS}\)</span> 的单位法向量) 的通量 <span class="arithmatex">\(\phi\)</span> 可表示为: <span class="arithmatex">\(d\phi = \vec{A} \cdot \vec{dS}\)</span>         <br />
+矢量场 <span class="arithmatex">\(\vec{A}\)</span> 穿过任意面 <span class="arithmatex">\(\Sigma\)</span> 的通量 <span class="arithmatex">\(\phi\)</span> , 可以通过将其分割为无数个微小面 <span class="arithmatex">\(\vec{dS}\)</span> 并求和来计算: <span class="arithmatex">\(\phi = \int_\Sigma d\phi = \int_\Sigma \vec{A} \cdot \vec{dS}\)</span>                   <br />
+如果面 <span class="arithmatex">\(\Sigma\)</span> 围成了一个体, 则称其为封闭面, 当法向量 <span class="arithmatex">\(\vec{n}\)</span> 指向体积内部时, 称之为入通量；当法向量 <span class="arithmatex">\(\vec{n}\)</span> 指向体积外部时, 称之为出通量                  </li>
+</ul>
+<h2 id="3operateurs-danalyse-vectorielle">3.Opérateurs d’analyse vectorielle<a class="headerlink" href="#3operateurs-danalyse-vectorielle" title="Permanent link">&para;</a></h2>
+<p>一个向量算子可以将一个场转换成另一个场, 如: 时间导数算子 <span class="arithmatex">\(\frac{\partial}{\partial t}\)</span> , 它将场 <span class="arithmatex">\(U(M,t)\)</span> 与场 <span class="arithmatex">\(\frac{\partial U}{\partial t}\)</span> 联系起来, 下面将学习四个重要的算子                                      </p>
+<h3 id="31-le-gradient">3.1 Le gradient (梯度)<a class="headerlink" href="#31-le-gradient" title="Permanent link">&para;</a></h3>
+<p>标量场 <span class="arithmatex">\(U\)</span> 的梯度, 记作 <span class="arithmatex">\(\vec{grad}(U)\)</span> , 使得 <span class="arithmatex">\(dU = \vec{grad}(U) \cdot d\vec{OM}\)</span> , 其中 <span class="arithmatex">\(d\vec{OM}\)</span> 是微小位移               <br />
+物理意义: 梯度是一个向量, 用于表示标量场如何随位置变化                  <br />
+如果在某一空间区域内 <span class="arithmatex">\(\vec{grad}(U) = 0\)</span> , 这意味着该区域内场 <span class="arithmatex">\(U\)</span> 是均匀的
+点 <span class="arithmatex">\(M\)</span> 的梯度与通过 <span class="arithmatex">\(M\)</span> 的等势线 (即 <span class="arithmatex">\(U\)</span> 为常数的曲线) 正交
+梯度的方向指向 <span class="arithmatex">\(U\)</span> 增大的方向          <br />
+梯度的量纲: <span class="arithmatex">\([||\vec{grad}(U)||] = [U] \cdot L^{-1}\)</span>                               </p>
+<p>下面将给出梯度在不同坐标系中的表达式:                    </p>
+<ul>
+<li>笛卡尔坐标系: <span class="arithmatex">\(\vec{grad}(U) = \frac{\partial U}{\partial x} \vec{e_x} + \frac{\partial U}{\partial y} \vec{e_y} + \frac{\partial U}{\partial z} \vec{e_z}\)</span></li>
+<li>圆柱坐标系: <span class="arithmatex">\(\vec{grad}(U) = \frac{\partial U}{\partial r} \vec{e_r} + \frac{1}{r} \frac{\partial U}{\partial \theta} \vec{e_\theta} + \frac{\partial U}{\partial z} \vec{e_z}\)</span></li>
+<li>圆坐标系: <span class="arithmatex">\(\vec{grad}(U) = \frac{\partial U}{\partial r} \vec{e_r} + \frac{1}{r} \frac{\partial U}{\partial \theta} \vec{e_\theta} + \frac{1}{rsin\theta} \frac{\partial U}{\partial \phi} \vec{e_\phi}\)</span></li>
+</ul>
+<p>在笛卡尔坐标系中, 我们引入算子 <span class="arithmatex">\(\vec{\nabla} = \frac{\partial}{\partial x} \vec{e_x} + \frac{\partial}{\partial y} \vec{e_y} + \frac{\partial}{\partial z} \vec{e_z}\)</span>         <br />
+从而, 我们可以简化等式: <span class="arithmatex">\(\vec{grad}(U) = \vec{\nabla}(U) = \vec{\nabla} U\)</span>                      </p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="31-le-gradient-problème" name="__tabbed_2" type="radio" /><input id="31-le-gradient-solution" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="31-le-gradient-problème">Problème</label><label for="31-le-gradient-solution">Solution</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>计算 <span class="arithmatex">\(\vec{grad}(V)\)</span> , <span class="arithmatex">\(V = \frac{mr^2}{e\tau^2} - \frac{k}{e}r^2sin\theta + \frac{mgz}{e}cos\theta\)</span>       <br />
+<span class="arithmatex">\(m, \tau, k, e, g\)</span> 都是带有量纲的常数                     </p>
+</div>
+<div class="tabbed-block">
+<div class="arithmatex">\[
+    \vec{grad}(V) = \frac{\partial}{\partial r} (\frac{mr^2}{e\tau^2} - \frac{k}{e}r^2sin\theta + \frac{mgz}{e}cos\theta) \vec{e_r} + \frac{1}{r} \frac{\partial}{\partial \theta} (\frac{mr^2}{e\tau^2} - \frac{k}{e}r^2sin\theta + \frac{mgz}{e}cos\theta) \vec{e_\theta} + \frac{\partial}{\partial z} (\frac{mr^2}{e\tau^2} - \frac{k}{e}r^2sin\theta + \frac{mgz}{e}cos\theta) \vec{e_z}
+\]</div>
+<div class="arithmatex">\[
+    = (\frac{2mr}{e\tau^2}-\frac{2kr}{e}sin\theta)\vec{e_r} - \frac{1}{r}(\frac{k}{e}r^2cos\theta+\frac{mgz}{e}sin\theta)\vec{e_\theta} + \frac{mg}{e}cos\theta \vec{e_z}
+\]</div>
+</div>
+</div>
+</div>
+</div>
+<h3 id="32-le-rotationnel">3.2 Le rotationnel (旋度)<a class="headerlink" href="#32-le-rotationnel" title="Permanent link">&para;</a></h3>
+<p>向量场 <span class="arithmatex">\(A\)</span> 的旋度, 记作 <span class="arithmatex">\(\vec{rot}(\vec{A})\)</span>               <br />
+物理意义: 表示向量场 <span class="arithmatex">\(A\)</span> 的"旋转"的程度        <br />
+旋度的量纲: <span class="arithmatex">\([||\vec{rot}(\vec{A})||] = [||\vec{A}||] \cdot L^{-1}\)</span>       <br />
+对于所有的向量场 <span class="arithmatex">\(A\)</span> , 存在如下等价关系:             </p>
+<div class="arithmatex">\[
+    \vec{rot}(\vec{A}) = \vec{0} \iff \exists U, 使得 \vec{A} = \vec{grad}(U)
+\]</div>
+<details class="note">
+<summary>Extra-note</summary>
+<p>在力学中, 保守力是指满足以下条件的力: <span class="arithmatex">\(\vec{rot}(\vec{f}) = \vec{0}\)</span>       <br />
+也就是说, 保守力的旋度为零
+而这样的力 <span class="arithmatex">\(\vec{f}\)</span> 来源于某个势能 <span class="arithmatex">\(E_p\)</span> , 满足以下关系: <span class="arithmatex">\(\vec{f} = - \vec{grad}(E_p)\)</span>
+而功 (记作 <span class="arithmatex">\(W_{AB}\)</span> ) 指的是一个物质系统在力场中从点 <span class="arithmatex">\(A\)</span> 移动到点 <span class="arithmatex">\(B\)</span> 时所交换的能量           <br />
+如果力是保守的, 这个功只取决于起点 <span class="arithmatex">\(A\)</span> 和终点 <span class="arithmatex">\(B\)</span> , 而与系统所经过的路径无关
+有如下推导:                            </p>
+<div class="arithmatex">\[
+    W_{AB} = \int_{A}^{B} \vec{f} \cdot \vec{OM} = \int_{A}^{B} - \vec{grad}(E_p) \cdot d\vec{OM}    
+\]</div>
+<p>又有势能 <span class="arithmatex">\(E_p\)</span> 的全微分式: <span class="arithmatex">\(d(E_p) = \vec{grad}(E_p) \cdot d\vec{OM}\)</span></p>
+<div class="arithmatex">\[
+    W_{AB} = - \int_{a}^{b} dE_p = -(E_p(B)-E_p(A)) = - \delta E_p
+\]</div>
+<p>由此也可见, <span class="arithmatex">\(W_{AB}\)</span> 与 <span class="arithmatex">\(A\)</span> 和 <span class="arithmatex">\(B\)</span> 之间的路径无关</p>
+</details>
+<p>旋度的计算: <span class="arithmatex">\(\vec{rot}(\vec{A}) = \vec{\nabla} \wedge \vec{A} = \begin{pmatrix}\frac{\partial}{\partial x} \\ \frac{\partial}{\partial y} \\ \frac{\partial}{\partial z}\end{pmatrix} \wedge \begin{pmatrix}A_x \\ A_y \\ A_z\end{pmatrix}\)</span>                     </p>
+<p>下面将给出旋度在不同坐标系中的表达式:                        </p>
+<ul>
+<li>笛卡尔坐标系: <span class="arithmatex">\(\vec{rot}(\vec{A}) = (\frac{\partial A_z}{\partial y} - \frac{\partial A_y}{\partial z}) \vec{e_x} + (\frac{\partial A_x}{\partial z} - \frac{\partial A_z}{\partial x})  \vec{e_y} + (\frac{\partial A_y}{\partial x} - \frac{\partial A_x}{\partial y})  \vec{e_z}\)</span>                     </li>
+<li>圆柱坐标系: <span class="arithmatex">\(\vec{rot}(\vec{A}) = \left( \frac{1}{r} \frac{\partial A_z}{\partial \theta} - \frac{\partial A_\theta}{\partial z} \right) \vec{e_r} + \left( \frac{\partial A_r}{\partial z} - \frac{\partial A_z}{\partial r} \right) \vec{e_\theta} + \frac{1}{r} \left( \frac{\partial (r A_\theta)}{\partial r} - \frac{\partial A_r}{\partial \theta} \right) \vec{e_z}\)</span>                          </li>
+<li>圆坐标系: <span class="arithmatex">\(\vec{rot}(\vec{A}) =\frac{1}{r \sin \theta}\left[\frac{\partial(A_\phi \sin \phi)}{\partial \theta} - \frac{\partial A_\theta}{\partial \phi}\right] \vec{e_r}+ \frac{1}{r}\left[\frac{1}{\sin \theta} \frac{\partial A_r}{\partial \phi} - \frac{\partial}{\partial r}(r A_\phi)\right] \vec{e_\theta}+ \frac{1}{r}\left[\frac{\partial (r A_\theta)}{\partial r} - \frac{\partial A_r}{\partial \theta}\right] \vec{e_\phi}\)</span>                    </li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Théorème de Stokes</p>
+<p>沿封闭且有向的曲线 <span class="arithmatex">\(\Gamma\)</span> 的向量场 <span class="arithmatex">\(A\)</span> 的环量等于 <span class="arithmatex">\(\vec{rot}(\vec{A})\)</span> 的在任意由 <span class="arithmatex">\(\Gamma\)</span> 圈出的曲面的通量, 曲面的方向取决于 <span class="arithmatex">\(\Gamma\)</span> 的方向 (依据右手螺旋法则)                           </p>
+<div class="arithmatex">\[
+    \oint_{\Gamma} \vec{A} \vec{dl} = \iint_{\Sigma} \vec{rot}(\vec{A}) \vec{dS}
+\]</div>
+</div>
+<h3 id="33-la-divergence">3.3 La divergence (散度)<a class="headerlink" href="#33-la-divergence" title="Permanent link">&para;</a></h3>
+<p>向量场 <span class="arithmatex">\(\vec{A}\)</span> 的散度, 记作 <span class="arithmatex">\(div(\vec{A})\)</span>           <br />
+物理意义: 表示向量场 <span class="arithmatex">\(\vec{A}\)</span> 在某个点邻域内的通量"密度"                  <br />
+涡流场内的散度为零                               <br />
+散度的量纲: <span class="arithmatex">\([div(\vec{A})] = [||\vec{A}||] \cdot L^{-1}\)</span>    <br />
+对于所有的向量场 <span class="arithmatex">\(A\)</span> , 存在如下等价关系:             </p>
+<div class="arithmatex">\[
+    div(\vec{A}) = \vec{0} \iff \exists \vec{B}, 使得 \vec{A} = \vec{rot}(\vec{B})
+\]</div>
+<p>下面将给出散度在不同坐标系中的表达式:  </p>
+<ul>
+<li>笛卡尔坐标系: <span class="arithmatex">\(div(\vec{A}) = \frac{\partial A_x}{\partial x} + \frac{\partial A_y}{\partial y} + \frac{\partial A_z}{\partial z}\)</span>                     </li>
+<li>圆柱坐标系: <span class="arithmatex">\(div(\vec{A}) = \frac{1}{r} \frac{\partial (r A_r)}{\partial r} + \frac{1}{r} \frac{\partial A_\theta}{\partial \theta} + \frac{\partial A_z}{\partial z}\)</span>                          </li>
+<li>圆坐标系: <span class="arithmatex">\(div(\vec{A}) = \frac{1}{r^2} \frac{\partial (r^2 A_r)}{\partial r} + \frac{1}{r \sin\theta} \frac{\partial (\sin\theta A_\theta)}{\partial \theta} + \frac{1}{r \sin\theta} \frac{\partial A_\phi}{\partial \phi}\)</span>               </li>
+</ul>
+<p>在笛卡尔坐标系中: <span class="arithmatex">\(div(\vec{A}) = \vec{\nabla} \cdot \vec{A}\)</span>
+<strong>注意</strong> : <span class="arithmatex">\(\vec{\nabla} \cdot \vec{A} \neq \vec{\nabla} \vec{A}\)</span>              </p>
+<div class="arithmatex">\[
+\begin{cases}
+    \vec{\nabla} \cdot \vec{A} = div(\vec{A}) \to 标量 \\                   
+    \vec{\nabla} \vec{A} = \vec{\nabla}(\vec{A}) \to 向量                     
+\end{cases}
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Théorème de Green-Ostrogradski</p>
+<p>向量场 <span class="arithmatex">\(\vec{A}\)</span> 通过封闭曲面 <span class="arithmatex">\(S\)</span> 的通量 (曲面局部朝外的单位法向量为 <span class="arithmatex">\(\vec{n}\)</span> ) 等于该曲面所围成的体积内散度 <span class="arithmatex">\(div(\vec{A})\)</span> 的积分</p>
+<div class="arithmatex">\[
+    \oiint_S \vec{A} \cdot \vec{n} \, dS = \iiint_V div(\vec{A}) \, dV
+\]</div>
+<p><span class="arithmatex">\(\oiint_S\)</span> 表示积分曲面封闭</p>
+</div>
+<h3 id="34-le-laplacien">3.4 Le laplacien (拉普拉斯算子)<a class="headerlink" href="#34-le-laplacien" title="Permanent link">&para;</a></h3>
+<p>标量场 <span class="arithmatex">\(\vec{U}\)</span> 的拉普拉斯算子, 记作 <span class="arithmatex">\(\Delta U = div(\vec{grad}(U))\)</span>           <br />
+在数学上, 拉普拉斯算子表示某一点 <span class="arithmatex">\(M\)</span> 处的函数值 <span class="arithmatex">\(U\)</span> 与其在 <span class="arithmatex">\(M\)</span> 周围的平均值之间的差异, 可以看成是一个场在空间中的弯曲程度, 一些波动传播方程会涉及拉普拉斯算子                           <br />
+拉普拉斯算子的量纲: <span class="arithmatex">\([\Delta U] = [U] \cdot L^{-2}\)</span>      </p>
+<p>下面将给出拉普拉斯算子在不同坐标系中的表达式:  </p>
+<ul>
+<li>笛卡尔坐标系: <span class="arithmatex">\(\Delta U = \frac{\partial^2 U}{\partial x^2} + \frac{\partial^2 U}{\partial y^2} + \frac{\partial^2 U}{\partial z^2}\)</span>                     </li>
+<li>圆柱坐标系: <span class="arithmatex">\(\Delta U = \frac{1}{r} \frac{\partial}{\partial r} \left( r \frac{\partial U}{\partial r} \right) + \frac{1}{r^2} \frac{\partial^2 U}{\partial \theta^2} + \frac{\partial^2 U}{\partial z^2}\)</span>                          </li>
+<li>圆坐标系: <span class="arithmatex">\(\Delta U = \frac{1}{r^2} \frac{\partial}{\partial r} \left( r^2 \frac{\partial U}{\partial r} \right) + \frac{1}{r^2 \sin\theta} \frac{\partial}{\partial \theta} \left( \sin\theta \frac{\partial U}{\partial \theta} \right) + \frac{1}{r^2 \sin^2\theta} \frac{\partial^2 U}{\partial \phi^2}\)</span>    </li>
+</ul>
+<p>最后, 我们引入向量拉普拉斯算子 <span class="arithmatex">\(\vec{\Delta}\)</span> , 定义如下: </p>
+<div class="arithmatex">\[
+\vec{\Delta} \vec{A} = \vec{grad} (div (\vec{A})) - \vec{rot}(\vec{rot}(\vec{A}))
+\]</div>
+<p>在笛卡尔坐标系中, 拉普拉斯算子对向量场的表达式: <span class="arithmatex">\(\vec{\Delta} \vec{A} = \frac{\partial^2 \vec{A}}{\partial x^2} + \frac{\partial^2 \vec{A}}{\partial y^2} + \frac{\partial^2 \vec{A}}{\partial z^2}\)</span>           </p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="34-le-laplacien-problème" name="__tabbed_3" type="radio" /><input id="34-le-laplacien-solution" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="34-le-laplacien-problème">Problème</label><label for="34-le-laplacien-solution">Solution</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>考虑一个复向量场, 其形式为: <span class="arithmatex">\(\vec{A} = \vec{C} e^{j(\omega t - kx)}\)</span>
+其中: <span class="arithmatex">\(\vec{C} = \vec{cste}\)</span> (常向量), <span class="arithmatex">\(\vec{k} = k \vec{e}_x\)</span> , <span class="arithmatex">\(j^2 = -1\)</span>
+要求证明, 在笛卡尔坐标系下: </p>
+<div class="arithmatex">\[
+    div(\vec{A}) = -j \vec{k} \cdot \vec{A}
+\]</div>
+<div class="arithmatex">\[
+    \vec{rot}(\vec{A}) = -j \vec{k} \wedge \vec{A}
+\]</div>
+<div class="arithmatex">\[
+    \vec{\Delta} \vec{A} = -k^2 \vec{A}
+\]</div>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><strong>对于第一个等式</strong>: </li>
+</ul>
+<div class="arithmatex">\[
+    div(\vec{A}) = \vec{\nabla} \cdot \vec{A} = \begin{pmatrix} \frac{\partial}{\partial x} \\ \frac{\partial}{\partial y} \\ \frac{\partial}{\partial z} \end{pmatrix} \wedge \begin{pmatrix} A_x \\ A_y \\ A_z \end{pmatrix}
+\]</div>
+<div class="arithmatex">\[
+    = \frac{\partial A_x}{\partial x} + \frac{\partial A_y}{\partial y} + \frac{\partial A_z}{\partial z}
+\]</div>
+<p>分别计算偏导数: </p>
+<div class="arithmatex">\[
+    \frac{\partial A_x}{\partial x} = -C_x j k e^{j(\omega t - kx)} , \frac{\partial A_y}{\partial y} = 0 , \frac{\partial A_z}{\partial z} = 0
+\]</div>
+<p>代入: </p>
+<div class="arithmatex">\[
+    div(\vec{A}) = -C_x j k e^{j(\omega t - kx)} = - j k A_x
+\]</div>
+<p>等式另一边: </p>
+<div class="arithmatex">\[
+    - j \vec{k} \cdot \vec{A} = - j k \vec{e}_x \cdot (A_x \vec{e}_x + A_y \vec{e}_y + A_z \vec{e}_z) = - j k A_x
+\]</div>
+<p>因此: </p>
+<div class="arithmatex">\[
+    div(\vec{A}) = - j \vec{k} \cdot \vec{A}
+\]</div>
+<ul>
+<li>
+<p><strong>对于第二个等式</strong>: 
+因为有 <span class="arithmatex">\(A_y = A_z = 0\)</span> , 代入 <span class="arithmatex">\(\vec{rot}(\vec{A})\)</span> 的表达式后可以得到 <span class="arithmatex">\(\vec{rot}(\vec{A}) = \vec{0}\)</span> 
+同样的, 对于等式另一边, 也有 <span class="arithmatex">\(- j \vec{k} \wedge \vec{A} = - j k \vec{e_x} \wedge (A_x e_x + A_y e_y + A_z e_z) = \vec{0}\)</span></p>
+</li>
+<li>
+<p><strong>对于第三个等式</strong>:                        </p>
+</li>
+</ul>
+<div class="arithmatex">\[
+    \vec{\Delta} \vec{A} = \frac{\partial^2 \vec{A}}{\partial x^2} + \frac{\partial^2 \vec{A}}{\partial y^2} + \frac{\partial^2 \vec{A}}{\partial z^2}
+\]</div>
+<div class="arithmatex">\[
+    \frac{\partial^2 A_x}{\partial^2 x} = - C_x k^2 e^{j(\omega t - kx)} , \frac{\partial^2 A_y}{\partial^2 y} = 0 , \frac{\partial^2 A_z}{\partial^2 z} = 0
+\]</div>
+<div class="arithmatex">\[
+    \vec{\Delta} \vec{A} = - C_x k^2 e^{j(\omega t - kx)}
+\]</div>
+<p>与第一个等式比较后易知等式成立</p>
+<p><strong>关系的推广</strong></p>
+<p>这三个关系的符号显然会改变，如果场的形式为：</p>
+<div class="arithmatex">\[
+    \vec{A} = \vec{C} e^{j(kx - \omega t)}
+\]</div>
+<p>对于更一般形式的场，这些关系仍然成立：</p>
+<div class="arithmatex">\[
+    \vec{A} = \vec{C} e^{j(\omega t - \vec{k} \cdot \overrightarrow{OM})}
+\]</div>
+<p>其中：</p>
+<div class="arithmatex">\[
+    \overrightarrow{OM} = x \vec{e}_x + y \vec{e}_y + z \vec{e}_z
+\]</div>
+<div class="arithmatex">\[
+    \vec{k} = k_x \vec{e}_x + k_y \vec{e}_y + k_z \vec{e}_z
+\]</div>
+<p>这些场在电磁学的课程中将会着重研究</p>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.expand", "navigation.path", "navigation.top"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/contrib/auto-render.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
