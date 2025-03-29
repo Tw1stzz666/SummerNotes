@@ -1,0 +1,2116 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Analyse%20vectorielle/">
+      
+      
+        <link rel="next" href="../Magn%C3%A9tostatique/">
+      
+      
+      <link rel="icon" href="../../assets/mmc.jpg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.6">
+    
+    
+      
+        <title>Chapitre 2 Electrostatique - Summer & Capoo's Home</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#electrostatique" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="Summer &amp; Capoo&#39;s Home" class="md-header__button md-logo" aria-label="Summer & Capoo's Home" data-md-component="logo">
+      
+  <img src="../../assets/mmc.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Summer & Capoo's Home
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapitre 2 Electrostatique
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Homepage
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Mathsindex/" class="md-tabs__link">
+          
+  
+    
+  
+  Mathématiques
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../%C3%89lectronique/" class="md-tabs__link">
+          
+  
+    
+  
+  Physique
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Summer &amp; Capoo&#39;s Home" class="md-nav__button md-logo" aria-label="Summer & Capoo's Home" data-md-component="logo">
+      
+  <img src="../../assets/mmc.jpg" alt="logo">
+
+    </a>
+    Summer & Capoo's Home
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Homepage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Mathématiques
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Mathématiques
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mathsindex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mathsindex
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../G%C3%A9om%C3%A9trie/Espace%20Vectoriels/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 15 Espace Vectoriels
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Analyse/Fonctions%20de%20deux%20variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 18 Fonctions de deux variables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Physique
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Physique
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../%C3%89lectronique/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Électronique
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Électronique
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Électromagnétisme
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Électromagnétisme
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Analyse%20vectorielle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 1 Analyse vectorielle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Chapitre 2 Electrostatique
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 2 Electrostatique
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1champ-electrostatique" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.Champ électrostatique (静电场)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.Champ électrostatique (静电场)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-force-de-lorentz" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Force de Lorentz (洛伦兹力)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-puissance-de-la-force-de-lorentz" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Puissance de la force de Lorentz
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-loi-de-coulomb" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Loi de Coulomb (库仑定律)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-principe-de-superposition" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 Principe de superposition (叠加原理)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-distributions-continues-de-charges" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5 Distributions continues de charges (电荷的连续分布)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2potentiel-electrostatique" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.Potentiel électrostatique (电势)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.Potentiel électrostatique (电势)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-circulation-du-champ-electrostatique" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Circulation du champ électrostatique (静电场的环量)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-cas-dune-charge-ponctuelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Cas d’une charge ponctuelle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-energie-potentielle" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Énergie potentielle (势能)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-equipotentielles-et-lignes-de-champ" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 Equipotentielles et lignes de champ (等势线和场线)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3theoreme-de-gauss" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.Théorème de Gauss (高斯定理)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.Théorème de Gauss (高斯定理)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-symetries" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Symétries (对称性)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-invariances" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Invariances (不变性)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-theoreme-de-gauss" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Théorème de Gauss
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-analogie-avec-le-champ-gravitationnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 Analogie avec le champ gravitationnel
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4problemes-a-fort-degre-de-symetrie" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.Problèmes à fort degré de symétrie
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.Problèmes à fort degré de symétrie">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-plan-infini" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Plan infini
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-probleme-a-symetrie-cylindrique" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Problème à symétrie cylindrique
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-probleme-a-symetrie-spherique" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Problème à symétrie sphérique
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5dipole-electrostatique" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.Dipôle électrostatique (电偶极子)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.Dipôle électrostatique (电偶极子)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-moment-dipolaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Moment dipolaire (偶极矩)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-potentiel-et-champ-electrostatique" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Potentiel et champ électrostatique
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-actions-subies-par-un-dipole-electrostatique" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Actions subies par un dipôle électrostatique
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 Actions subies par un dipôle électrostatique">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#531-champ-exterieur-uniforme" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.1 Champ extérieur uniforme (外部均匀电场)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#532-champ-exterieur-non-uniforme" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.2 Champ extérieur non uniforme (外部非均匀电场)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Magn%C3%A9tostatique/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 3 Magnétostatique
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1champ-electrostatique" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.Champ électrostatique (静电场)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.Champ électrostatique (静电场)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-force-de-lorentz" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Force de Lorentz (洛伦兹力)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-puissance-de-la-force-de-lorentz" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Puissance de la force de Lorentz
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-loi-de-coulomb" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Loi de Coulomb (库仑定律)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-principe-de-superposition" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 Principe de superposition (叠加原理)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-distributions-continues-de-charges" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5 Distributions continues de charges (电荷的连续分布)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2potentiel-electrostatique" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.Potentiel électrostatique (电势)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.Potentiel électrostatique (电势)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-circulation-du-champ-electrostatique" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Circulation du champ électrostatique (静电场的环量)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-cas-dune-charge-ponctuelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Cas d’une charge ponctuelle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-energie-potentielle" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Énergie potentielle (势能)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-equipotentielles-et-lignes-de-champ" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 Equipotentielles et lignes de champ (等势线和场线)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3theoreme-de-gauss" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.Théorème de Gauss (高斯定理)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.Théorème de Gauss (高斯定理)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-symetries" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Symétries (对称性)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-invariances" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Invariances (不变性)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-theoreme-de-gauss" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Théorème de Gauss
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-analogie-avec-le-champ-gravitationnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 Analogie avec le champ gravitationnel
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4problemes-a-fort-degre-de-symetrie" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.Problèmes à fort degré de symétrie
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.Problèmes à fort degré de symétrie">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-plan-infini" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Plan infini
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-probleme-a-symetrie-cylindrique" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Problème à symétrie cylindrique
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-probleme-a-symetrie-spherique" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Problème à symétrie sphérique
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5dipole-electrostatique" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.Dipôle électrostatique (电偶极子)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.Dipôle électrostatique (电偶极子)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-moment-dipolaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Moment dipolaire (偶极矩)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-potentiel-et-champ-electrostatique" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Potentiel et champ électrostatique
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-actions-subies-par-un-dipole-electrostatique" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Actions subies par un dipôle électrostatique
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 Actions subies par un dipôle électrostatique">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#531-champ-exterieur-uniforme" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.1 Champ extérieur uniforme (外部均匀电场)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#532-champ-exterieur-non-uniforme" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.2 Champ extérieur non uniforme (外部非均匀电场)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="electrostatique">Electrostatique<a class="headerlink" href="#electrostatique" title="Permanent link">&para;</a></h1>
+<p>在本章中, 我们关注的是静电学, 即在研究参考系中静止分布的电荷及其所产生的效应</p>
+<h2 id="1champ-electrostatique">1.Champ électrostatique (静电场)<a class="headerlink" href="#1champ-electrostatique" title="Permanent link">&para;</a></h2>
+<h3 id="11-force-de-lorentz">1.1 Force de Lorentz (洛伦兹力)<a class="headerlink" href="#11-force-de-lorentz" title="Permanent link">&para;</a></h3>
+<p>在惯性参考系 <span class="arithmatex">\(R\)</span> 中, 一个电荷为 <span class="arithmatex">\(q\)</span> 的带电粒子, 在时刻 <span class="arithmatex">\(t\)</span> 处于点 <span class="arithmatex">\(M\)</span> , 并以速度 <span class="arithmatex">\(\vec{v}(t)\)</span> 运动, 它会与宇宙中其他带电粒子相互作用          <br />
+这种相互作用由 <strong>洛伦兹力</strong> (记作 <span class="arithmatex">\(\vec{F_L}(M,t)\)</span> ) 来描述, 该力作用于粒子, 并满足以下关系式: </p>
+<div class="arithmatex">\[
+    \vec{F_L} = q (\vec{E}(M,t) + \vec{v} \wedge \vec{B}(M,t))
+\]</div>
+<p>其中, <span class="arithmatex">\(\vec{E}\)</span> 叫做 <strong>"champ électrique" 电场</strong> ; <span class="arithmatex">\(\vec{B}\)</span> 叫做 <strong>"champ magnétique" 磁场</strong>                                  <br />
+它们在给定的参考系中与速度 <span class="arithmatex">\(v\)</span> 无关, 却于所选择的参考系 <span class="arithmatex">\(R\)</span> 有关                </p>
+<p>我们为了研究粒子所受到的力, 作出以下假设:   </p>
+<ul>
+<li>选取一个惯性参考系 <span class="arithmatex">\( R \)</span>  </li>
+<li>研究一个质量为 <span class="arithmatex">\( m \)</span> 和电荷量为 <span class="arithmatex">\( q \)</span> 恒定的粒子 <span class="arithmatex">\( M \)</span>  </li>
+<li>对于电子, <span class="arithmatex">\( m \approx 10^{-30} \)</span> kg, <span class="arithmatex">\( q = -e \approx -1.6 \times 10^{-19} \)</span> C  </li>
+<li>电场 <span class="arithmatex">\(\vec{E}\)</span> 足够弱, 使得粒子不具有相对论效应 (即 <span class="arithmatex">\( v \ll c \)</span>)                 </li>
+</ul>
+<p>粒子 <span class="arithmatex">\( M \)</span> 在电磁场 <span class="arithmatex">\((\vec{E},\vec{B})\)</span> 中受到的洛伦兹力:  </p>
+<div class="arithmatex">\[
+    \vec{F_L} = \vec{F_e} + \vec{F_m} = q\vec{E} + q\vec{v} \wedge \vec{B}
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>力 <span class="arithmatex">\(\vec{F_e}\)</span>, 也称为库伦力, 方向取决于电荷 <span class="arithmatex">\(q\)</span> 的符号, 沿着 <span class="arithmatex">\(\pm \vec{E}\)</span> 方向; 磁场分量始终垂直于位移方向 (左手定则)</li>
+<li>在电磁场中带电粒子的运动中, 相比于洛伦兹力, 重力总是可以忽略不计</li>
+</ul>
+</div>
+<h3 id="12-puissance-de-la-force-de-lorentz">1.2 Puissance de la force de Lorentz<a class="headerlink" href="#12-puissance-de-la-force-de-lorentz" title="Permanent link">&para;</a></h3>
+<p>在惯性参考系中, 对带电粒子应用动能定理: </p>
+<div class="arithmatex">\[
+    \frac{dE_c}{dt} = \vec{F_L} \cdot \vec{v} = (q \vec{E} + q \vec{v} \wedge \vec{B}) \cdot \vec{v} = q \vec{E} \cdot \vec{v}
+\]</div>
+<p>因此, 电场 <span class="arithmatex">\(\vec{E}\)</span> 可以改变带电粒子的动能 <span class="arithmatex">\(E_c\)</span> , 也就是改变粒子的速度大小 (加速或减速)                <br />
+然而, 磁场 <span class="arithmatex">\(\vec{B}\)</span> 只能改变粒子速度的方向(使其偏转), 但不会改变其大小</p>
+<h3 id="13-loi-de-coulomb">1.3  Loi de Coulomb (库仑定律)<a class="headerlink" href="#13-loi-de-coulomb" title="Permanent link">&para;</a></h3>
+<p>考虑在惯性参考系中的两个静止的带电粒子</p>
+<p><img alt="1" src="../c2img/1.png" title="1" /></p>
+<p>库仑定律指出带电粒子 <span class="arithmatex">\(q_1\)</span> 对另一颗位于距离 <span class="arithmatex">\(r\)</span> 处的带电粒子 <span class="arithmatex">\(q_2\)</span> 施加的力: </p>
+<div class="arithmatex">\[
+    \vec{F_{1,2}} = \frac{q_1q_2}{4 \pi \epsilon_0 r^2} \vec{u_{1,2}}, \epsilon_0 = 8.85 \times 10^{-12} F \cdot m^{-1} (真空介电系数)
+\]</div>
+<p>这是一种 "牛顿型" 的有心力 (与 <span class="arithmatex">\( \frac{1}{r^2} \)</span> 成正比) , 类似于引力的相互作用, 因此我们可以在这两种相互作用之间进行类比     <br />
+该力可以是吸引力或排斥力, 具体取决于两种电荷的符号       </p>
+<p>在此模型中, 两种电荷被视为点电荷, 这一假设在其自身直径远小于相互作用距离 <span class="arithmatex">\( r \)</span> 时是合理的     <br />
+然而, 当 <span class="arithmatex">\( r \to 0 \)</span> 时, 该模型不再适用, 因为此时力会趋于无穷大 (发散)      </p>
+<p>我们可以将库仑力换一种写法: <span class="arithmatex">\(\vec{F}_{12} = q_2 \vec{E}\)</span> , 其中 <span class="arithmatex">\(\vec{E} = \frac{q_1}{4\pi\epsilon_0 r^2} \vec{u}_{12}\)</span> , 该电场只取决于产生该力的源 (即位于距离 <span class="arithmatex">\( r \)</span> 处的电荷 <span class="arithmatex">\( q_1 \)</span>)    </p>
+<p>通过与洛伦兹力的表达式对比, 我们可以将 <span class="arithmatex">\(\vec{E}\)</span> 看作是由静止点电荷 <span class="arithmatex">\( q_1 \)</span> 在位置 <span class="arithmatex">\( M_1 \)</span> 处产生的电场        <br />
+由于该电荷保持静止, <span class="arithmatex">\(\vec{E}\)</span> 仅依与位置有关, 而不随时间变化, 因此称之为 <strong>静电场</strong> (或 <strong>稳恒场</strong>, <strong>永久场</strong>)    </p>
+<p>由此, 我们可以从两个角度来看待静电荷的相互作用: <br />
+- <span class="arithmatex">\( q_2 \)</span> 与 <span class="arithmatex">\( q_1 \)</span> 相互作用, 这可以用库仑力 <span class="arithmatex">\(\vec{F}_{12}\)</span> 来描述 <br />
+- <span class="arithmatex">\( q_2 \)</span> 与由 <span class="arithmatex">\( q_1 \)</span> 产生的电场 <span class="arithmatex">\(\vec{E}\)</span> 发生相互作用, 此时我们不再关注产生电场的电荷, 而只关心其产生的场, 当一个电荷 <span class="arithmatex">\( q \)</span> 处于该电场中时, 它受到的力为: <br />
+- 
+[
+    \vec{F} = q \vec{E}
+]  </p>
+<p>电场的量纲:   </p>
+<div class="arithmatex">\[
+    [\|\vec{E}\|] = [F][Q]^{-1} = [E]\cdot [L]^{-1}
+\]</div>
+<p>因此, 电场的单位为 <span class="arithmatex">\( V \cdot m^{-1} \)</span> </p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="13-loi-de-coulomb-problème" name="__tabbed_1" type="radio" /><input id="13-loi-de-coulomb-solution" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="13-loi-de-coulomb-problème">Problème</label><label for="13-loi-de-coulomb-solution">Solution</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>计算氢原子中电子所受到的电场强度大小的数量级                 </p>
+</div>
+<div class="tabbed-block">
+<div class="arithmatex">\[
+    ||\vec{E}|| = \frac{e}{2 \pi \epsilon_0 r^2} = 1.4 \times 10^{11}
+\]</div>
+</div>
+</div>
+</div>
+</div>
+<h3 id="14-principe-de-superposition">1.4 Principe de superposition (叠加原理)<a class="headerlink" href="#14-principe-de-superposition" title="Permanent link">&para;</a></h3>
+<p>考虑由 <span class="arithmatex">\( N \)</span> 个点电荷组成的系统, 每个点电荷在点 <span class="arithmatex">\( M \)</span> 处产生一个静电场 <span class="arithmatex">\( \vec{E}_k(M) \)</span> <br />
+点 <span class="arithmatex">\( M \)</span> 处的总静电场为:   </p>
+<div class="arithmatex">\[
+    \vec{E}(M) = \sum_{k=1}^{N} \vec{E}_k(M)
+\]</div>
+<p>这体现了带电粒子之间相互作用的独立性 </p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="14-principe-de-superposition-problème" name="__tabbed_2" type="radio" /><input id="14-principe-de-superposition-solution" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="14-principe-de-superposition-problème">Problème</label><label for="14-principe-de-superposition-solution">Solution</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="1" src="../c2img/2.png" title="2" /></p>
+<p>1). 要确定 <span class="arithmatex">\( M \)</span> 点在 <span class="arithmatex">\( (Ox) \)</span> 轴上的静电场 <span class="arithmatex">\( \vec{E}(M) \)</span>           <br />
+2). 当 <span class="arithmatex">\( x \gg a \)</span> 时, 表达式如何变化        <br />
+3). 绘制 <span class="arithmatex">\( E(x) \)</span> 的大致曲线                     </p>
+</div>
+<div class="tabbed-block">
+<p>1).</p>
+<div class="arithmatex">\[
+    \vec{E}(M) = \frac{-2Q}{4 \pi \epsilon_0 x^2} \vec{e_x} + \frac{2Q}{4 \pi \epsilon_0 (a^2+x^2)} \frac{x}{\sqrt{a^2+x^2}} \vec{e_x} 
+\]</div>
+<div class="arithmatex">\[
+    = \frac{2Q}{4 \pi \epsilon_0} (\frac{x}{(a^2+x^2)^{\frac{3}{2}}} - \frac{1}{x^2}) \vec{e_x}
+\]</div>
+<p>2). <span class="arithmatex">\(x \gg a\)</span></p>
+<div class="arithmatex">\[
+    \vec{E}(M) = \frac{2Q}{4 \pi \epsilon_0 x^2} (\frac{1}{(\frac{a^2}{x^2} + 1)} - 1) \vec{e_x}
+\]</div>
+<p>根据等价无穷小 <span class="arithmatex">\((1+x)^a \to (1+ax)\)</span></p>
+<div class="arithmatex">\[
+    \vec{E}(M) = \frac{2Q}{4 \pi \epsilon_0 x^2} (1 - \frac{3}{2} \frac{a^2}{x^2} - 1) \vec{e_x} 
+\]</div>
+<div class="arithmatex">\[
+    = - \frac{3 a^2 Q}{2 \pi \epsilon_0 x^4} \vec{e_x} 
+\]</div>
+<p>3). </p>
+<p><img alt="1" src="../c2img/3.png" title="3" /></p>
+</div>
+</div>
+</div>
+</div>
+<h3 id="15-distributions-continues-de-charges">1.5 Distributions continues de charges (电荷的连续分布)<a class="headerlink" href="#15-distributions-continues-de-charges" title="Permanent link">&para;</a></h3>
+<p>当点电荷的数量过多, 无法逐个处理时, 采用连续分布来描述电荷分布 </p>
+<p>这样的电荷分布主要有以下两种形式:</p>
+<p><strong>体积分布</strong>: 当电荷分布在一个体积上时, 记 <span class="arithmatex">\( \rho(P) \)</span> 为在分布中的某点 <span class="arithmatex">\( P \)</span> 处的体积电荷密度   </p>
+<div class="arithmatex">\[
+    \vec{E}(M) = \int_{P \in (V)} \frac{dq}{4\pi\epsilon_0 P M^2} \vec{u}
+    = \int_{P \in (V)} \frac{\rho(P) dV}{4\pi\epsilon_0 P M^2} \vec{u}
+\]</div>
+<p><img alt="1" src="../c2img/4.png" title="4" /></p>
+<p><strong>面分布</strong>: 当电荷分布在一个表面上时, 记 <span class="arithmatex">\( \sigma(P) \)</span> 为在分布中的某点 <span class="arithmatex">\( P \)</span> 处的表面电荷密度   </p>
+<div class="arithmatex">\[
+    \vec{E}(M) = \int_{P \in (S)} \frac{\sigma dS}{4\pi\epsilon_0 P M^2} \vec{u}
+\]</div>
+<p><img alt="1" src="../c2img/5.png" title="5" /></p>
+<p>尝试推导不同电荷密度之间的关系: <br />
+在实际实验中, 电荷实际上分布在接近 <span class="arithmatex">\( z = 0 \)</span> 的一个微小体积内           <br />
+我们采用以下体积分布:   </p>
+<p><img alt="1" src="../c2img/6.png" title="6" /></p>
+<div class="arithmatex">\[
+    \begin{cases}
+    \rho(z) = \rho_0 \exp\left(-\frac{z}{\delta}\right) \quad \delta \ll L \text{若} z \in [0; L] \\                  
+    \rho(z) = 0 \quad \text{在外部}                     
+    \end{cases}
+\]</div>
+<blockquote>
+<p>这表示电荷分布是一个指数衰减的函数, 衰减长度为 <span class="arithmatex">\( \delta \)</span>, 且仅在 <span class="arithmatex">\( z \in [0; L] \)</span> 区域内存在电荷 </p>
+</blockquote>
+<div class="arithmatex">\[
+    Q = \int_{z=0}^{L} \rho(z) a b dz = \int_{0}^{L} \rho_0 e^{\frac{-z}{\delta}} a b dz = \rho_0 a b [-e^{\frac{-z}{\delta}}\delta]_0^L = \rho_0 a b \delta (1 - e^{\frac{-L}{\delta}})
+\]</div>
+<div class="arithmatex">\[
+    \sim \rho_0 a b \delta (1 - (1 - \frac{-L}{\delta})) = \rho_0 a b \delta \frac{-L}{\delta}
+\]</div>
+<div class="arithmatex">\[
+    = \rho_0 a b L = a b \sigma, \text{其中: } \sigma = \rho_0 L
+\]</div>
+<p>该模型相当于在尺寸为 <span class="arithmatex">\( a \)</span> 和 <span class="arithmatex">\( b \)</span> 的面上进行表面电荷分布, 表面电荷密度为 <span class="arithmatex">\( \sigma = \rho_0 \delta \)</span> <br />
+这些分布更容易处理, 但会导致人为的不连续性出现 </p>
+<p><strong>曲线: 线性分布</strong>  </p>
+<p>当电荷相对于距离 <span class="arithmatex">\( PM \)</span> 与曲线 <span class="arithmatex">\( \Gamma \)</span> 的距离较近时, 使用此线性分布模型更为合适 <br />
+记 <span class="arithmatex">\( \lambda \)</span> 为电荷的线性密度, 则电场为:   </p>
+<div class="arithmatex">\[
+    \vec{E}(M) = \int_{P \in \Gamma} \frac{\lambda dl}{4\pi \epsilon_0 P M^2} \vec{u}
+\]</div>
+<p><img alt="1" src="../c2img/7.png" title="7" /></p>
+<h2 id="2potentiel-electrostatique">2.Potentiel électrostatique (电势)<a class="headerlink" href="#2potentiel-electrostatique" title="Permanent link">&para;</a></h2>
+<h3 id="21-circulation-du-champ-electrostatique">2.1 Circulation du champ électrostatique (静电场的环量)<a class="headerlink" href="#21-circulation-du-champ-electrostatique" title="Permanent link">&para;</a></h3>
+<p>矢量场 <span class="arithmatex">\(\vec{E}\)</span> 沿路径 <span class="arithmatex">\(\Gamma_{AB}\)</span> 的环量为:   </p>
+<div class="arithmatex">\[
+    C_{A \to B} = \int_{M \in \Gamma_{𝐴𝐵}} \vec{E} (M) \cdot d\vec{l} (M)
+\]</div>
+<p>如果路径是封闭的, 则称之为回路, 并使用带圆圈的积分符号表示: <span class="arithmatex">\(\oint\)</span></p>
+<h3 id="22-cas-dune-charge-ponctuelle">2.2 Cas d’une charge ponctuelle<a class="headerlink" href="#22-cas-dune-charge-ponctuelle" title="Permanent link">&para;</a></h3>
+<p>考虑在点 <span class="arithmatex">\(O\)</span> 处有一个点电荷 <span class="arithmatex">\(q\)</span>, 其电场为:   </p>
+<div class="arithmatex">\[
+    \vec{E}(𝑀) = \frac{q}{4\pi\epsilon_0} \frac{\vec{OM}}{OM^3}
+\]</div>
+<p>电场 <span class="arithmatex">\(\vec{E}\)</span> 沿路径 <span class="arithmatex">\(AB\)</span> 的环量为:   </p>
+<div class="arithmatex">\[
+    C = \int_{A}^{B} \frac{q}{4\pi\epsilon_0} \frac{\vec{OM}}{OM^3} \cdot d\vec{OM} = \int_{A}^{B} -d \left[ \frac{q}{4\pi\epsilon_0 OM} \right] 
+\]</div>
+<p>由 <span class="arithmatex">\(V(M) = \frac{q}{4 \pi \epsilon_0 OM}\)</span></p>
+<div class="arithmatex">\[
+    C = - \int_{V(A)}^{V(B)} dV = - (V(B) - V(A)) = V(A) - V(B)
+\]</div>
+<p>有        </p>
+<div class="arithmatex">\[
+    \vec{E}d\vec{OM} = -dV \quad \text{或} \vec{E} = -\vec{grad}V
+\]</div>
+<p>环量 <span class="arithmatex">\(C\)</span> 仅取决于点 <span class="arithmatex">\(A\)</span> 和 <span class="arithmatex">\(B\)</span> 处的电势值, 而与 <span class="arithmatex">\(A\)</span> 到 <span class="arithmatex">\(B\)</span> 之间的路径无关, 因此, 我们称电场 <span class="arithmatex">\(\vec{E}\)</span> 是 <strong>保守场</strong> , <span class="arithmatex">\(V\)</span> 被称为 <strong>静电势(电势)</strong>   </p>
+<p>对于由静止点电荷产生的电场 <span class="arithmatex">\(\vec{E}\)</span> 与其对应的静电势 <span class="arithmatex">\(V\)</span>, 有以下等价关系:   </p>
+<div class="arithmatex">\[
+    \vec{E}(M) \cdot d\vec{OM} = -dV(M)
+\]</div>
+<p>或</p>
+<div class="arithmatex">\[
+    \vec{F_e} = \vec{F_E} = \vec{grad}(-qV) \Rightarrow \vec{rot}(\vec{F_e}) = \vec{rot}(\vec{grad}(-qV)) = \vec{0}
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>梯度是一个线性算子, 因此根据叠加原理, 一个电荷分布的电势等于各个单独电荷产生的电势之和              </li>
+<li>特别地, 公式 <span class="arithmatex">\(\vec{E} = - \vec{grad}(V)\)</span> 对于离散或连续的电荷分布仍然成立                </li>
+<li>电势 <span class="arithmatex">\(V\)</span> 是一个相对概念, 需要人为选取零势能点, 即我们只能测量电势的变化, 而不是其绝对值              </li>
+<li>对于有限范围的电荷分布 (即空间中有限区域内的电荷) , 通常取 <span class="arithmatex">\(V\)</span> 在无穷远处为零</li>
+<li>对于无限分布的电荷, 这一选择不全是成立的                   </li>
+</ul>
+</div>
+<table>
+<thead>
+<tr>
+<th>电荷分布类型</th>
+<th>电场 <span class="arithmatex">\(\vec{E}\)</span> 的连续性</th>
+<th>电势 V 的连续性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>体分布 (体电荷)</td>
+<td><span class="arithmatex">\(\vec{E}\)</span> 在所有地方都是连续的</td>
+<td>V 在所有地方都是连续的</td>
+</tr>
+<tr>
+<td>面分布 (表面电荷)</td>
+<td><span class="arithmatex">\(\vec{E}\)</span> 在电荷分布处不连续</td>
+<td>V 在所有地方都是连续的</td>
+</tr>
+<tr>
+<td>线分布 (线电荷)</td>
+<td><span class="arithmatex">\(\vec{E}\)</span> 在电荷分布处都不连续</td>
+<td>V 在电荷分布处不连续</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-energie-potentielle">2.3 Énergie potentielle (势能)<a class="headerlink" href="#23-energie-potentielle" title="Permanent link">&para;</a></h3>
+<p>在静电场, 电场强度为 <span class="arithmatex">\(\vec{E} = -\vec{grad} (V)\)</span> 的场内, 一个位于点 <span class="arithmatex">\( M \)</span> 处的电荷 <span class="arithmatex">\( q \)</span> 受到的库仑力为: <span class="arithmatex">\(\vec{F_e} = q \vec{E}(M) = -\vec{grad} (qV)\)</span></p>
+<p>在静态情况下, 库仑力是保守力, 并且可以由势能导出, 其势能表达式为: <span class="arithmatex">\(E_p (M) = qV(M)\)</span></p>
+<h3 id="24-equipotentielles-et-lignes-de-champ">2.4 Equipotentielles et lignes de champ (等势线和场线)<a class="headerlink" href="#24-equipotentielles-et-lignes-de-champ" title="Permanent link">&para;</a></h3>
+<p>一条静电场的场线是一条曲线, 使得在该曲线上的每一点 <span class="arithmatex">\( P \)</span>, 电场强度 <span class="arithmatex">\( \vec{E}(P) \)</span> 都与曲线相切, 并且其方向与电场方向相同   </p>
+<p>等势线是一条曲线, 使得曲线上的每一点 <span class="arithmatex">\( P \)</span> 具有相同的电势, 即 <span class="arithmatex">\( V(P) = \text{cste} \)</span>      </p>
+<p>等势线始终与电场线正交相垂直    </p>
+<p>静电场的场线永不相交, 除去一些特定的点, 例如电场强度 <span class="arithmatex">\( \vec{E} \)</span> 在该点没有定义 (如点电荷所在处) 或该点电场为零 (如两个相反电荷 <span class="arithmatex">\( q \)</span> 和 <span class="arithmatex">\( -q \)</span> 之间的中点)    </p>
+<p>在无电荷区域内, 沿着电场线方向, 若相邻的电场线变得更密集, 则电场强度更强; 相反, 若相邻的电场线变得稀疏, 则电场强度较弱   </p>
+<p>例如, 对于两个正点电荷的分布, 可以绘制其带方向的电场线和等势线   </p>
+<p><img alt="1" src="../c2img/8.png" title="8" /></p>
+<p>可以观察到, 电场线从两个点电荷向外辐射, 并且在两电荷的中点处相交且该点的电场为零  <br />
+沿着电场线靠近电荷时, 周围的电场线会逐渐变密集, 因此电场强度会越来越强 </p>
+<h2 id="3theoreme-de-gauss">3.Théorème de Gauss (高斯定理)<a class="headerlink" href="#3theoreme-de-gauss" title="Permanent link">&para;</a></h2>
+<h3 id="31-symetries">3.1 Symétries (对称性)<a class="headerlink" href="#31-symetries" title="Permanent link">&para;</a></h3>
+<p>电荷分布 <span class="arithmatex">\( D \)</span> 关于平面 <span class="arithmatex">\( \Pi \)</span> 对称, 当且仅当:   </p>
+<ul>
+<li>对于所有点 <span class="arithmatex">\( M \in D \)</span>, 其关于 <span class="arithmatex">\( \Pi \)</span> 的对称点 <span class="arithmatex">\( M' \)</span> (记作 <span class="arithmatex">\( M' = \text{sym}(M) \)</span>) 也属于该分布   </li>
+<li>电荷密度满足 <span class="arithmatex">\( \rho(M') = \rho(M) \)</span>   </li>
+</ul>
+<p>一个对称平面将电荷分布分割成两个相互镜像且电荷符号相同的区域   </p>
+<p>电荷分布 <span class="arithmatex">\( D \)</span> 关于平面 <span class="arithmatex">\( \Pi \)</span> 反对称, 当且仅当:   </p>
+<ul>
+<li>对于所有点 <span class="arithmatex">\( M \in D \)</span>, 其关于 <span class="arithmatex">\( \Pi \)</span> 的对称点 <span class="arithmatex">\( M' \)</span> (记作 <span class="arithmatex">\( M' = \text{sym}(M) \)</span>) 也属于该分布   </li>
+<li>电荷密度满足 <span class="arithmatex">\( \rho(M') = -\rho(M) \)</span>   </li>
+</ul>
+<p>一个反对称平面将电荷分布分割成两个相互镜像但电荷符号相反的区域   </p>
+<p><strong>Principe de Curie (居里原理):</strong>  原因的对称性也会出现在结果中, 在以下的应用中可以理解为: 电荷是电场强度产生的原因, 电场强度是电荷的结果, 所以有, 若电荷对称则电场强度对称                      </p>
+<p>根据居里原理, 若 <span class="arithmatex">\( M' = \text{sym}(M) \)</span>: <br />
+- 如果 <span class="arithmatex">\( \Pi \)</span> 是电荷分布的对称平面, 则 <span class="arithmatex">\(\vec{E}(M') = \text{sym}(\vec{E}(M))\)</span> 且若 <span class="arithmatex">\( M \in \Pi \)</span>, 则 <span class="arithmatex">\(\vec{E}(M) \in \Pi\)</span>                          <br />
+- 如果 <span class="arithmatex">\( \Pi \)</span> 是电荷分布的反对称平面, 则 <span class="arithmatex">\(\vec{E}(M') = -\text{sym}(\vec{E}(M))\)</span> 且若 <span class="arithmatex">\( M \in \Pi \)</span>, 则 <span class="arithmatex">\(\vec{E}(M) \text{ 垂直于 } \Pi\)</span>                  </p>
+<p>在实际应用中, 反对称平面可直接确定电场 <span class="arithmatex">\( \vec{E} \)</span> 的方向, 而两个对称平面才能唯一确定电场的方向     <br />
+所选择的对称平面或反对称平面必须通过点 <span class="arithmatex">\( M \)</span>                 </p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="31-symetries-problème" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="31-symetries-problème">Problème</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<p>为在 <span class="arithmatex">\(\Pi^*\)</span> 之外的 <span class="arithmatex">\( M \)</span> 绘制 <span class="arithmatex">\(\vec{E}(M)\)</span> 和 <span class="arithmatex">\(\vec{E}(M')\)</span> 的示意图        </p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="31-symetries-solution" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="31-symetries-solution">Solution</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<p>如图所示: </p>
+<p><img alt="1" src="../c2img/9.png" title="9" /></p>
+</div>
+<h3 id="32-invariances">3.2 Invariances (不变性)<a class="headerlink" href="#32-invariances" title="Permanent link">&para;</a></h3>
+<p>平移不变性: 电荷分布 <span class="arithmatex">\( D \)</span> 对平移向量 <span class="arithmatex">\( \vec{a} \)</span> 不变, 当且仅当: </p>
+<ul>
+<li>对于任意 <span class="arithmatex">\( M \in D \)</span>, <span class="arithmatex">\( M \)</span> 通过平移向量 <span class="arithmatex">\( \vec{a} \)</span> 得到的图像 <span class="arithmatex">\( M' \)</span> 也属于 <span class="arithmatex">\( D \)</span></li>
+<li><span class="arithmatex">\( \rho(M') = \rho(M) \)</span></li>
+</ul>
+<p>旋转不变性: 电荷分布 <span class="arithmatex">\( D \)</span> 对轴 <span class="arithmatex">\( \Delta \)</span> 和角度 <span class="arithmatex">\( \theta \)</span> 的旋转不变, 当且仅当: </p>
+<ul>
+<li>对于任意 <span class="arithmatex">\( M \in D \)</span>, <span class="arithmatex">\( M \)</span> 通过该旋转得到的图像 <span class="arithmatex">\( M' \)</span> 也属于 <span class="arithmatex">\( D \)</span></li>
+<li><span class="arithmatex">\( \rho(M') = \rho(M) \)</span></li>
+</ul>
+<p>根据居里原理, 如果电荷分布沿 <span class="arithmatex">\( \vec{e_z} \)</span> 方向平移不变, 则这意味着空间中任意点的 <span class="arithmatex">\( \vec{E} \)</span> 不依赖于 <span class="arithmatex">\( z \)</span>轴, 电势 <span class="arithmatex">\( V \)</span> 也不依赖于 <span class="arithmatex">\( z \)</span>轴             <br />
+在旋转不变性的情况下, 空间中任意点的 <span class="arithmatex">\( \vec{E} \)</span> 和 <span class="arithmatex">\( V \)</span> 不依赖于角 <span class="arithmatex">\( \theta \)</span> </p>
+<h3 id="33-theoreme-de-gauss">3.3 Théorème de Gauss<a class="headerlink" href="#33-theoreme-de-gauss" title="Permanent link">&para;</a></h3>
+<p>静电场通过某一表面的通量定义为:   </p>
+<div class="arithmatex">\[
+    \Phi = \iint \vec{E}(M) \cdot d\vec{S}(M)
+\]</div>
+<p>我们可以以两种不同的方式来确定表面的方向 <br />
+当该表面是封闭的时, 我们一般将其指向外部的方向确定为正方向 (这样计算出的通量即为外流通量) , 并记作:   </p>
+<div class="arithmatex">\[
+    \Phi = \unicode{x222F} \vec{E}(M) \cdot d\vec{S}(M)
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Théorème de Gauss</p>
+<p>静电场 <span class="arithmatex">\(\vec{E}\)</span> 通过封闭表面 <span class="arithmatex">\(S\)</span> (称为高斯面) 的通量满足以下关系:   </p>
+<div class="arithmatex">\[
+    \Phi = \unicode{x222F} \vec{E}(M) \cdot d\vec{S}(M) = \frac{Q_{\text{int}}}{\varepsilon_0}
+\]</div>
+<p>其中, <span class="arithmatex">\( Q_{\text{int}} \)</span> 表示封闭表面 <span class="arithmatex">\( S \)</span> 内部包含的总电荷量   </p>
+</div>
+<p>该定理可以从麦克斯韦方程推导得到                <br />
+需要注意的是, 高斯定理中的电场 <span class="arithmatex">\(\vec{E}\)</span> 是由所有电荷 (包括可能位于高斯面外部的电荷) 所产生的总电场 </p>
+<h3 id="34-analogie-avec-le-champ-gravitationnel">3.4  Analogie avec le champ gravitationnel<a class="headerlink" href="#34-analogie-avec-le-champ-gravitationnel" title="Permanent link">&para;</a></h3>
+<p>设 <span class="arithmatex">\( \vec{M_1M_2} \)</span> 的位置向量为: <span class="arithmatex">\(\vec{M_1M_2} = r \vec{e}_{1 \to 2}\)</span>           </p>
+<table>
+<thead>
+<tr>
+<th><strong>物理量</strong></th>
+<th><strong>静电场</strong></th>
+<th><strong>引力场</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>基本属性</strong></td>
+<td>电荷 <span class="arithmatex">\( q \)</span></td>
+<td>质量 <span class="arithmatex">\( m \)</span></td>
+</tr>
+<tr>
+<td><strong>相互作用力</strong></td>
+<td>库仑力:  <span class="arithmatex">\(\vec{F}_{1 \to 2} = \frac{1}{4\pi\epsilon_0} \frac{q_1 q_2}{r^2} \vec{e}_{1 \to 2} \)</span></td>
+<td>引力:  <span class="arithmatex">\(\vec{F}_{1 \to 2} = -G \frac{m_1 m_2}{r^2} \vec{e}_{1 \to 2} \)</span></td>
+</tr>
+<tr>
+<td><strong>作用性质</strong></td>
+<td>吸引 (<span class="arithmatex">\( q_1 q_2 &lt; 0 \)</span>) , 排斥 (<span class="arithmatex">\( q_1 q_2 &gt; 0 \)</span>)</td>
+<td>仅吸引</td>
+</tr>
+<tr>
+<td><strong>常数</strong></td>
+<td><span class="arithmatex">\(\frac{1}{4\pi\epsilon_0}\)</span>, 其中 <span class="arithmatex">\(\epsilon_0 = 8.85 \times 10^{-12} \, \text{F} \cdot \text{m}^{-1} \)</span> (真空介电常数)</td>
+<td>万有引力常数 <span class="arithmatex">\( G = 6.67 \times 10^{-11} \, \text{N} \cdot \text{m}^2 \cdot \text{kg}^{-2} \)</span></td>
+</tr>
+<tr>
+<td><strong>场的概念</strong></td>
+<td><strong>电场强度</strong> <span class="arithmatex">\(\vec{E}\)</span></td>
+<td><strong>引力场强度</strong> <span class="arithmatex">\( \vec{A} \)</span></td>
+</tr>
+<tr>
+<td><strong>电位/引力势</strong></td>
+<td>电势 <span class="arithmatex">\( V \)</span> 使得 <span class="arithmatex">\(\vec{E} = - \vec{grad}(V)\)</span></td>
+<td>引力势 <span class="arithmatex">\( V_g \)</span> 使得 <span class="arithmatex">\(\vec{A} = - \vec{grad}(V_g)\)</span></td>
+</tr>
+<tr>
+<td><strong>势能</strong></td>
+<td>电势能 <span class="arithmatex">\( E_p = qV \)</span></td>
+<td>引力势能 <span class="arithmatex">\( E_{pg} = mV_g \)</span></td>
+</tr>
+<tr>
+<td><strong>高斯定理</strong></td>
+<td><span class="arithmatex">\(\Phi_{\vec{E}} = \unicode{x222F}_{M \in S} \vec{E} (M) \cdot d\vec{S}(M) = \frac{q_{\text{int}}}{\epsilon_0}\)</span></td>
+<td><span class="arithmatex">\(\Phi_{\vec{A}} = \unicode{x222F}_{M \in S} \vec{A} (M) \cdot d\vec{S}(M) = -4\pi G M_{\text{int}}\)</span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="4problemes-a-fort-degre-de-symetrie">4.Problèmes à fort degré de symétrie<a class="headerlink" href="#4problemes-a-fort-degre-de-symetrie" title="Permanent link">&para;</a></h2>
+<h3 id="41-plan-infini">4.1 Plan infini<a class="headerlink" href="#41-plan-infini" title="Permanent link">&para;</a></h3>
+<p>在此我们研究平行板电容器的例子                   </p>
+<p><img alt="1" src="../c2img/10.png" title="10" /></p>
+<p>我们考虑两块金属板 (称为极板) , 其表面带有相反的面电荷密度 <span class="arithmatex">\(\sigma\)</span> 和 <span class="arithmatex">\(−\sigma\)</span> (其中 <span class="arithmatex">\(\sigma &gt; 0\)</span>) , 它们相对放置, 并且之间为空气或真空                <br />
+为了研究这种电荷分布产生的电场, 我们可以分别考虑每块极板单独产生的电场, 然后利用叠加原理将它们相加, 从而得到总电场             <br />
+我们先研究一块单独的极板, 其表面电荷密度为 <span class="arithmatex">\(\sigma\)</span>                <br />
+取极板所在空间中的某一点 <span class="arithmatex">\(M(x, y, z)\)</span> 处产生的静电场 <span class="arithmatex">\(\vec{E_2}\)</span>, 并假设该点距离极板边缘足够远, 使得可以将极板视为在 <span class="arithmatex">\(y\)</span> 和 <span class="arithmatex">\(z\)</span> 方向上无限延展的理想平面 </p>
+<p><img alt="1" src="../c2img/11.png" title="11" /></p>
+<p>对称性: <span class="arithmatex">\((M,\vec{u_x},\vec{u_z})\)</span> 和 <span class="arithmatex">\((M,\vec{u_x},\vec{u_y})\)</span> 对于电荷分布是对称平面, 故: <span class="arithmatex">\(\vec{E}(M) = E_x(x,y,z) \vec{u_x}\)</span>                     </p>
+<p>不变性: 对于轴 <span class="arithmatex">\(\vec{e_y}\)</span> 和 <span class="arithmatex">\(\vec{e_z}\)</span> , 有平移不变性, 故: <span class="arithmatex">\(\vec{E}(M) = E_x(x) \vec{u_x}\)</span>
+故: <span class="arithmatex">\(\vec{E_2}(M) = E_2(x) \vec{e_x}\)</span></p>
+<p>我们考虑 <span class="arithmatex">\(x &gt; \frac{e}{2}\)</span> 的情况, 此时点 <span class="arithmatex">\(M(x,y,z)\)</span> 位于电荷分布的右侧                <br />
+为了研究该点的电场, 我们选择一个关于极板对称的高斯面, 该高斯面是一个立方体, 其侧面位于 <span class="arithmatex">\(e − x\)</span> 和 <span class="arithmatex">\(x\)</span> 处, 使得 <span class="arithmatex">\(M\)</span> 属于位于 <span class="arithmatex">\(x\)</span> 处的那一面               <br />
+设 <span class="arithmatex">\(S\)</span> 为该立方体一面的面积 由于该表面是一个封闭面, 我们可以应用高斯定理: </p>
+<div class="arithmatex">\[
+    \Phi_2 = \unicode{x222F}_C \vec{E_2} (M) \cdot \vec{dS} (M)
+\]</div>
+<p>由于 <span class="arithmatex">\(\vec{E_2}\)</span> 沿 <span class="arithmatex">\(\vec{e_x}\)</span> 方向, 电场仅在 <span class="arithmatex">\(e − x\)</span> 和 <span class="arithmatex">\(x\)</span> 两个面上正交于 <span class="arithmatex">\(\vec{dS}\)</span> , 其余面上无通量贡献   <br />
+此外, 由于带电分布的平面是一个对称平面, 我们有: <span class="arithmatex">\(\vec{E_2} (x) = sym(\vec{E_2}(e-x)) = -\vec{E_2} (- x)\)</span></p>
+<p>因此, 高斯定理可写为: </p>
+<div class="arithmatex">\[
+    \unicode{x222F}_{\text{在x上的面}} \vec{E_2} (x) \cdot dS \vec{e_x} + \unicode{x222F}_{\text{在e-x上的面}} -\vec{E_2} (x) \cdot dS (-\vec{e_x})
+\]</div>
+<p><img alt="1" src="../c2img/12.png" title="12" /></p>
+<blockquote>
+<p>前后为5和6</p>
+</blockquote>
+<p>由于 <span class="arithmatex">\(\vec{E_2}\)</span> 在这两个面上是均匀的 (因为它仅取决于 <span class="arithmatex">\(x\)</span> , 而在同一面上 <span class="arithmatex">\(x\)</span> 是常数) , 我们可以得到: </p>
+<div class="arithmatex">\[
+    \Phi = \unicode{x222F}_S \vec{E}(M) \vec{dS} = \frac{Q_{int}}{\epsilon_0}
+\]</div>
+<div class="arithmatex">\[
+    \Phi = \Phi_1 + \Phi_2 + \Phi_3 + \Phi_4 + \Phi_5 + \Phi_6 = E(x)S + E(e-x)S =2E(x)S
+\]</div>
+<div class="arithmatex">\[
+    Q_{int} = \sigma S
+\]</div>
+<div class="arithmatex">\[
+    \vec{E_2} (x) = - \frac{\sigma}{2\epsilon_0}
+\]</div>
+<p>由于分布关于平面 <span class="arithmatex">\( \vec{e_y, e_z} \)</span> 对称, 因此对于任意 <span class="arithmatex">\( x \)</span>, 有: <span class="arithmatex">\(\vec{E_2}(x) = -\vec{E_2}(e - x)\)</span>
+可以得出, 在 <span class="arithmatex">\( x &lt; \frac{e}{2} \)</span> (即点 <span class="arithmatex">\( M \)</span> 位于分布的左侧) 时:   </p>
+<div class="arithmatex">\[
+E_2(x) = -\frac{\sigma}{2\epsilon_0}
+\]</div>
+<p>对于表面电荷密度为 <span class="arithmatex">\(-\sigma\)</span> 的极板 <span class="arithmatex">\(P_1\)</span> , 其电场形式相同, 仅需用 <span class="arithmatex">\(\sigma\)</span> 替换为 <span class="arithmatex">\(-\sigma\)</span>, 即: 
+在 <span class="arithmatex">\(P_1\)</span> 左侧: <span class="arithmatex">\(E_1 (𝑥) = \frac{\sigma}{2\epsilon_0}\)</span>
+在 <span class="arithmatex">\(P_1\)</span> 右侧: <span class="arithmatex">\(E_1 (𝑥) = -\frac{\sigma}{2\epsilon_0}\)</span></p>
+<p>根据叠加原理, 总电场为: 
+在两块极板之间 <span class="arithmatex">\( x \in [-\frac{e}{2}, \frac{e}{2}]\)</span> : <span class="arithmatex">\(\vec{E}(M) = - \frac{\sigma}{\epsilon_0} \vec{e_x}\)</span>
+在极板外部区域 <span class="arithmatex">\(x &lt; - \frac{e}{2} 或 x &gt; \frac{e}{2} \)</span> : <span class="arithmatex">\(\vec(E)(M) = 0\)</span></p>
+<p><img alt="1" src="../c2img/13.png" title="13" /></p>
+<p>在这两个区域内, 电场为均匀场 </p>
+<div class="admonition note">
+<p class="admonition-title">Conclusion</p>
+<p>一个带均匀面电荷密度 <span class="arithmatex">\(\sigma\)</span> 的平行板电容器产生的电场是均匀的, 其大小为: <span class="arithmatex">\(\vec{E}(M) = -\frac{\sigma}{\epsilon_0} \vec{e_x}\)</span> , 其中, <span class="arithmatex">\(\vec{e_x}\)</span> 是从带电荷 <span class="arithmatex">\(-\sigma\)</span> 的极板指向 <span class="arithmatex">\(\sigma\)</span> 极板的单位矢量, 而在极板外部区域, 电场为零</p>
+</div>
+<hr />
+<p>平行板电容器的电容 <span class="arithmatex">\(C\)</span> 由以下关系定义: </p>
+<div class="arithmatex">\[
+    Q = C U
+\]</div>
+<p>其中: 
+- <span class="arithmatex">\(Q\)</span> 是单个极板上的电荷量 (取绝对值)<br />
+- <span class="arithmatex">\(U = V_+ -V_-\)</span> 是两极板间的电势差 (其中 <span class="arithmatex">\(V_+\)</span> 对应于带 <span class="arithmatex">\(\sigma\)</span> 的极板, <span class="arithmatex">\(V_-\)</span> 对应于带 <span class="arithmatex">\(-\sigma\)</span> 的极板)  </p>
+<p>根据电势定义, 我们有: </p>
+<div class="arithmatex">\[
+    \vec{E} = -\vec{grad}(V)
+\]</div>
+<p>因为 <span class="arithmatex">\(\vec{E}\)</span> 只与 <span class="arithmatex">\(\vec{e_x}\)</span> 有关, 所以 V(x,y,z) = V(x)</p>
+<div class="arithmatex">\[
+    \vec{E} = - \frac{dV}{dx} \vec{e_x} \Rightarrow V = \frac{\sigma}{\epsilon_0} x + A
+\]</div>
+<div class="arithmatex">\[
+    V(x) = \frac{\sigma}{\epsilon_0} x + V(0)
+\]</div>
+<div class="arithmatex">\[
+    U = V_+ - V_- = V(x = \frac{e}{2}) - V(x = -\frac{e}{2}) = \frac{\sigma e}{\epsilon_0}
+\]</div>
+<div class="arithmatex">\[
+    C = \frac{Q}{U} = \frac{\sigma S \epsilon_0}{\sigma e} = \frac{S \epsilon_0}{e}
+\]</div>
+<p>同样的, 我们也可以直接写成:             </p>
+<div class="arithmatex">\[
+    U = \int_{V_-}^{V_+} dV = - \int_{A_1}^{A_2} \vec{E}(M) \cdot \vec{dOM} = \int_{-e/2}^{e/2} \frac{\sigma}{\epsilon_0} dx
+\]</div>
+<p>故: </p>
+<div class="arithmatex">\[
+    U = \frac{\sigma e}{\epsilon_0}
+\]</div>
+<p>由于 <span class="arithmatex">\(Q = \sigma S\)</span> , 所以电容为: </p>
+<div class="arithmatex">\[
+    C = \frac{Q}{U} = \frac{\epsilon_0 S}{e}
+\]</div>
+<p>我们不难发现, 对于一个无限平行板电容器, 电场的强度不取决于极板之间的距离, 而是与极板间的电压和电容的大小相关</p>
+<h3 id="42-probleme-a-symetrie-cylindrique">4.2 Problème à symétrie cylindrique<a class="headerlink" href="#42-probleme-a-symetrie-cylindrique" title="Permanent link">&para;</a></h3>
+<p>在此我们研究一个半径为 <span class="arithmatex">\(a\)</span>, 长度 <span class="arithmatex">\(L\)</span> 的圆柱体, 其中 <span class="arithmatex">\(L \gg a\)</span> , 且具有均匀体电荷密度 <span class="arithmatex">\(\rho\)</span> <br />
+我们研究距离圆柱轴较近的点 <span class="arithmatex">\(M\)</span> 处的电场, 在此条件下, 可以认为该圆柱体在 <span class="arithmatex">\(\vec{e_z}\)</span> 方向上是无限长的 
+我们使用柱坐标系来描述点 <span class="arithmatex">\(M\)</span> 的位置: <span class="arithmatex">\(M (r, \theta, z)\)</span></p>
+<p><img alt="1" src="../c2img/14.png" title="14" /></p>
+<p>对称性: <span class="arithmatex">\(\Pi = (M,\vec{u_r},\vec{u_z})\)</span> 和 <span class="arithmatex">\(\Pi' = (M,\vec{u_r},\vec{u_\theta})\)</span> 对于电荷分布是对称平面, 故: <span class="arithmatex">\(\vec{E}(M) = E(M) \vec{u_r}\)</span></p>
+<blockquote>
+<p><span class="arithmatex">\(\vec{M} \in \Pi \Rightarrow E_\theta = 0\)</span>, <span class="arithmatex">\(\vec{M} \in \Pi' \Rightarrow E_z = 0\)</span>                     </p>
+</blockquote>
+<p>不变性: 对于轴 <span class="arithmatex">\(\vec{u_z}\)</span> 和角 <span class="arithmatex">\(\theta\)</span> 绕轴 <span class="arithmatex">\(\vec{u_z}\)</span> , 有平移和旋转不变性, 故: <span class="arithmatex">\(\vec{E}(M) = E(r) \vec{u_r}\)</span> 且 <span class="arithmatex">\(V(M) = V(r)\)</span>
+故: <span class="arithmatex">\(\vec{E}(M) = E(r) \vec{u_r}\)</span></p>
+<p>应用高斯定理于通过点 <span class="arithmatex">\( M \)</span> 的封闭圆柱, 如下图所示   </p>
+<p><img alt="1" src="../c2img/15.png" title="15" /></p>
+<p>我们选择该高斯面是有意义的, 因为在圆柱的侧面上, 电场 <span class="arithmatex">\( \vec{E} \)</span> 是均匀的（<span class="arithmatex">\( r = \text{常数} \)</span>）, 并且在两个底面上垂直于高斯面, 电场通量在这两个表面上为零 <br />
+故, 电通量为:   </p>
+<div class="arithmatex">\[
+    \Phi = 2\pi r h E(r)
+\]</div>
+<p>根据点 <span class="arithmatex">\( M \)</span> 所处的位置, 内部电荷 <span class="arithmatex">\( q_{\text{int}} \)</span> 的表达式将有所不同, 因此需要分情况讨论</p>
+<div class="arithmatex">\[
+    \Phi_1 = \iint_{P \in  ①} \vec{E}(P) \cdot \vec{dS}(P) = \iint \vec{E}(P) \vec{u_r} \cdot dS \vec{u_z} = 0
+\]</div>
+<div class="arithmatex">\[
+    \Phi_2 = \iint_{P \in  ②} \vec{E}(P) \cdot \vec{dS}(P) = \iint \vec{E}(P) \vec{u_r} \cdot dS (\vec{-u_z}) = 0
+\]</div>
+<div class="arithmatex">\[
+    \Phi_3 = \iint_{P \in  ③} \vec{E}(P) \cdot \vec{dS}(P) = \iint_{P \in ③} \vec{E}(P) \vec{u_r} \cdot dS(P) \vec{u_r} = \iint_{P \in ③} E(r) dS(P) = E(r) \iint_{P \in ③} dS(P) = E(r) 2 \pi r h
+\]</div>
+<div class="arithmatex">\[
+    \Phi_1 + \Phi_2 + \Phi_3 = E(r) \cdot 2 \pi r h = \frac{Q_{int}}{\epsilon_0} 
+\]</div>
+<ul>
+<li><span class="arithmatex">\(r &gt; a\)</span> (<span class="arithmatex">\(M\)</span> 在圆柱外部) :             </li>
+</ul>
+<div class="arithmatex">\[
+    Q_{int} = \rho \cdot \pi a^2 h
+\]</div>
+<div class="arithmatex">\[
+    E(r) = \frac{\rho a^2}{2 \epsilon_0 r}
+\]</div>
+<div class="arithmatex">\[
+    \vec{E} = - \vec{grad}(V) = - \frac{dV}{dr} \Rightarrow V(r) = - \frac{\rho a^2}{2 \epsilon_0} lnr + K_1
+\]</div>
+<ul>
+<li><span class="arithmatex">\(r &lt; a\)</span> (<span class="arithmatex">\(M\)</span> 在圆柱内部) :             </li>
+</ul>
+<div class="arithmatex">\[
+    Q_{int} = \rho \cdot \pi r^2 h
+\]</div>
+<div class="arithmatex">\[
+    E(r) = \frac{\rho r}{2 \epsilon_0}
+\]</div>
+<div class="arithmatex">\[
+    \vec{E} = - \vec{grad}(V) = - \frac{dV}{dr} \Rightarrow V(r) = - \frac{\rho r^2}{4 \epsilon_0} + K
+\]</div>
+<p>我们取 <span class="arithmatex">\(r = 0\)</span> 处的电势 <span class="arithmatex">\(V(r = 0) = 0\)</span>, 根据电势的连续性: </p>
+<div class="arithmatex">\[
+    - \frac{\rho a^2}{4 \epsilon_0} + K = - \frac{\rho a^2}{2 \epsilon_0} lna + K_1 \Rightarrow K_1 = - \frac{\rho a^2}{4 \epsilon_0} + \frac{\rho a^2}{2 \epsilon_0} lna
+\]</div>
+<p>代入电势的表达式:     </p>
+<div class="arithmatex">\[
+    \begin{cases}
+    V(r) = - \frac{\rho r^2}{4 \epsilon_0}, \quad r &lt; a \\
+    V(r) = \frac{\rho a^2}{2 \epsilon_0}(ln(\frac{a}{r} - \frac{1}{2})), \quad r &gt; a 
+    \end{cases}
+\]</div>
+<p>我们可以绘制电场和电势的变化趋势:  </p>
+<p><img alt="1" src="../c2img/16.png" title="16" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>由于这是体电荷分布, 电场和静电势都是连续的, 电场在 <span class="arithmatex">\( r = a \)</span> 处最强, 其最大值为: <span class="arithmatex">\(E_{\max} = \frac{\rho a}{2 \epsilon_0}\)</span></li>
+<li>由于静电相互作用随 <span class="arithmatex">\( \frac{1}{r^2} \)</span> 递减, 因此在无穷远处 <span class="arithmatex">\( E \)</span> 为零  </li>
+<li>电势的数值大小取决于积分常数的任意选择 (此处取 <span class="arithmatex">\( V(0) = 0 \)</span>) , 需要注意的是, 不同的选择仅会使电势曲线整体在垂直方向上平移, 这是由于电势是相对的概念                        </li>
+</ul>
+</div>
+<h3 id="43-probleme-a-symetrie-spherique">4.3 Problème à symétrie sphérique<a class="headerlink" href="#43-probleme-a-symetrie-spherique" title="Permanent link">&para;</a></h3>
+<p>在此我们研究一个半径为 <span class="arithmatex">\( R \)</span> 的球体, 球内均匀分布着总电荷 <span class="arithmatex">\( Q \)</span> <br />
+我们使用球坐标系来表示点 <span class="arithmatex">\( M \)</span> : <span class="arithmatex">\( M(r, \theta, \phi) \)</span> </p>
+<p><img alt="1" src="../c2img/17.png" title="17" /></p>
+<p>对称性: 任何包含向量 <span class="arithmatex">\( \vec{OM} \)</span> 的平面都是电荷分布的对称平面, 因此 <span class="arithmatex">\( \vec{E}(M) = E(M) \vec{u}_r \)</span>      </p>
+<p>不变性: 对于角 <span class="arithmatex">\(\Phi\)</span> 有沿着 <span class="arithmatex">\( e_z \)</span> 轴的旋转不变性, 对于角 <span class="arithmatex">\(\theta\)</span> 有沿着 <span class="arithmatex">\( u_\Phi \)</span> 轴的旋转不变性, 因此 <span class="arithmatex">\( \vec{E}(M) = E(r) \vec{u}_r \)</span> 且 <span class="arithmatex">\( V(M) = V(r) \)</span>                      </p>
+<p>应用高斯定理于一个以 <span class="arithmatex">\( O \)</span> 为中心, 半径为 <span class="arithmatex">\( r \)</span> 的球面上, 该球面通过点 <span class="arithmatex">\( M \)</span> , 且该表面上电场 <span class="arithmatex">\( \vec{E} \)</span> 是均匀的, 如下图所示  </p>
+<p><img alt="1" src="../c2img/18.png" title="18" /></p>
+<p>我们可以知道:                  </p>
+<div class="arithmatex">\[
+    \Phi = 4\pi r^2 E(r)
+\]</div>
+<p>根据点 <span class="arithmatex">\( M \)</span> 的位置, 内部包含的电荷表达式 <span class="arithmatex">\(Q_{int}\)</span> 不同, 因此我们分以下情况讨论:                   </p>
+<ul>
+<li><span class="arithmatex">\(r &gt; R\)</span> (<span class="arithmatex">\(M\)</span> 在球外部) :             </li>
+</ul>
+<div class="arithmatex">\[
+    Q_{int} = Q
+\]</div>
+<div class="arithmatex">\[
+    E(r) = \frac{Q}{4 \pi r^2 \epsilon_0}
+\]</div>
+<div class="arithmatex">\[
+    \vec{E} = - \vec{grad}(V) = - \frac{dV}{dr} \Rightarrow V(r) = - \frac{Q}{4 \pi r \epsilon_0} + K
+\]</div>
+<ul>
+<li><span class="arithmatex">\(r &lt; R\)</span> (<span class="arithmatex">\(M\)</span> 在球内部) :             </li>
+</ul>
+<div class="arithmatex">\[
+    Q_{int} = \frac{Q}{\frac{4}{3} \pi R^3} \cdot \frac{4}{3} \pi r^3 = Q \frac{r^3}{R^3}            
+\]</div>
+<div class="arithmatex">\[
+    E(r) = \frac{Q r}{R^3 4 \pi \epsilon_0} = \frac{3 \rho r}{\epsilon_0} , \quad 其中 \rho = \frac{Q}{\frac{4}{3} \pi R^3}
+\]</div>
+<div class="arithmatex">\[
+    \vec{E} = - \vec{grad}(V) = - \frac{dV}{dr} \Rightarrow V(r) = - \frac{Q r^2}{8 \pi R^3 \epsilon_0} + K_1
+\]</div>
+<p>我们取 <span class="arithmatex">\(r = \infty\)</span> 处的电势 <span class="arithmatex">\(V(r = \infty) = 0\)</span> , 有 <span class="arithmatex">\(K = 0\)</span> , 根据电势的连续性: </p>
+<div class="arithmatex">\[
+    - \frac{Q}{4 \pi r \epsilon_0} + K = - \frac{Q r^2}{8 \pi R^3 \epsilon_0} + K_1 \Rightarrow K_1 = \frac{3Q}{8 \pi R \epsilon_0}
+\]</div>
+<p>代入电势的表达式:     </p>
+<div class="arithmatex">\[
+    \begin{cases}
+    V(r) = \frac{\rho R^2}{6 \epsilon_0} \left( 3 - \frac{r^2}{R^2} \right) , \quad r &lt; R \\
+    V(r) = \frac{\rho R^3}{3 \epsilon_0 r}, \quad r \geq R 
+    \end{cases}
+\]</div>
+<p>值得注意的是, 在球体外部, 电场与由位于 <span class="arithmatex">\( O \)</span> 点的一个点电荷 <span class="arithmatex">\( Q \)</span> (<span class="arithmatex">\(Q\)</span> 为球体电荷分布的总电荷) 所产生的电场相同: </p>
+<div class="arithmatex">\[
+    \vec{E}(r) = \frac{\rho R^3}{3 \epsilon_0 r^2} \vec{u_r} = \frac{Q}{4 \pi \epsilon_0 r^2} \vec{u_r}
+\]</div>
+<p>在研究此类情况时, 我们可以像这样简化表达式                               <br />
+我们可以绘制电场强度和电势的变化趋势                          </p>
+<p><img alt="1" src="../c2img/19.png" title="19" /></p>
+<p><span class="arithmatex">\(E(0) = 0\)</span> 是由于对称性造成的, 放置在球心的电荷所受到来自均匀分布电荷的合力为零                                              </p>
+<h2 id="5dipole-electrostatique">5.Dipôle électrostatique (电偶极子)<a class="headerlink" href="#5dipole-electrostatique" title="Permanent link">&para;</a></h2>
+<p><img alt="1" src="../c2img/20.png" title="20" /></p>
+<p>电偶极子指的是由两个点电荷组成的系统, 这两点电荷大小相等但符号相反 (<span class="arithmatex">\( q \)</span> 和 <span class="arithmatex">\( -q \)</span>) , 其中 <span class="arithmatex">\( q &gt; 0 \)</span>, 两电荷之间的间距为 <span class="arithmatex">\( a \)</span>   </p>
+<p>这一概念在化学中尤为重要, 因为它可以用来模拟分子间的相互作用, 如 <span class="arithmatex">\(NaCl\)</span> 分子就是由 <span class="arithmatex">\(Na^+\)</span> 和 <span class="arithmatex">\(Cl^-\)</span> 两个离子组成  </p>
+<p>在研究过程中, 我们假设 <span class="arithmatex">\(r \gg a\)</span> , <span class="arithmatex">\(r\)</span> 为点 <span class="arithmatex">\(M\)</span> 到两电荷中点的距离          <br />
+此外, 我们仅考虑内部不发生改变的偶极子, 即 <span class="arithmatex">\( a \)</span> 为常数<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>的情况   </p>
+<h3 id="51-moment-dipolaire">5.1 Moment dipolaire (偶极矩)<a class="headerlink" href="#51-moment-dipolaire" title="Permanent link">&para;</a></h3>
+<p>电偶极子的偶极矩 <span class="arithmatex">\( \vec{p} \)</span> 定义为:   </p>
+<div class="arithmatex">\[
+    \vec{p} = q \cdot \vec{NP}
+\]</div>
+<p>其中, <span class="arithmatex">\( \vec{NP} \)</span> 是从负电荷指向正电荷的矢量   </p>
+<ul>
+<li>偶极矩的方向从负电荷指向正电荷   </li>
+<li>其单位为库仑·米 (C·m) , 有<span class="arithmatex">\(p \approx 10^{-29}\text{ C·m}\)</span></li>
+<li>在某些情况下, 我们使用更适合的单位: 德拜 (Debye) , 其换算关系为: <span class="arithmatex">\(1D = 3.336 \times 10^{-30} \text{C·m}\)</span></li>
+</ul>
+<h3 id="52-potentiel-et-champ-electrostatique">5.2 Potentiel et champ électrostatique<a class="headerlink" href="#52-potentiel-et-champ-electrostatique" title="Permanent link">&para;</a></h3>
+<p>使用球坐标系表示点 <span class="arithmatex">\( M(r, \theta, \phi) \)</span>, 其中 <span class="arithmatex">\( \vec{u_z} \)</span> 是偶极子的轴向, <span class="arithmatex">\( O \)</span> 是偶极子 [N P] 的中点</p>
+<p><img alt="1" src="../c2img/21.png" title="21" /></p>
+<p>对称性: <span class="arithmatex">\((M,\vec{u_r},\vec{u_\theta})\)</span> 对于电荷分布是一个对称平面, 故: <span class="arithmatex">\(\vec{E}(M) = E_r \vec{u_r} + E_\theta \vec{u_\theta} + E_\phi \vec{u_\phi} = E_r \vec{u_r} + E_\theta \vec{u_\theta}\)</span>                     </p>
+<p>不变性: 对于轴 <span class="arithmatex">\(\vec{e_z}\)</span> 和角 <span class="arithmatex">\(\phi\)</span> , 有平移和旋转不变性, 故: <span class="arithmatex">\(\vec{E}(M) = E_r(r,\theta,\phi) \vec{u_r} + E_\theta(r,\theta,\phi) \vec{u_\theta} = E_r(r,\theta) \vec{u_r} + E_\theta(r,\theta) \vec{u_\theta}\)</span>
+故: <span class="arithmatex">\(V(M) = V(r,\theta)\)</span></p>
+<div class="arithmatex">\[
+    V(M) = \frac{-q}{4 \pi \epsilon_0 NM} + \frac{q}{4 \pi \epsilon_0 PM} = \frac{q}{4 \pi \epsilon_0}(\frac{1}{PM}-\frac{1}{NM})  
+\]</div>
+<p>由 <span class="arithmatex">\(r \gg a\)</span> : </p>
+<div class="arithmatex">\[
+    PM^2 = (\vec{PM})^2 = (\vec{PO} + \vec{OM})^2 = \vec{PO}^2 + \vec{OM}^2 + 2 \vec{PO} \vec{OM} = \frac{a^2}{4} - arcos\theta + r^2
+\]</div>
+<div class="arithmatex">\[
+    \frac{1}{PM} = \frac{1}{\sqrt{\frac{a^2}{4} - arcos\theta + r^2}} = \frac{1}{r \sqrt{1 - \frac{acos\theta}{r} + \frac{a^2}{4r^2}}} = \frac{1}{r} (1 + \frac{acos\theta}{2r})
+\]</div>
+<p>同样的: </p>
+<div class="arithmatex">\[
+    \frac{1}{NM} = \frac{1}{r} (1 - \frac{acos\theta}{2r})
+\]</div>
+<p>代入: </p>
+<div class="arithmatex">\[
+    V(M) = \frac{qacos\theta}{4\pi \epsilon_0 r^2}
+\]</div>
+<p>我们还有: <span class="arithmatex">\(\vec{p} = q \vec{NP}, \vec{p} \cdot \vec{OM} = qarcos\theta\)</span>                 <br />
+故:  </p>
+<div class="arithmatex">\[
+    V(M) = \frac{\vec{p} \cdot \vec{OM}}{4 \pi \epsilon_0 r^3}
+\]</div>
+<p>因此, 我们考虑位于 <span class="arithmatex">\(\phi = \text{cste}\)</span> 平面内的情况                         <br />
+由该偶极子产生的静电势为: </p>
+<div class="arithmatex">\[
+    \vec{E} = - \vec{grad}(V) = - \frac{\partial V}{\partial r} \vec{u_r} - \frac{1}{r} \frac{\partial V}{\partial \theta} \vec{u_\theta}
+\]</div>
+<p>计算 <span class="arithmatex">\(\frac{\partial V}{\partial r} = - \frac{qacos\theta}{2\pi \epsilon_0 r^3}, \frac{\partial V}{\partial \theta} = - \frac{qasin\theta}{4\pi \epsilon_0 r^2}\)</span> , 代入:    </p>
+<div class="arithmatex">\[
+    \vec{E} = \frac{qa}{4\pi \epsilon_0 r^3} (2cos\theta \vec{u_r} + sin\theta \vec{u_\theta})
+\]</div>
+<div class="arithmatex">\[
+    = \frac{1}{4 \pi \epsilon_0 OM^5} (3(\vec{p} \cdot \vec{OM})\vec{OM} - \vec{OM}^2\vec{p})
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>可以看出, 电场和电势仅依赖于偶极矩 <span class="arithmatex">\( \vec{p} \)</span> , 而不依赖于 <span class="arithmatex">\( a \)</span> 和 <span class="arithmatex">\( q \)</span> 的具体取值, 因此 <span class="arithmatex">\( \vec{p} \)</span> 才是表征偶极子的真正物理量   </li>
+<li>电势的衰减率为 <span class="arithmatex">\( 1/r^2 \)</span>, 而电场的衰减率为 <span class="arithmatex">\( 1/r^3 \)</span>, 这与点电荷的情况不同 (点电荷的电势随 <span class="arithmatex">\( 1/r \)</span> 变化, 电场随 <span class="arithmatex">\( 1/r^2 \)</span> 变化) , 这表明, 偶极子的影响范围比单个点电荷更局限, 它的作用在较短距离内更显著   </li>
+<li>也可以通过电场 <span class="arithmatex">\( \vec{E} \)</span> 推导出电势 <span class="arithmatex">\( V \)</span>, 但在这种情况下计算会更复杂, 因为由两个点电荷产生的电场并不共线   </li>
+</ul>
+</div>
+<p>我们可以绘制偶极子的电场线和等势面:      <br />
+中央阴影部分表示偶极近场区域, 在该区域内, 偶极近似不再适用, 因此无法使用先前推导的电场表达式, 也无法确定该区域内的电场线分布                <br />
+在所有位置, 电场线都与等势面正交 电场线从正电荷 (偶极矩 <span class="arithmatex">\( \vec{p} \)</span> 的方向) 发出, 流向负电荷            </p>
+<p><img alt="1" src="../c2img/22.png" title="22" /></p>
+<h3 id="53-actions-subies-par-un-dipole-electrostatique">5.3 Actions subies par un dipôle électrostatique<a class="headerlink" href="#53-actions-subies-par-un-dipole-electrostatique" title="Permanent link">&para;</a></h3>
+<h4 id="531-champ-exterieur-uniforme">5.3.1 Champ extérieur uniforme (外部均匀电场)<a class="headerlink" href="#531-champ-exterieur-uniforme" title="Permanent link">&para;</a></h4>
+<p><img alt="1" src="../c2img/23.png" title="23" /></p>
+<p>偶极子在均匀静电场中所受的合力为零:   </p>
+<div class="arithmatex">\[
+    \vec{M_O} = \vec{OP} \wedge q\vec{E}(P) - \vec{ON} \wedge q\vec{E}(N) = q \vec{NP} \wedge \vec{E} = \vec{p} \wedge \vec{E}
+\]</div>
+<p>它不依赖于所选的参考点 <span class="arithmatex">\( O \)</span>   </p>
+<p>偶极子在均匀静电场中所受的力矩为:   </p>
+<div class="arithmatex">\[
+    \vec{M_O} = \vec{p} \wedge \vec{E}
+\]</div>
+<p>我们寻找偶极子的平衡位置, 即满足力矩 <span class="arithmatex">\( \vec{M_O} = \vec{0} \)</span> 的情况                     <br />
+这对应于偶极矩 <span class="arithmatex">\( \vec{p} \)</span> 与电场 <span class="arithmatex">\( \vec{E} \)</span> 共线的情况 (<span class="arithmatex">\( \theta = 0 \)</span> 或 <span class="arithmatex">\( \theta = \pi \)</span>)  接下来研究这两种平衡位置的稳定性   </p>
+<ul>
+<li>平行情况 (<span class="arithmatex">\( \theta = 0 \)</span>) : <br />
+  当偶极子偏离 <span class="arithmatex">\( \theta = 0 \)</span> 位置一个小角度 <span class="arithmatex">\( \theta \)</span> 时, 它受到的力矩会使其恢复到 <span class="arithmatex">\( \theta = 0 \)</span>, 因此该平衡是稳定的   </li>
+</ul>
+<p><img alt="1" src="../c2img/24.png" title="24" /></p>
+<ul>
+<li>反平行情况 (<span class="arithmatex">\( \theta = \pi \)</span>) : <br />
+  当偶极子偏离 <span class="arithmatex">\( \theta = \pi \)</span> 位置一个小角度 <span class="arithmatex">\( \theta \)</span> 时, 它受到的力矩会使其远离 <span class="arithmatex">\( \theta = \pi \)</span>, 因此该平衡是不稳定的 </li>
+</ul>
+<p><img alt="1" src="../c2img/25.png" title="25" /></p>
+<h4 id="532-champ-exterieur-non-uniforme">5.3.2 Champ extérieur non uniforme (外部非均匀电场)<a class="headerlink" href="#532-champ-exterieur-non-uniforme" title="Permanent link">&para;</a></h4>
+<p>在非均匀外电场 <span class="arithmatex">\(\vec{E}\)</span> 的情况下, 电偶极子 (偶极矩为 <span class="arithmatex">\(\vec{p}\)</span>) 受到以下作用:   </p>
+<div class="arithmatex">\[
+    \vec{F} = \vec{grad} (\vec{p} \cdot \vec{E})
+\]</div>
+<div class="arithmatex">\[
+    \vec{M_O} = \vec{p} \wedge \vec{E} (O)
+\]</div>
+<p>对于力矩 <span class="arithmatex">\(\vec{M_O}\)</span>, 其表达式与均匀电场中的情况相同, 但此时电场 <span class="arithmatex">\(\vec{E}\)</span> 需要在点 O 处求值 (因为电场不再均匀)  电场仍然会使偶极子旋转, 使其方向与电场对齐   </p>
+<p>考虑偶极子与电场共线的情况, 不失一般性地写出: <span class="arithmatex">\(\vec{p} = p_x \vec{u}_x, \quad \vec{E} = E \vec{u}_x\)</span>         <br />
+则作用力为:   </p>
+<div class="arithmatex">\[
+    \vec{F} = \vec{grad} (\vec{p} \cdot \vec{E}) = \vec{grad} (p_x 𝐸) = p_x \frac{\partial 𝐸}{\partial x} \vec{u}_x
+\]</div>
+<p>若 <span class="arithmatex">\(p_x &gt; 0\)</span> (即偶极子与电场方向相同) , 则 <span class="arithmatex">\(\frac{\partial E}{\partial x}\)</span> 的符号决定了力的方向, 即偶极子被吸引向电场强度增加的方向   </p>
+<p>由此可得以下结论:   </p>
+<ul>
+<li>电场会使偶极子沿场线方向排列 (由力矩作用决定) , 这一点与均匀电场相同   </li>
+<li>作用力会将偶极子吸引至电场强度更高的区域   </li>
+</ul>
+<p>由于 <span class="arithmatex">\(\vec{F}\)</span> 的表达形式, 该力是保守力 (库仑力) , 其对应的势能为:   </p>
+<div class="arithmatex">\[
+    \vec{rot}(\vec{F}) = \vec{rot}(\vec{grad}{\vec{P} \cdot \vec{E}}) = \vec{0}
+\]</div>
+<div class="arithmatex">\[
+    有 E_P 使得, \vec{F} = - \vec{grad} E_P, \quad E_P = - \vec{P} \cdot \vec{E}
+\]</div>
+<p>对势能关于角度 <span class="arithmatex">\(\theta\)</span> 的曲线分析表明: <br />
+- <span class="arithmatex">\(\theta = 0\)</span> 时, 为稳定平衡态 <br />
+- <span class="arithmatex">\(\theta = ± \pi\)</span> 时, 为不稳定平衡态 </p>
+<p><img alt="1" src="../c2img/26.png" title="26" /></p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>如果这两个电荷是孤立的, 它们会在库仑力的作用下相互靠近, 因此它们之间的距离 <span class="arithmatex">\( a \)</span> 无法保持恒定, 所以, 必然存在其他作用力使两电荷保持分离, 维持固定距离 <span class="arithmatex">\( a \)</span> 这些作用力在本研究中不作讨论&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.expand", "navigation.indexes", "navigation.path", "navigation.top", "content.footnote.tooltips"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

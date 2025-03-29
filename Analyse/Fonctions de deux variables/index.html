@@ -1,0 +1,1410 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../G%C3%A9om%C3%A9trie/Espace%20Vectoriels/">
+      
+      
+        <link rel="next" href="../../%C3%89lectronique/">
+      
+      
+      <link rel="icon" href="../../assets/mmc.jpg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.6">
+    
+    
+      
+        <title>Chapitre 18 Fonctions de deux variables - Summer & Capoo's Home</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fonctions-de-deux-variables" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="Summer &amp; Capoo&#39;s Home" class="md-header__button md-logo" aria-label="Summer & Capoo's Home" data-md-component="logo">
+      
+  <img src="../../assets/mmc.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Summer & Capoo's Home
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapitre 18 Fonctions de deux variables
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Homepage
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../Mathsindex/" class="md-tabs__link">
+          
+  
+    
+  
+  Mathématiques
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%C3%89lectronique/" class="md-tabs__link">
+          
+  
+    
+  
+  Physique
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Summer &amp; Capoo&#39;s Home" class="md-nav__button md-logo" aria-label="Summer & Capoo's Home" data-md-component="logo">
+      
+  <img src="../../assets/mmc.jpg" alt="logo">
+
+    </a>
+    Summer & Capoo's Home
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Homepage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Mathématiques
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Mathématiques
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mathsindex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mathsindex
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../G%C3%A9om%C3%A9trie/Espace%20Vectoriels/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 15 Espace Vectoriels
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 18 Fonctions de deux variables
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Physique
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Physique
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../%C3%89lectronique/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Électronique
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Électronique
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../%C3%89lectromagn%C3%A9tisme/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Électromagnétisme
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Électromagnétisme
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%C3%89lectromagn%C3%A9tisme/Analyse%20vectorielle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 1 Analyse vectorielle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%C3%89lectromagn%C3%A9tisme/Electrostatique/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 2 Electrostatique
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%C3%89lectromagn%C3%A9tisme/Magn%C3%A9tostatique/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 3 Magnétostatique
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="fonctions-de-deux-variables">Fonctions de deux variables<a class="headerlink" href="#fonctions-de-deux-variables" title="Permanent link">&para;</a></h1>
+<h1 id="1topologie-de-mathbbr2">1.Topologie de <span class="arithmatex">\(\mathbb{R}^2\)</span><a class="headerlink" href="#1topologie-de-mathbbr2" title="Permanent link">&para;</a></h1>
+<p>一般来说, 拓扑是指一组被称为开集的子集集合      <br />
+在此, 拓扑来源于 <strong>赋范向量空间</strong> (espace vectoriel normé) 的结构, 即具有范数 (norme)          </p>
+<h2 id="11-norme-sur-mathbbr2">1.1 Normé sur <span class="arithmatex">\(\mathbb{R}^2\)</span><a class="headerlink" href="#11-norme-sur-mathbbr2" title="Permanent link">&para;</a></h2>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>Définition: Norme</strong> </p>
+<hr />
+<p>范数是一个函数 <span class="arithmatex">\(N\)</span> , 将向量空间中的每个向量映射到一个非负实数: <span class="arithmatex">\(N: \mathbb{R}^2 \to \mathbb{R}_{+}\)</span></p>
+<ul>
+<li>非负性: <span class="arithmatex">\(\forall \vec{x} \in \mathbb{R}^2, (N(\vec{x}) = 0 \to \vec{x} = \vec{0})\)</span></li>
+<li>齐次性: <span class="arithmatex">\(\forall (\lambda, \vec{x}) \in \mathbb{R} \times \mathbb{R}^2, N(\lambda \vec{x}) = |\lambda| N(\vec{x})\)</span></li>
+<li>满足三角不等式: <span class="arithmatex">\(\forall (\vec{x},\vec{y}) \in (\mathbb{R}^2)^2, N(\vec{x}+\vec{y}) \leq N(\vec{x}) + N(\vec{y})\)</span></li>
+</ul>
+</li>
+</ul>
+</div>
+<details class="note">
+<summary>Extra-note</summary>
+<p>我们不需要强调函数值为非负实数, 因为可以用定义中的三个点推出: </p>
+<div class="arithmatex">\[
+    \begin{cases}
+    N(\vec{0}) = N{\vec{x}-\vec{x}} \leq N(\vec{x}) + N(\vec{-x}) = N(\vec{x}) + |-1| N(\vec{x}) = 2N(\vec{x}) \\
+    N(\vec{0}) = N(0 \cdot \vec{0}) = 0 \cdot N(\vec{0}) = 0
+    \end{cases}
+\]</div>
+<p>如果 <span class="arithmatex">\(\mathbb{R}^2\)</span> 具有一个范数 <span class="arithmatex">\(N\)</span> , 我们可以使用向量空间的结构来定义一个距离: </p>
+<div class="arithmatex">\[
+    d_N: 
+    \begin{cases}
+    \mathbb{R}^2 \times \mathbb{R}^2 \to \mathbb{R}_{+} \\
+    (\vec{x},\vec{y}) \mapsto N(\vec{x}-\vec{y})
+    \end{cases}
+\]</div>
+<p>这个函数具有与范数定义中的正定性和三角不等式相似的性质: </p>
+<ul>
+<li>&amp;\forall (\vec{x},\vec{y}) \in \mathbb{R}^2 \times \mathbb{R}^2, (d_N(\vec{x},\vec{y}) = 0 \Rightarrow \vec{x} = \vec{y})&amp;</li>
+<li><span class="arithmatex">\(forall \vec{x}, \vec{y}, \vec{z} \in \mathbb{R}^2, d_N(\vec{x},\vec{z}) \leq d_N(\vec{x},\vec{y}) + d_N(\vec{y},\vec{z})\)</span></li>
+</ul>
+<p>但需要注意的是, 距离的函数没有与齐次性对应的等价条件, 所以此函数不一定来源于范数          <br />
+距离是一种更一般的概念, 不需要向量空间的结构                 </p>
+</details>
+<p>范数一般记为: </p>
+<div class="arithmatex">\[
+    ||\cdot|| : 
+    \begin{cases}
+    \mathbb{R}^2 \to \mathbb{R} \\
+    \vec{x} \mapsto ||\vec{x}||
+    \end{cases}
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Proposition</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="11-norme-sur-mathbbr2-contenu" name="__tabbed_1" type="radio" /><input id="11-norme-sur-mathbbr2-démonstration" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="11-norme-sur-mathbbr2-contenu">Contenu</label><label for="11-norme-sur-mathbbr2-démonstration">Démonstration</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>设 <span class="arithmatex">\(N\)</span> , 是 <span class="arithmatex">\(\mathbb{R}^2\)</span> 上的一个范数, 则其满足逆三角不等式: </p>
+<div class="arithmatex">\[
+    \forall (\vec{x},\vec{y}) \in \mathbb{R}^2 \times \mathbb{R}^2, |N(\vec{x})-N(\vec{y})| \leq N(\vec{x} - \vec{y})
+\]</div>
+</div>
+<div class="tabbed-block">
+<p>设 <span class="arithmatex">\((\vec{x},\vec{y}) \in \mathbb{R}^2 \times \mathbb{R}^2\)</span>, 有: </p>
+<div class="arithmatex">\[
+    \begin{cases}
+    N(\vec{x}) = N((\vec{x}-\vec{y})+\vec{y}) \leq N(\vec{x}-\vec{y}) + N(\vec{y}) \\
+    N(\vec{y}) = N((\vec{y}-\vec{x})+\vec{x}) \leq N(\vec{y}-\vec{x}) + N(\vec{x})
+    \end{cases}
+    \Rightarrow
+    \begin{cases}
+    N(\vec{x}) - N(\vec{y}) \leq N(\vec{x}-\vec{y}) \\
+    N(\vec{y}) - N(\vec{x}) \leq N(\vec{y}-\vec{x}) = N(\vec{x}-\vec{y})
+    \end{cases}
+    \Rightarrow
+    |N(\vec{x})-N(\vec{y})| \leq N(\vec{x} - \vec{y})
+\]</div>
+<p>命题得证</p>
+</div>
+</div>
+</div>
+</div>
+<p id="1"></p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="11-norme-sur-mathbbr2-probleme" name="__tabbed_2" type="radio" /><input id="11-norme-sur-mathbbr2-solution" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="11-norme-sur-mathbbr2-probleme">Probleme</label><label for="11-norme-sur-mathbbr2-solution">Solution</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>对于任意 <span class="arithmatex">\( \vec{x} = (x_1, x_2) \in \mathbb{R}^2 \)</span>, 定义以下三种常见的范数:   </p>
+<div class="arithmatex">\[
+    \|\vec{x}\|_1 := |x_1| + |x_2|
+\]</div>
+<div class="arithmatex">\[
+    \|\vec{x}\|_2 := \sqrt{x_1^2 + x_2^2}
+\]</div>
+<div class="arithmatex">\[
+    \|\vec{x}\|_\infty := \max\{|x_1|, |x_2|\}
+\]</div>
+<p>证明它们满足范数定义中的三个性质  </p>
+</div>
+<div class="tabbed-block">
+<p>设 <span class="arithmatex">\( \vec{x} = (x_1, x_2) \)</span>, <span class="arithmatex">\( \vec{y} = (y_1, y_2) \in \mathbb{R}^2, \lambda \in \mathbb{R} \)</span>   </p>
+<p>非负性: </p>
+<ul>
+<li><span class="arithmatex">\( \|\vec{x}\|_1 = 0 \iff |x_1| + |x_2| = 0 \iff x_1 = 0, x_2 = 0 \iff \vec{x} = (0,0) \)</span> </li>
+<li><span class="arithmatex">\( \|\vec{x}\|_2 = 0 \iff \sqrt{x_1^2 + x_2^2} = 0 \iff x_1^2 + x_2^2 = 0 \iff x_1 = 0, x_2 = 0 \iff \vec{x} = (0,0) \)</span> </li>
+<li><span class="arithmatex">\( \|\vec{x}\|_\infty = 0 \iff \max\{|x_1|, |x_2|\} = 0 \iff x_1 = 0, x_2 = 0 \iff \vec{x} = (0,0) \)</span> </li>
+</ul>
+<p>齐次性:</p>
+<ul>
+<li><span class="arithmatex">\( \|\lambda \vec{x}\|_1 = |\lambda x_1| + |\lambda x_2| = |\lambda| (|x_1| + |x_2|) = |\lambda| \|\vec{x}\|_1 \)</span> </li>
+<li><span class="arithmatex">\( \|\lambda \vec{x}\|_2 = \sqrt{\lambda^2 x_1^2 + \lambda^2 x_2^2} = |\lambda| \sqrt{x_1^2 + x_2^2} = |\lambda| \|\vec{x}\|_2 \)</span> </li>
+<li><span class="arithmatex">\( \|\lambda \vec{x}\|_\infty = \max\{|\lambda x_1|, |\lambda x_2|\} = |\lambda| \max\{|x_1|, |x_2|\} = |\lambda| \|\vec{x}\|_\infty \)</span> </li>
+</ul>
+<p>三角不等式:</p>
+<ul>
+<li><span class="arithmatex">\( \|\vec{x} + \vec{y}\|_1 = |x_1 + y_1| + |x_2 + y_2| \leq |x_1| + |y_1| + |x_2| + |y_2| = \|\vec{x}\|_1 + \|\vec{y}\|_1 \)</span> </li>
+<li><span class="arithmatex">\( \|\vec{x} + \vec{y}\|_\infty = \max\{|x_1 + y_1|, |x_2 + y_2|\} \leq \max\{|x_1| + |y_1|, |x_2| + |y_2|\} \leq \max\{|x_1|, |x_2|\} + \max\{|y_1|, |y_2|\} = \|\vec{x}\|_\infty + \|\vec{y}\|_\infty \)</span> </li>
+<li>
+<p>对于 <span class="arithmatex">\( \|\cdot\|_2 \)</span> 范数, 使用柯西-施瓦茨不等式: </p>
+<div class="arithmatex">\[
+    (x_1 y_2 - x_2 y_1)^2 \geq 0 \Rightarrow 2x_1 y_1 + 2x_2 y_2 \leq x_1^2 + x_2^2 + y_1^2 + y_2^2
+\]</div>
+<p>由此得到: </p>
+<div class="arithmatex">\[
+    \|\vec{x} + \vec{y}\|_2 = \sqrt{(x_1 + y_1)^2 + (x_2 + y_2)^2} \leq \sqrt{x_1^2 + x_2^2} + \sqrt{y_1^2 + y_2^2} = \|\vec{x}\|_2 + \|\vec{y}\|_2
+\]</div>
+</li>
+</ul>
+<hr />
+<p><span class="arithmatex">\( \|\cdot\|_2 \)</span> 也被称为欧几里得范数, 因为它来源于如下内积: </p>
+<div class="arithmatex">\[
+    \cdot :
+    \begin{cases}
+    \mathbb{R}^2 \times \mathbb{R}^2 \to \mathbb{R} \\
+    (\vec{x}, \vec{y}) \mapsto x_1 y_1 + x_2 y_2
+    \end{cases}
+\]</div>
+<p>柯西-施瓦茨不等式可写为: </p>
+<div class="arithmatex">\[
+    \forall \vec{x},\vec{y} \in \mathbb{R}, |\vec{x} \cdot \vec{y}| \leq \|\vec{x}\|_2 \|\vec{y}\|_2
+\]</div>
+<p>利用内积, 可以重写三角不等式的证明: </p>
+<div class="arithmatex">\[
+    \|\vec{x} + \vec{y}\|_2 = \sqrt{(\vec{x} + \vec{y}) \cdot (\vec{x} + \vec{y})} = \sqrt{\|\vec{x}\|_2^2 + 2 \vec{x} \cdot \vec{y} + \|\vec{y}\|_2^2}
+\]</div>
+<div class="arithmatex">\[
+    \leq \sqrt{\|\vec{x}\|_2^2 + 2 \|\vec{x}\|_2 \|\vec{y}\|_2 + \|\vec{y}\|_2^2} = \|\vec{x}\|_2 + \|\vec{y}\|_2
+\]</div>
+<hr />
+<p>与其他范数不同, 欧几里得范数满足平行四边形恒等式: </p>
+<div class="arithmatex">\[
+    \forall \vec{x}, \vec{y} \in \mathbb{R}^2, \quad \|\vec{x} + \vec{y}\|_2^2 + \|\vec{x} - \vec{y}\|_2^2 = 2 (\|\vec{x}\|_2^2 + \|\vec{y}\|_2^2)
+\]</div>
+<p>但对于 <span class="arithmatex">\( \|\cdot\|_1 \)</span> 和 <span class="arithmatex">\( \|\cdot\|_\infty \)</span> , 存在某些 <span class="arithmatex">\( \vec{x}, \vec{y} \)</span> 使得: </p>
+<div class="arithmatex">\[
+    \|\vec{x} + \vec{y}\|_1^2 + \|\vec{x} - \vec{y}\|_1^2 \neq 2 (\|\vec{x}\|_1^2 + \|\vec{y}\|_1^2)
+\]</div>
+<div class="arithmatex">\[
+    \|\vec{x} + \vec{y}\|_\infty^2 + \|\vec{x} - \vec{y}\|_\infty^2 \neq 2 (\|\vec{x}\|_\infty^2 + \|\vec{y}\|_\infty^2)
+\]</div>
+<hr />
+<p>Fréchet-von Neumann-Jordan 定理表明, 如果一个范数 <span class="arithmatex">\( N \)</span> 满足平行四边形恒等式, 则可以定义一个与其兼容的内积, 例如: </p>
+<div class="arithmatex">\[
+    \forall \vec{x}, \vec{y} \in \mathbb{R}^2, \quad \langle \vec{x}, \vec{y} \rangle := \frac{N(\vec{x} + \vec{y})^2 - N(\vec{x} - \vec{y})^2}{4}
+\]</div>
+<p>这说明 <span class="arithmatex">\( \|\cdot\|_2 \)</span> 范数源自一个内积, 而 <span class="arithmatex">\( \|\cdot\|_1 \)</span> 和 <span class="arithmatex">\( \|\cdot\|_\infty \)</span> 不是由内积导出的范数 </p>
+</div>
+</div>
+</div>
+</div>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>Définition</strong> </p>
+<hr />
+<p>设 <span class="arithmatex">\( N \)</span> 是 <span class="arithmatex">\(\mathbb{R}^2\)</span> 上的一个范数, <span class="arithmatex">\(\vec{c} \in \mathbb{R}^2\)</span>, <span class="arithmatex">\( r \in \mathbb{R}^*_+ \)</span>  </p>
+<ul>
+<li>开球 (boule ouverte): 以 <span class="arithmatex">\(\vec{c}\)</span> 为中心, <span class="arithmatex">\( r \)</span> 为半径的 <strong>开球</strong> (对于范数 <span class="arithmatex">\( N \)</span>) 定义为:   </li>
+</ul>
+<div class="arithmatex">\[
+    \mathcal{B}_N (\vec{c}; r) := \{ \vec{x} \in \mathbb{R}^2 \mid N (\vec{x} - \vec{c}) &lt; r \}
+\]</div>
+<ul>
+<li>闭球 (boule fermée): 以 <span class="arithmatex">\(\vec{c}\)</span> 为中心, <span class="arithmatex">\( r \)</span> 为半径的 <strong>闭球</strong> (对于范数 <span class="arithmatex">\( N \)</span>) 定义为:   </li>
+</ul>
+<div class="arithmatex">\[
+    \mathcal{B}_{f,N} (\vec{c}; r) := \{ \vec{x} \in \mathbb{R}^2 \mid N (\vec{x} - \vec{c}) \leq r \}
+\]</div>
+<ul>
+<li>球面 (sphère): 以 <span class="arithmatex">\(\vec{c}\)</span> 为中心, <span class="arithmatex">\( r \)</span> 为半径的 <strong>球面</strong> (对于范数 <span class="arithmatex">\( N \)</span>) 定义为:   </li>
+</ul>
+<div class="arithmatex">\[
+    \mathcal{S}_N (\vec{c}; r) := \{ \vec{x} \in \mathbb{R}^2 \mid N (\vec{x} - \vec{c}) = r \}
+\]</div>
+</li>
+</ul>
+</div>
+<details class="note">
+<summary>Extra-note</summary>
+<p>以 <span class="arithmatex">\(\vec{c}\)</span> 为中心的球与以 <span class="arithmatex">\(\vec{0}\)</span> 为中心的球通过平移相重叠:   </p>
+<div class="arithmatex">\[
+    \vec{c} + B_N (\vec{0}; r) = \{ \vec{c} + \vec{u} \mid N (\vec{u} - \vec{0}) &lt; r \} = \{ \vec{v} \mid N (\vec{v} - \vec{c}) &lt; r \} = B_N (\vec{c}; r)
+\]</div>
+<p>下图为三种常见范数对应的单位球, 即以 <span class="arithmatex">\(\vec{0}\)</span> (为中心, 半径为 1 的开球)</p>
+<p><img alt="1" src="../c9img/1.png" title="1" />   </p>
+<p>需要注意的是: 如果我们知道与某个范数 <span class="arithmatex">\( N \)</span> 相关的球面 <span class="arithmatex">\( S \)</span> , 那么该范数就可以被完全确定                 </p>
+<p>对于所有非零向量 <span class="arithmatex">\(\vec{x} \in \mathbb{R}^2 \setminus \{ \vec{0} \}\)</span>, 由于 <span class="arithmatex">\( N(\vec{x}) &gt; 0 \)</span>, 所以存在唯一的 <span class="arithmatex">\( \lambda \in \mathbb{R}_+^* \)</span> 使得: <span class="arithmatex">\(\lambda N(\vec{x}) = 1\)</span></p>
+<p>由于 <span class="arithmatex">\( N(\lambda \vec{x}) = |\lambda| N(\vec{x}) = \lambda N(\vec{x}) = 1 \)</span>, <br />
+可知 <span class="arithmatex">\( \lambda \vec{x} \in S \)</span> , 恰好落在球面 <span class="arithmatex">\( S \)</span> 上   </p>
+<p>无论选择何种范数 <span class="arithmatex">\( N \)</span>, 单位球 <span class="arithmatex">\( B \)</span> 都满足以下性质:   </p>
+<div class="arithmatex">\[
+    \forall \vec{x}, \vec{y} \in B, \quad \forall \lambda \in [0,1], \quad N((1 - \lambda) \vec{x} + \lambda \vec{y}) \leq (1 - \lambda) N(\vec{x}) + \lambda N(\vec{y}) \leq (1 - \lambda) + \lambda = 1
+\]</div>
+<p>这意味着, 对于任意 <span class="arithmatex">\(\lambda \in [0,1]\)</span>, 点 <span class="arithmatex">\((1 - \lambda) \vec{x} + \lambda \vec{y}\)</span> 位于 <span class="arithmatex">\( B \)</span> 上 <br />
+换句话说, 单位球是凸集</p>
+<p>我们同样可以证明其逆命题也成立: <br />
+如果 <span class="arithmatex">\( C \)</span> 是 <span class="arithmatex">\(\mathbb{R}^2\)</span> 的一个子集, 且满足以下条件 <span class="arithmatex">\( C \)</span> 包含原点 <span class="arithmatex">\( \vec{0} \)</span> 且 <span class="arithmatex">\( C \)</span> 是凸集                   <br />
+那么, 必定存在一个范数 <span class="arithmatex">\( N_C \)</span>, 使得单位球满足 <span class="arithmatex">\(B_{N_C} (\vec{0}; 1) \subseteq C \subseteq B_{f, N_C} (\vec{0}; 1)\)</span></p>
+</details>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>Définition</strong> </p>
+<hr />
+<p>设 <span class="arithmatex">\( N_1 \)</span> 和 <span class="arithmatex">\( N_2 \)</span> 是 <span class="arithmatex">\(\mathbb{R}^2\)</span> 上的两个范数           <br />
+我们称 <span class="arithmatex">\( N_1 \)</span> 受控 (dominée) 于 <span class="arithmatex">\( N_2 \)</span>, 或者说 <span class="arithmatex">\( N_2 \)</span> 比 <span class="arithmatex">\( N_1 \)</span> 更精细 (plus fine), 记作: <span class="arithmatex">\(N_1 = O(N_2)\)</span>             <br />
+如果存在一个常数 <span class="arithmatex">\( K \in \mathbb{R}_+^* \)</span> , 使得:   </p>
+<div class="arithmatex">\[
+    \forall \vec{x} \in \mathbb{R}^2, N_1(\vec{x}) \leq K N_2(\vec{x})
+\]</div>
+<p>如果 <span class="arithmatex">\( N_1 = O(N_2) \)</span> 且 <span class="arithmatex">\( N_2 = O(N_1) \)</span>, 则称 <span class="arithmatex">\( N_1 \)</span> 和 <span class="arithmatex">\( N_2 \)</span> 是具有等价关系 ("<span class="arithmatex">\(\sim\)</span>") 的范数 </p>
+</li>
+</ul>
+</div>
+<details class="note">
+<summary>Extra-note</summary>
+<p>以上定义表明, 如果 <span class="arithmatex">\( \vec{x} \in B_{N_2} (\vec{0}, 1) \)</span>, 那么 <span class="arithmatex">\( \vec{x} \in B_{N_1} (\vec{0}, K) \)</span>, 即 <span class="arithmatex">\( B_{N_2} (\vec{0}, 1) \subseteq B_{N_1} (\vec{0}, K) \)</span><br />
+更一般地说,</p>
+<div class="arithmatex">\[ 
+    \forall \vec{x} \in \mathbb{R}^2, \forall r &gt; 0, \exists \rho &gt; 0, \quad B_{N_2} (\vec{x}, \rho) \subseteq B_{N_1} (\vec{x}, r) 
+\]</div>
+<p>只需取 <span class="arithmatex">\( \rho := \frac{r}{K} &gt; 0 \)</span> 即可证明                </p>
+</details>
+<p id="2"></p>
+<div class="admonition note">
+<p class="admonition-title">Proposition</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="11-norme-sur-mathbbr2-contenu_1" name="__tabbed_3" type="radio" /><input id="11-norme-sur-mathbbr2-démonstration_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="11-norme-sur-mathbbr2-contenu_1">Contenu</label><label for="11-norme-sur-mathbbr2-démonstration_1">Démonstration</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><span class="arithmatex">\(\mathbb{R}^2\)</span> 上的三种常见范数是等价的 (<a href="#1">例</a>中的三个函数) <br />
+即: </p>
+<div class="arithmatex">\[
+    \|\vec{x}\|_1 \sim \|\vec{x}\|_2 \sim \|\vec{x}\|_\infty
+\]</div>
+</div>
+<div class="tabbed-block">
+<p>对于任意 <span class="arithmatex">\(\vec{x} \in \mathbb{R}^2\)</span>, 设 <span class="arithmatex">\(\vec{x} = (x_1, x_2)\)</span>, 我们有以下关系:   </p>
+<div class="arithmatex">\[
+    \begin{cases}
+    \|\vec{x}\|_{\infty} = \max \{|x_1|, |x_2|\} \leq |x_1| + |x_2| = \|\vec{x}\|_1 \leq 2 \max \{|x_1|, |x_2|\} = 2 \|\vec{x}\|_{\infty} \\  
+    \|\vec{x}\|_{\infty} = \max \{|x_1|, |x_2|\} \leq \sqrt{x_1^2 + x_2^2} = \|\vec{x}\|_2 \leq \sqrt{2 \max \{|x_1|^2, |x_2|^2\}} = \sqrt{2} \|\vec{x}\|_{\infty}
+    \end{cases}
+\]</div>
+<p>这说明 <span class="arithmatex">\(\|\cdot\|_{\infty} \sim \|\cdot\|_1\)</span> 且 <span class="arithmatex">\(\|\cdot\|_{\infty} \sim \|\cdot\|_2\)</span> , 因此三种范数是等价  <br />
+命题得证</p>
+<hr />
+<p>我们还可以用单个不等式链来证明:   </p>
+<div class="arithmatex">\[
+    \forall \vec{x} = (x_1, x_2) \in \mathbb{R}^2, \quad \frac{1}{\sqrt{2}} \|\vec{x}\|_1 \leq \|\vec{x}\|_{\infty} \leq \|\vec{x}\|_2 \leq \|\vec{x}\|_1
+\]</div>
+<p>对于所有 <span class="arithmatex">\( r &gt; 0 \)</span>, 这些范数的单位球满足以下包含关系:   </p>
+<div class="arithmatex">\[
+    B_{\|\cdot\|_1} (\vec{0}, r) \subseteq B_{\|\cdot\|_2} (\vec{0}, r) \subseteq B_{\|\cdot\|_{\infty}} (\vec{0}, r) \subseteq B_{\|\cdot\|_1} (\vec{0}, 2r)
+\]</div>
+<p><img alt="1" src="../c9img/2.png" title="2" />   </p>
+</div>
+</div>
+</div>
+</div>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>Définition</strong> </p>
+<hr />
+<p>集合 <span class="arithmatex">\( X \)</span> 是 <span class="arithmatex">\( \mathbb{R}^2 \)</span> 的一个有界子集, 当且仅当:   </p>
+<div class="arithmatex">\[
+    \exists M \in \mathbb{R}^+, \forall \vec{x} \in X, \|\vec{x}\|_2 \leq M
+\]</div>
+<p><span class="arithmatex">\( X \)</span> 是有界的, 当且仅当:   </p>
+<div class="arithmatex">\[
+    \forall r &gt; 0, \exists \lambda &gt; 0, X \subseteq \lambda B_{\|\cdot\|_2}(\vec{0}, r) = \{ \lambda \vec{x} \mid \vec{x} \in B_{\|\cdot\|_2}(\vec{0}, r) \} = B_{\|\cdot\|_2}(\vec{0}, \lambda r)
+\]</div>
+<p><p id="3"></p></p>
+<p>集合 <span class="arithmatex">\( \Omega \)</span> 是 <span class="arithmatex">\( \mathbb{R}^2 \)</span> 的开集, 当且仅当:   </p>
+<div class="arithmatex">\[
+    \forall \vec{x} \in \Omega, \exists r \in \mathbb{R}_+^*, B_{\|\cdot\|_2}(\vec{x}, r) \subseteq \Omega
+\]</div>
+</li>
+</ul>
+</div>
+<details class="note">
+<summary>Extra-note</summary>
+<p>通常我们会说 “设 <span class="arithmatex">\( \Omega \)</span> 为 <span class="arithmatex">\( \mathbb{R}^2 \)</span> 的一个开集”, 其中隐含的意思是“<span class="arithmatex">\( \Omega \)</span> 是一个开子集”, 在法语中用阳性形式表达<br />
+根据<a href="#2">命题</a>, 若使用一个与 <span class="arithmatex">\( \|\cdot\|_2 \)</span> 等价的范数来定义上述概念, 所得的定义仍然是一致的</p>
+</details>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<p>设 <span class="arithmatex">\( a, b, c, d \in \mathbb{R} \)</span> 且 <span class="arithmatex">\( a &lt; b \)</span> 且 <span class="arithmatex">\( c &lt; d \)</span>, 那么开区间 <span class="arithmatex">\( ]a, b[ \times ]c, d[ \)</span> 是 <span class="arithmatex">\( \mathbb{R}^2 \)</span> 的一个开集   </p>
+<hr />
+<p>对于任意 <span class="arithmatex">\( \vec{x} = (x_1, x_2) \in ]a, b[ \times ]c, d[ \)</span>, 有 <span class="arithmatex">\( a &lt; x_1 &lt; b \)</span> 且 <span class="arithmatex">\( c &lt; x_2 &lt; d \)</span> <br />
+因此, 我们定义:   </p>
+<div class="arithmatex">\[
+    \rho := \min (b - x_1, x_1 - a, d - x_2, x_2 - c) &gt; 0
+\]</div>
+<p>由此可知,   </p>
+<div class="arithmatex">\[
+    B_{\|\cdot\|_\infty}(\vec{x}, \rho) \subseteq ]a, b[ \times ]c, d[
+\]</div>
+<p>此外, 由于在 <span class="arithmatex">\( \mathbb{R}^2 \)</span> 中, 范数 <span class="arithmatex">\( \|\cdot\|_2 \)</span> 的单位球包含于范数 <span class="arithmatex">\( \|\cdot\|_\infty \)</span> 的单位球, 即:   </p>
+<div class="arithmatex">\[
+    B_{\|\cdot\|_2}(\vec{x}, \rho) \subset B_{\|\cdot\|_\infty}(\vec{x}, \rho),
+\]</div>
+<p>所以可以推出 <span class="arithmatex">\( B_{\|\cdot\|_2}(\vec{x}, \rho) \subseteq ]a, b[ \times ]c, d[ \)</span> <br />
+因此, <span class="arithmatex">\( ]a, b[ \times ]c, d[ \)</span> 是开集 </p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Proposition</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="11-norme-sur-mathbbr2-contenu_2" name="__tabbed_4" type="radio" /><input id="11-norme-sur-mathbbr2-démonstration_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="11-norme-sur-mathbbr2-contenu_2">Contenu</label><label for="11-norme-sur-mathbbr2-démonstration_2">Démonstration</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>所有开球都是开集</p>
+</div>
+<div class="tabbed-block">
+<p>设 <span class="arithmatex">\( N \)</span> 是一个范数, <span class="arithmatex">\( B_N(\vec{c}, r) \)</span> 是以 <span class="arithmatex">\( \vec{c} \)</span> 为中心, 半径为 <span class="arithmatex">\( r &gt; 0 \)</span> 的开球              <br />
+设 <span class="arithmatex">\( \vec{x} \in B_N(\vec{c}, r) \)</span>, 我们需要证明存在一个半径 <span class="arithmatex">\( \rho &gt; 0 \)</span> 使得: <span class="arithmatex">\(B_N(\vec{x}, \rho) \subseteq B_N(\vec{c}, r)\)</span></p>
+<p>由于 <span class="arithmatex">\( \vec{x} \in B_N(\vec{c}, r) \)</span>, 所以 <span class="arithmatex">\(N(\vec{x} - \vec{c}) &lt; r\)</span>  </p>
+<p>令 <span class="arithmatex">\(\rho := r - N(\vec{x} - \vec{c}) &gt; 0\)</span>   </p>
+<p><span class="arithmatex">\(\forall \vec{y} \in B_N(\vec{x}, \rho) \)</span>, 有三角不等式:   </p>
+<div class="arithmatex">\[
+    N(\vec{y} - \vec{c}) \leq N(\vec{y} - \vec{x}) + N(\vec{x} - \vec{c}) &lt; \rho + N(\vec{x} - \vec{c}) = r
+\]</div>
+<p>因此, <span class="arithmatex">\( \vec{y} \in B_N(\vec{c}, r) \)</span>, 且对于所有 <span class="arithmatex">\( \vec{y} \in B_N(\vec{x}, \rho) \)</span> 都成立 <br />
+命题得证
+<img alt="1" src="../c9img/3.png" title="3" />  </p>
+</div>
+</div>
+</div>
+</div>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>Définition</strong> </p>
+<hr />
+<p>设 <span class="arithmatex">\((\vec{u}_n)_{n\in\mathbb{N}}\)</span> 是一个取值于 <span class="arithmatex">\(\mathbb{R}^2\)</span> 的序列       </p>
+<ul>
+<li>序列是收敛, 当且仅当, 如果存在 <span class="arithmatex">\(\vec{l} \in \mathbb{R}^2\)</span>, 使得 <span class="arithmatex">\(\lim_{n\to\infty} \vec{u}_n = \vec{l}\)</span>
+即: </li>
+</ul>
+<div class="arithmatex">\[
+    \forall \varepsilon &gt; 0, \exists N \in \mathbb{N}, \forall n \in N, (n \geq N \Rightarrow \|\vec{u}_n - \vec{l}\|_2 &lt; \varepsilon)
+\]</div>
+<p>或者等价地, 存在 <span class="arithmatex">\(\vec{l} \in \mathbb{R}^2\)</span>, 使得: </p>
+<div class="arithmatex">\[
+    \forall \varepsilon &gt; 0, \exists N \in \mathbb{N}, \forall n \in N, n \geq N, \vec{u}_n \in B_{\|\cdot\|_2}(\vec{l}, \varepsilon)
+\]</div>
+<ul>
+<li>如果序列 <span class="arithmatex">\(\{\vec{u}_n\}\)</span> 不满足上述收敛条件, 则称其发散 </li>
+</ul>
+</li>
+</ul>
+</div>
+<details class="note">
+<summary>Extra-note</summary>
+<p>我们通常会表述为: “从某一项开始, 序列的所有项都落在开球 <span class="arithmatex">\(B_{\|\cdot\|_2}(\vec{l}, \varepsilon)\)</span> 内” </p>
+</details>
+<div class="admonition note">
+<p class="admonition-title">Proposition</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="11-norme-sur-mathbbr2-contenu_3" name="__tabbed_5" type="radio" /><input id="11-norme-sur-mathbbr2-démonstration_3" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="11-norme-sur-mathbbr2-contenu_3">Contenu</label><label for="11-norme-sur-mathbbr2-démonstration_3">Démonstration</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>设 <span class="arithmatex">\((\vec{u}_n)_{n\in\mathbb{N}}\)</span> 是 <span class="arithmatex">\(\mathbb{R}^2\)</span> 中的一个序列         </p>
+<ul>
+<li>极限的唯一性: 如果 <span class="arithmatex">\(\{\vec{u}_n\}\)</span> 收敛到 <span class="arithmatex">\(\vec{l}\)</span> 和 <span class="arithmatex">\(\vec{m}\)</span>, 则 <span class="arithmatex">\(\vec{l} = \vec{m}\)</span>                        </li>
+<li>坐标分量的收敛性: 对所有 <span class="arithmatex">\(n \in \mathbb{N}\)</span>, 如果 <span class="arithmatex">\(\vec{u}_n = (x_n, y_n)\)</span> 且 <span class="arithmatex">\(\vec{l} = (l_x, l_y)\)</span>, 则  </li>
+</ul>
+<div class="arithmatex">\[
+    \lim_{n\to\infty} \vec{u}_n = \vec{l} \quad \Longleftrightarrow \quad
+    \begin{cases}
+    \lim_{n\to\infty} x_n = l_x \\
+    \lim_{n\to\infty} y_n = l_y
+    \end{cases}
+\]</div>
+</div>
+<div class="tabbed-block">
+<p>(i): 假设 <span class="arithmatex">\(\{\vec{u}_n\}\)</span> 同时收敛到 <span class="arithmatex">\(\vec{l}\)</span> 和 <span class="arithmatex">\(\vec{m}\)</span>, 但 <span class="arithmatex">\(\vec{l} \neq \vec{m}\)</span>, 则: </p>
+<div class="arithmatex">\[
+    \begin{cases}
+    \forall \varepsilon_1 &gt; 0, \exists N_1 \in \mathbb{N}, \forall n \geq N_1, \vec{u}_n \in B_{\|\cdot\|_2}(\vec{l}, \varepsilon_1) \\
+    \forall \varepsilon_2 &gt; 0, \exists N_2 \in \mathbb{N}, \forall n \geq N_2, \vec{u}_n \in B_{\|\cdot\|_2}(\vec{m}, \varepsilon_2)
+    \end{cases}
+\]</div>
+<p>令 <span class="arithmatex">\(\varepsilon_1 = \varepsilon_2 = \frac{1}{2} \|\vec{l} - \vec{m}\|_2\)</span>, 则对于所有 <span class="arithmatex">\(n \geq \max\{N_1, N_2\}\)</span>,   </p>
+<div class="arithmatex">\[
+    \vec{u}_n \in B_{\|\cdot\|_2}(\vec{l}, \varepsilon_1) \cap B_{\|\cdot\|_2}(\vec{m}, \varepsilon_2)
+\]</div>
+<p>但由于 <span class="arithmatex">\(\|\vec{l} - \vec{m}\|_2 &gt; \varepsilon_1 + \varepsilon_2\)</span>, 这与两球不相交矛盾 因此, <span class="arithmatex">\(\vec{l} = \vec{m}\)</span></p>
+<hr />
+<p>(ii): <span class="arithmatex">\(\lim_{n\to\infty} \vec{u}_n = \vec{l}\)</span> 意味着: </p>
+<div class="arithmatex">\[
+    \forall \varepsilon &gt; 0, \exists N \in \mathbb{N}, \forall n \geq N, \vec{u}_n \in B_{\|\cdot\|_2}(\vec{l}, \varepsilon)
+\]</div>
+<p>由于 <span class="arithmatex">\(B_{\|\cdot\|_2}(\vec{l}, \varepsilon) \subseteq B_{\|\cdot\|_\infty}(\vec{l}, \varepsilon)\)</span> , 有 <span class="arithmatex">\(\max\{|x_n - l_x|, |y_n - l_y|\} &lt; \varepsilon\)</span>     <br />
+这意味着: <span class="arithmatex">\(\begin{cases} |x_n - l_x| &lt; \varepsilon \\ |y_n - l_y| &lt; \varepsilon \end{cases}\)</span>
+由此可得: </p>
+<div class="arithmatex">\[
+\lim_{n\to\infty} x_n = l_x, \quad \lim_{n\to\infty} y_n = l_y
+\]</div>
+<p>相反的, 如果: </p>
+<div class="arithmatex">\[
+    \begin{cases}
+    \forall \varepsilon_1 &gt; 0, \exists N_1 \in \mathbb{N}, \forall n \geq N_1, |x_n - l_x| &lt; \varepsilon_1 \\
+    \forall \varepsilon_2 &gt; 0, \exists N_2 \in \mathbb{N}, \forall n \geq N_2, |y_n - l_y| &lt; \varepsilon_2
+    \end{cases}
+\]</div>
+<p>令 <span class="arithmatex">\(\varepsilon_1 = \varepsilon_2 = \frac{\varepsilon}{\sqrt{2}}\)</span>, 则对于所有 <span class="arithmatex">\(n \geq \max \{N_1, N_2\}\)</span>, 有: </p>
+<div class="arithmatex">\[
+\|\vec{u}_n - \vec{l}\|_2 = \sqrt{(x_n - l_x)^2 + (y_n - l_y)^2} \leq \sqrt{\left(\frac{\varepsilon}{\sqrt{2}}\right)^2 + \left(\frac{\varepsilon}{\sqrt{2}}\right)^2} = \varepsilon
+\]</div>
+<p>因此, <span class="arithmatex">\(\vec{u}_n \in B_{\|\cdot\|_2}(\vec{l}, \varepsilon)\)</span>, 即 <span class="arithmatex">\(\{\vec{u}_n\}\)</span> 收敛到 <span class="arithmatex">\(\vec{l}\)</span> </p>
+<p>以上两个命题均得证</p>
+</div>
+</div>
+</div>
+</div>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>Définition</strong> </p>
+<hr />
+<p>设 <span class="arithmatex">\(X \subseteq \mathcal{P}(\mathbb{R}^2)\)</span>, 对于 <span class="arithmatex">\(\vec{a} \in \mathbb{R}^2\)</span> , 当且仅当其满足: </p>
+<div class="arithmatex">\[
+    \forall \varepsilon &gt; 0, \exists \vec{x} \in X, \|\vec{x} - \vec{a}\|_2 &lt; \varepsilon
+\]</div>
+<p>或者等价地: </p>
+<div class="arithmatex">\[
+    \forall \varepsilon &gt; 0, B_{\|\cdot\|_2}(\vec{a}, \varepsilon) \cap X \neq \emptyset
+\]</div>
+<p>这时则称 <span class="arithmatex">\(\vec{a}\)</span> 是 <span class="arithmatex">\(X\)</span> 的聚点 (adhérent)    </p>
+<p><span class="arithmatex">\(X\)</span> 的闭包 (adhérence) 记作 <span class="arithmatex">\(\overline{X}\)</span>, 即所有 <span class="arithmatex">\(X\)</span> 的聚点组成的集合 </p>
+</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Proposition</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="11-norme-sur-mathbbr2-contenu_4" name="__tabbed_6" type="radio" /><input id="11-norme-sur-mathbbr2-démonstration_4" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="11-norme-sur-mathbbr2-contenu_4">Contenu</label><label for="11-norme-sur-mathbbr2-démonstration_4">Démonstration</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>设 <span class="arithmatex">\(\vec{a} \in \mathbb{R}^2\)</span>, <span class="arithmatex">\(X\)</span> 是 <span class="arithmatex">\(\mathbb{R}^2\)</span> 的一个子集, 则: </p>
+<div class="arithmatex">\[
+    \vec{a} \in \overline{X} \quad \Longleftrightarrow \quad \exists \{\vec{u}_n\}_{n\in\mathbb{N}} \subseteq X, \quad \lim_{n\to\infty} \vec{u}_n = \vec{a}
+\]</div>
+</div>
+<div class="tabbed-block">
+<p>(⇒) 充分性<br />
+根据聚点的定义, 取 <span class="arithmatex">\(\varepsilon_n = \frac{1}{n+1}\)</span> , 有: </p>
+<div class="arithmatex">\[
+    \forall n \in \mathbb{N}, \exists \vec{x}_n \in X, \quad \|\vec{x}_n - \vec{a}\|_2 &lt; \varepsilon_n
+\]</div>
+<p>因此, <span class="arithmatex">\(\{\vec{x}_n\}_{n\in\mathbb{N}}\)</span> 是 <span class="arithmatex">\(X\)</span> 中的一个序列, 并且收敛到 <span class="arithmatex">\(\vec{a}\)</span> </p>
+<p>(⇐) 必要性<br />
+假设有: </p>
+<div class="arithmatex">\[
+    \forall \varepsilon &gt; 0, \exists N \in \mathbb{N}, \forall n \geq N, \|\vec{u}_n - \vec{a}\|_2 &lt; \varepsilon
+\]</div>
+<p>可得: </p>
+<div class="arithmatex">\[
+    B_{\|\cdot\|_2}(\vec{a}, \varepsilon) \cap X \neq \emptyset
+\]</div>
+<p>因此, <span class="arithmatex">\(\vec{a}\)</span> 是 <span class="arithmatex">\(X\)</span> 的一个聚点, 即 <span class="arithmatex">\(\vec{a} \in \overline{X}\)</span> </p>
+<p>命题得证</p>
+</div>
+</div>
+</div>
+</div>
+<details class="note">
+<summary>Extra-note</summary>
+<p>记 <span class="arithmatex">\(\tau\)</span> 为<a href="#3">定义</a>的开集的集合, 记 <span class="arithmatex">\(\text{Cvg} \subseteq (\mathbb{R}^2)^\mathbb{N}\)</span> 为所有收敛序列的集合, 这两个定义是基于范数和球, 但我们也可以直接用它们 (拓扑 (开集) 和收敛性) 相互定义   </p>
+<p><span class="arithmatex">\(\mathbb{R}^2\)</span> 中一点 <span class="arithmatex">\(\vec{l}\)</span> 的邻域是指包含一个开集 <span class="arithmatex">\(U\)</span> 且 <span class="arithmatex">\(U\)</span> 包含 <span class="arithmatex">\(\vec{l}\)</span> 的任何集合 <span class="arithmatex">\(V\)</span> </p>
+<ul>
+<li>若已知拓扑 <span class="arithmatex">\(\tau\)</span>, 可定义收敛序列<br />
+设 <span class="arithmatex">\(\{\vec{u}_n\}_{n\in\mathbb{N}}\)</span> 是一个序列, 我们说它收敛到 <span class="arithmatex">\(\vec{l} \in \mathbb{R}^2\)</span> 当且仅当: </li>
+</ul>
+<div class="arithmatex">\[
+    \forall \vec{l} \text{ 的邻域 } V , \exists N \in \mathbb{N}, \forall n \geq N, \vec{u}_n \in V
+\]</div>
+<ul>
+<li>若已知收敛性 <span class="arithmatex">\(\text{Cvg}\)</span>, 可定义拓扑 <span class="arithmatex">\(\tau\)</span><br />
+设 <span class="arithmatex">\(U \subseteq \mathbb{R}^2\)</span>, 我们说它是一个开集 (即 <span class="arithmatex">\(U \in \tau\)</span>) 当且仅当: </li>
+</ul>
+<div class="arithmatex">\[
+    \forall \text{ 收敛到 } \vec{l} \text{ 的序列 } \{\vec{u}_n\}_{n\in\mathbb{N}}, \quad \text{若 } \vec{l} \in U, \text{ 则 } \exists N \in \mathbb{N}, \forall n \geq N, \vec{u}_n \in U
+\]</div>
+<p>虽然这并不适用于所有拓扑空间, 但在度量空间 (即带有度量或范数的空间) 中, 可以基于先前的证明构造, 得出: </p>
+<div class="arithmatex">\[
+    \tau \longleftrightarrow \text{Cvg}
+\]</div>
+<p>即开集 (拓扑) 和收敛性是互相确定的 </p>
+</details>
+<h1 id="12-fonctions-de-deux-variables">1.2 Fonctions de deux variables<a class="headerlink" href="#12-fonctions-de-deux-variables" title="Permanent link">&para;</a></h1>
+<p>我们可以将一个二元函数理解为一族单变量函数          <br />
+设 <span class="arithmatex">\(X, Y, Z\)</span> 是三个集合, 对于任意函数  </p>
+<div class="arithmatex">\[
+    f: 
+    \begin{cases}
+    X \times Y \to Z \\
+    (x, y) \mapsto f(x, y)
+    \end{cases}
+\]</div>
+<p>可以定义以下 "偏映射" (les applications partielles): </p>
+<div class="arithmatex">\[
+    \left( f_y: 
+    \begin{cases}
+    X \to Z \\
+    x \mapsto f(x, y)
+    \end{cases}
+    \right)_{\forall y \in Y}
+    \quad
+    \left( f_x: 
+    \begin{cases}
+    Y \to Z \\
+    y \mapsto f(x, y)
+    \end{cases}
+    \right)_{\forall x \in X}
+\]</div>
+<p>即: </p>
+<div class="arithmatex">\[
+    f_{2,1}: 
+    \begin{cases}
+    Y \to Z^X \\
+    y \mapsto f_y
+    \end{cases}
+    \quad
+    f_{1,2}: 
+    \begin{cases}
+    X \to Z^Y \\
+    x \mapsto f_x
+    \end{cases}
+\]</div>
+<p>已知其中之一即可重构原来的二元函数, 这可以通过以下的图形等式表示: </p>
+<div class="arithmatex">\[
+    \Gamma_f := \{(x, y, f(x, y)) \mid (x, y) \in X \times Y\}
+\]</div>
+<div class="arithmatex">\[
+    = \bigcup_{y \in Y} \{(x, y, f(x, y)) \mid x \in X\}
+\]</div>
+<div class="arithmatex">\[
+    = \bigcup_{x \in X} \{(x, y, f(x, y)) \mid y \in Y\}
+\]</div>
+<p><span class="arithmatex">\(\Gamma_f\)</span> 可以按固定的 <span class="arithmatex">\(y\)</span> 或 <span class="arithmatex">\(x\)</span> 进行分割, 如果知道所有这些“切片”, 就可以重建整个函数 </p>
+<p>一个特殊的二元函数情形是当 <span class="arithmatex">\(Z = \mathbb{R}\)</span>（或某个代数）时, 考虑满足以下条件的函数 <span class="arithmatex">\( f \in \mathbb{R}^{X \times Y} \)</span>: </p>
+<div class="arithmatex">\[
+\forall (y_1, y_2) \in Y^2, \exists (\lambda, \mu) \in \mathbb{R}^2 \setminus \{(0, 0)\}, \quad \lambda f_{y_1} + \mu f_{y_2} = 0
+\]</div>
+<p>或等价地: </p>
+<div class="arithmatex">\[
+\forall (x_1, x_2) \in X^2, \exists (\lambda, \mu) \in \mathbb{R}^2 \setminus \{(0, 0)\}, \quad \lambda f_{x_1} + \mu f_{x_2} = 0.
+\]</div>
+<p>分析第一种情况: 如果 <span class="arithmatex">\( f = 0 \)</span>, 则条件自动成立, 不施加任何约束 假设存在某个 <span class="arithmatex">\((x_0, y_0) \in X \times Y\)</span> 使得 <span class="arithmatex">\( f(x_0, y_0) \neq 0 \)</span>, 则</p>
+<div class="arithmatex">\[
+\forall y \in Y, \exists (\lambda_y, \mu_y) \neq (0, 0), \forall x \in X, \quad \lambda_y f_{y_0}(x) + \mu_y f_y(x) = 0
+\]</div>
+<p>由此可得</p>
+<div class="arithmatex">\[
+Y_1 := \{ y \in Y \mid \lambda_y \neq 0 \} \neq \emptyset
+\]</div>
+<p>否则会推出 <span class="arithmatex">\( f = 0 \)</span> 对于 <span class="arithmatex">\( y \in Y_1 \)</span>, 有</p>
+<div class="arithmatex">\[
+\mu_{y_1} f_{y_1}(x_0) = -\lambda_{y_1} f(x_0, y_0) \neq 0
+\]</div>
+<p>因此 <span class="arithmatex">\( \mu_{y_1} \neq 0 \)</span>, 从而</p>
+<div class="arithmatex">\[
+\forall y \in Y_1, \forall x \in X, \quad f(x, y) = -\frac{\lambda_y}{\mu_y} f(x, y_0)
+\]</div>
+<p>对于 <span class="arithmatex">\( y \in Y \setminus Y_1 \)</span>, <span class="arithmatex">\(\lambda_y = 0\)</span>, 但由于 <span class="arithmatex">\((\lambda_y, \mu_y) \neq (0,0)\)</span>, 必须有 <span class="arithmatex">\(\mu_y \neq 0\)</span> 此时, 方程 <span class="arithmatex">\( \lambda_y f_{y_0} + \mu_y f_y = 0 \)</span> 直接推出 <span class="arithmatex">\( f_y = 0 \)</span> </p>
+<p>综上所述, 存在一个函数 <span class="arithmatex">\( g: Y \to Z \)</span> 使得</p>
+<div class="arithmatex">\[
+\forall (x, y) \in X \times Y, \quad f(x, y) = g(y) \cdot f_{y_0}(x)
+\]</div>
+<p>这样的函数被称为**可分变量函数**（separable functions） </p>
+<p>然而, 二元函数的定义域不一定是笛卡尔积集合 函数 <span class="arithmatex">\( f \)</span> 的定义域 <span class="arithmatex">\( D \subseteq \mathbb{R}^2 \)</span> 可能具有如下形式: </p>
+<div class="arithmatex">\[
+D_1(x_0, y_0) := \{x \in \mathbb{R} \mid (x, y_0) \in D\}
+\]</div>
+<div class="arithmatex">\[
+D_2(x_0, y_0) := \{y \in \mathbb{R} \mid (x_0, y) \in D\}
+\]</div>
+<p>定义相应的部分应用: </p>
+<div class="arithmatex">\[
+f_{y_0}: D_1(x_0, y_0) \to \mathbb{R}, \quad x \mapsto f(x, y_0)
+\]</div>
+<div class="arithmatex">\[
+f_{x_0}: D_2(x_0, y_0) \to \mathbb{R}, \quad y \mapsto f(x_0, y)
+\]</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.expand", "navigation.indexes", "navigation.path", "navigation.top", "content.footnote.tooltips"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

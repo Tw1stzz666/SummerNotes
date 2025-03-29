@@ -1,0 +1,1436 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Electrostatique/">
+      
+      
+      
+      <link rel="icon" href="../../assets/mmc.jpg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.6">
+    
+    
+      
+        <title>Chapitre 3 Magnétostatique - Summer & Capoo's Home</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#magnetostatique" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="Summer &amp; Capoo&#39;s Home" class="md-header__button md-logo" aria-label="Summer & Capoo's Home" data-md-component="logo">
+      
+  <img src="../../assets/mmc.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Summer & Capoo's Home
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapitre 3 Magnétostatique
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Homepage
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Mathsindex/" class="md-tabs__link">
+          
+  
+    
+  
+  Mathématiques
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../%C3%89lectronique/" class="md-tabs__link">
+          
+  
+    
+  
+  Physique
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Summer &amp; Capoo&#39;s Home" class="md-nav__button md-logo" aria-label="Summer & Capoo's Home" data-md-component="logo">
+      
+  <img src="../../assets/mmc.jpg" alt="logo">
+
+    </a>
+    Summer & Capoo's Home
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Homepage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Mathématiques
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Mathématiques
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mathsindex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mathsindex
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../G%C3%A9om%C3%A9trie/Espace%20Vectoriels/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 15 Espace Vectoriels
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Analyse/Fonctions%20de%20deux%20variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 18 Fonctions de deux variables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Physique
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Physique
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../%C3%89lectronique/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Électronique
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Électronique
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Électromagnétisme
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Électromagnétisme
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Analyse%20vectorielle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 1 Analyse vectorielle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Electrostatique/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 2 Electrostatique
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Chapitre 3 Magnétostatique
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 3 Magnétostatique
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1le-champ-magnetostatique" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.Le champ magnétostatique (磁场)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.Le champ magnétostatique (磁场)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-densite-de-courant" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Densité de courant (电流密度)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-lignes-de-champ-magnetostatique" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Lignes de champ magnétostatique (磁场线)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2theoreme-dampere" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.Théorème d’Ampère (安培环路定理)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.Théorème d’Ampère (安培环路定理)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-symetries-et-invariances" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Symétries et invariances
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-theoreme-dampere" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Théorème d’Ampère
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-fil-rectiligne-infini" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Fil rectiligne infini (无限长直导线)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-solenoide-infini" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 Solénoïde infini (无限长螺线管)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3dipole-magnetique" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.Dipôle magnétique
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.Dipôle magnétique">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-moment-magnetique" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Moment magnétique (磁矩)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-champ-cree-par-un-dipole-magnetique" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Champ crée par un dipôle magnétique (磁偶极子产生的磁场)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-actions-subies-par-un-dipole-magnetique" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Actions subies par un dipôle magnétique
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1le-champ-magnetostatique" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.Le champ magnétostatique (磁场)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.Le champ magnétostatique (磁场)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-densite-de-courant" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Densité de courant (电流密度)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-lignes-de-champ-magnetostatique" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Lignes de champ magnétostatique (磁场线)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2theoreme-dampere" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.Théorème d’Ampère (安培环路定理)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.Théorème d’Ampère (安培环路定理)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-symetries-et-invariances" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Symétries et invariances
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-theoreme-dampere" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Théorème d’Ampère
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-fil-rectiligne-infini" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Fil rectiligne infini (无限长直导线)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-solenoide-infini" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 Solénoïde infini (无限长螺线管)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3dipole-magnetique" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.Dipôle magnétique
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.Dipôle magnétique">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-moment-magnetique" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Moment magnétique (磁矩)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-champ-cree-par-un-dipole-magnetique" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Champ crée par un dipôle magnétique (磁偶极子产生的磁场)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-actions-subies-par-un-dipole-magnetique" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Actions subies par un dipôle magnétique
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="magnetostatique">Magnétostatique<a class="headerlink" href="#magnetostatique" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>关于磁的小知识XD                 </p>
+</blockquote>
+<p>磁铁自古以来就为人所知, 被称为磁铁矿, 这种石头在土耳其的马格尼西亚城附近被发现, 现代 "磁场" 一词正是源自这种石头, 然而, 直到19世纪末, 才出现了完整的理论                  <br />
+在本章中, 我们研究的是由永久性源产生的磁场        </p>
+<h2 id="1le-champ-magnetostatique">1.Le champ magnétostatique (磁场)<a class="headerlink" href="#1le-champ-magnetostatique" title="Permanent link">&para;</a></h2>
+<h3 id="11-densite-de-courant">1.1 Densité de courant (电流密度)<a class="headerlink" href="#11-densite-de-courant" title="Permanent link">&para;</a></h3>
+<p>在前一章中, 我们知道了电场是由于电荷的存在而产生的, 因为电荷会有相互作用                      <br />
+而当电荷以速度 <span class="arithmatex">\(\vec{v}\)</span> 运动时, 则会产生磁场         <br />
+在磁静力学的框架下, <span class="arithmatex">\(\vec{v} = \text{cste}\)</span>   </p>
+<p>我们可能会简单地认为用电流强度就足以描述电荷的运动, 这在所有载流子沿同一方向运动 (如在一根直导线上) 时是正确的            <br />
+但一般来说, 我们需要使用一个向量来量化电荷的运动                                                      </p>
+<p>因此, 我们引入电流密度 <span class="arithmatex">\(\vec{j}(M)\)</span> 的概念, 定义如下:    </p>
+<div class="arithmatex">\[
+    \delta Q = \vec{j}(M) \cdot d\vec{S} \, dt
+\]</div>
+<p>其中, <span class="arithmatex">\(\delta Q\)</span> 是在时间 <span class="arithmatex">\(dt\)</span> 内通过微小表面元 <span class="arithmatex">\(d\vec{S}\)</span> 的电荷量   </p>
+<p>电流 <span class="arithmatex">\(i\)</span> 通过表面 <span class="arithmatex">\(d\vec{S}\)</span> 并沿 <span class="arithmatex">\(\vec{j}\)</span> 方向的表达式为:   </p>
+<div class="arithmatex">\[
+    i = \frac{\delta Q}{dt} = \vec{j}(M) \cdot d\vec{S}
+\]</div>
+<p>因此, 流过某一表面的电流强度等于该表面上的电流密度的通量   </p>
+<div class="arithmatex">\[
+    I = \iint_S \vec{j}(M) \cdot d\vec{S}
+\]</div>
+<p>电流密度的单位为: <span class="arithmatex">\([\|\vec{j}\|] = A \cdot m^{-2}\)</span>                                </p>
+<p>电流密度向量用于描述空间中电荷的运动情况, 而运动的电荷会产生磁场                                       <br />
+电流密度的概念可以类别上章所学的电场中的电荷体密度 <span class="arithmatex">\(\rho\)</span>                     </p>
+<hr />
+<p>我们尝试将电流密度 <span class="arithmatex">\(\vec{j}\)</span> 与载流子的运动联系起来                         <br />
+假设有携带电荷 <span class="arithmatex">\(q\)</span> 的粒子, 它们以速度 <span class="arithmatex">\(\vec{v}\)</span> 运动      <br />
+在时间 <span class="arithmatex">\(dt\)</span> 内, 通过表面元 <span class="arithmatex">\(d\vec{S}\)</span> 的电荷量为:   </p>
+<div class="arithmatex">\[
+    \delta Q = n (\vec{v} dt \cdot d\vec{S}) q = (q n \vec{v}) \cdot d\vec{S} dt
+\]</div>
+<p>其中, <span class="arithmatex">\(n\)</span> 是单位体积内的载流子数密度 <br />
+而 <span class="arithmatex">\(\vec{j} = n q \vec{v}\)</span>                          </p>
+<p>若存在多个种类的载流子, 每种载流子的电荷为 <span class="arithmatex">\(q_i\)</span>, 速度为 <span class="arithmatex">\(\vec{v}_i\)</span>, 数密度为 <span class="arithmatex">\(n_i\)</span>, 则总电流密度为:   </p>
+<div class="arithmatex">\[
+    \vec{j} = \sum_i n_i q_i \vec{v}_i
+\]</div>
+<p>这说明不同载流子产生的电流密度是累加的   </p>
+<hr />
+<p>我们尝试确定通过一根电线的电流密度的数量级                      <br />
+假设一根半径 <span class="arithmatex">\(r = 1mm\)</span> 的导线, 电流 <span class="arithmatex">\(I = 1A\)</span>, 并且电流密度在整个导线上均匀分布
+有: </p>
+<div class="arithmatex">\[
+    j = \frac{I}{\pi r^2} = \frac{1}{\pi \times (1 \times 10^{-3})^2} = 10^5 A \cdot m^{-2}  
+\]</div>
+<p>类似于静电学中的面电荷密度, 当电荷在非常薄的层内移动时, 可以引入面电流密度 <span class="arithmatex">\(\vec{j}_s\)</span> 的概念   </p>
+<p><img alt="1" src="../c3img/1.png" title="1" /></p>
+<p>例如, 对于一个导体截面 <span class="arithmatex">\(\Gamma\)</span>, 设 <span class="arithmatex">\(\sigma\)</span> 为表面 <span class="arithmatex">\(\Sigma\)</span> 上的面电荷密度, <span class="arithmatex">\(\vec{n}\)</span> 为与 <span class="arithmatex">\(\Gamma\)</span> 法向的单位向量, 且 <span class="arithmatex">\(d\vec{l} = d\ell \vec{n}\)</span>, 那么在时间 <span class="arithmatex">\(dt\)</span> 内通过 <span class="arithmatex">\(d\ell\)</span> 的电荷量为:   </p>
+<div class="arithmatex">\[
+    \delta^2 Q = \sigma \vec{v} dt \cdot d\ell \vec{n}
+\]</div>
+<p>引入面电流密度 <span class="arithmatex">\(\vec{j}_s\)</span>:   </p>
+<div class="arithmatex">\[
+    \delta^2 Q = \vec{j}_s \cdot d\ell \vec{n} dt
+\]</div>
+<p>整个 <span class="arithmatex">\(\Gamma\)</span> 截面上的总电荷通过量为:   </p>
+<div class="arithmatex">\[
+    \delta Q = \int_{\Gamma} \vec{j}_s \cdot d\ell \vec{n} dt
+\]</div>
+<p>因此, 流过 <span class="arithmatex">\(\Gamma\)</span> 的电流强度 <span class="arithmatex">\(I\)</span> 为:   </p>
+<div class="arithmatex">\[
+    I = \frac{\delta Q}{dt} = \int_{\Gamma} \vec{j}_s \cdot d\ell \vec{n}
+\]</div>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<p>对于半径 <span class="arithmatex">\(R\)</span> 的圆柱体, 若表面流过均匀的面电流密度 <span class="arithmatex">\(\vec{j}_s\)</span>, 则其总电流强度为:   </p>
+<div class="arithmatex">\[
+    I = j_s \cdot 2 \pi R
+\]</div>
+<p><img alt="1" src="../c3img/2.png" title="2" /></p>
+</div>
+<h3 id="12-lignes-de-champ-magnetostatique">1.2 Lignes de champ magnétostatique (磁场线)<a class="headerlink" href="#12-lignes-de-champ-magnetostatique" title="Permanent link">&para;</a></h3>
+<p>与电场一样, 磁场线是使得磁场在其上每一点都与该曲线相切的曲线 <span class="arithmatex">\(C\)</span> <br />
+磁场线具有如下性质:                     </p>
+<ul>
+<li>磁场线是闭合的, 并包围磁场的源, 即电荷运动的区域   </li>
+<li>沿磁场线方向, 磁场的强度变化规律如下:   </li>
+</ul>
+<div class="arithmatex">\[
+    \begin{cases}
+    当相邻磁场线彼此远离时, 磁场强度减小 \\
+    当相邻磁场线彼此靠近时, 磁场强度增大 
+    \end{cases}
+\]</div>
+<ul>
+<li>磁场线的方向遵循右手定则, 右手握住导线, 拇指指向电流正方向, 则弯曲的四指指向磁场线的方向   </li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>注意:  磁场是是通量守恒的, 这意味着对于任意封闭曲面 <span class="arithmatex">\(S\)</span>, 有:</p>
+<div class="arithmatex">\[
+    \unicode{x222F}_S \vec{B} \cdot d\vec{S} = 0
+\]</div>
+<p>这一数学表达式也同时解释了磁场线的第二条性质, 即磁场线始终闭合   </p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<p>考虑两根通有相反方向电流的导线, 左侧导线的电流流入纸面, 右侧导线的电流流出纸面     </p>
+<p><img alt="1" src="../c3img/3.png" title="3" /></p>
+<p>磁场线围绕电流流过的导线闭合, 表明导线是磁场的源      </p>
+</div>
+<details class="note">
+<summary>Extra-note</summary>
+<ul>
+<li>若电流分布是无限延伸的, 某些磁场线可能看似开放, 但它们实际上在无穷远处闭合   </li>
+<li>电场线源自或汇聚于点电荷, 而磁场线则是围绕电流闭合的   </li>
+<li>在静电学中, 电场线的方向可用于判断电荷的正负；在磁静力学中, 磁场线的方向可用于判断电流的方向   </li>
+</ul>
+</details>
+<h2 id="2theoreme-dampere">2.Théorème d’Ampère (安培环路定理)<a class="headerlink" href="#2theoreme-dampere" title="Permanent link">&para;</a></h2>
+<h3 id="21-symetries-et-invariances">2.1 Symétries et invariances<a class="headerlink" href="#21-symetries-et-invariances" title="Permanent link">&para;</a></h3>
+<p>设 <span class="arithmatex">\(\Pi\)</span> 为电流分布的 <strong>对称平面</strong> , 对于 <span class="arithmatex">\(\Pi\)</span> 关于点 <span class="arithmatex">\(M\)</span> 的对称点 <span class="arithmatex">\(M'\)</span>: </p>
+<ul>
+<li>电流密度 <span class="arithmatex">\(\vec{j}\)</span> 满足: <span class="arithmatex">\(\vec{j}(M') = \text{sym} (\vec{j}(M))\)</span>                               </li>
+<li>磁场 <span class="arithmatex">\(\vec{B}\)</span> 满足: <span class="arithmatex">\(\vec{B}(M') = -\text{sym} (\vec{B}(M))\)</span>                                </li>
+<li>若 <span class="arithmatex">\(M\)</span> 属于对称平面 <span class="arithmatex">\(\Pi\)</span>, 则 <span class="arithmatex">\(\vec{B}(M)\)</span> 垂直于 <span class="arithmatex">\(\Pi\)</span>                </li>
+</ul>
+<p>设 <span class="arithmatex">\(\Pi\)</span> 为电流分布的 <strong>反对称平面</strong> , 对于 <span class="arithmatex">\(\Pi\)</span> 关于点 <span class="arithmatex">\(M\)</span> 的对称点 <span class="arithmatex">\(M'\)</span>:           </p>
+<ul>
+<li>电流密度 <span class="arithmatex">\(\vec{j}\)</span> 满足: <span class="arithmatex">\(\vec{j}(M') = -\text{sym} (\vec{j}(M))\)</span>                                     </li>
+<li>磁场 <span class="arithmatex">\(\vec{B}\)</span> 满足: <span class="arithmatex">\(\vec{B}(M') = \text{sym} (\vec{B}(M))\)</span>                        </li>
+<li>若 <span class="arithmatex">\(M\)</span> 属于反对称平面 <span class="arithmatex">\(\Pi\)</span>, 则 <span class="arithmatex">\(\vec{B}(M)\)</span> 位于 <span class="arithmatex">\(\Pi\)</span> 平面内   </li>
+</ul>
+<p>磁场 <span class="arithmatex">\(\vec{B}\)</span> 被称为赝矢量 (伪矢量, pseudo-vecteur)                        <br />
+电场 <span class="arithmatex">\(\vec{E}\)</span> 和电流密度 <span class="arithmatex">\(\vec{j}\)</span> 是极矢量 (vecteurs polaires)   </p>
+<p>要确定 <span class="arithmatex">\(\vec{B}\)</span> 的方向, 至少需要: 一个对称平面, 或两个反对称平面 <br />
+要确定 <span class="arithmatex">\(\vec{E}\)</span> 的方向, 至少需要: 一个反对称平面, 或两个对称平面   </p>
+<p>平移不变性: 若电流分布沿某一方向 <span class="arithmatex">\(\vec{u}_x\)</span> 不变, 则磁场 <span class="arithmatex">\(\vec{B}\)</span> 不依赖于 <span class="arithmatex">\(x\)</span> <br />
+旋转不变性: 若电流分布绕某轴 <span class="arithmatex">\(\vec{u}_z\)</span> 旋转角度 <span class="arithmatex">\(\theta\)</span> 后不变, 则磁场 <span class="arithmatex">\(\vec{B}\)</span> 不依赖于 <span class="arithmatex">\(\theta\)</span> </p>
+<h3 id="22-theoreme-dampere">2.2 Théorème d’Ampère<a class="headerlink" href="#22-theoreme-dampere" title="Permanent link">&para;</a></h3>
+<p>设 <span class="arithmatex">\(\Gamma\)</span> 为一个闭合且有方向的回路, 则有:   </p>
+<div class="arithmatex">\[
+    C_B = \oint_{P \in \Gamma} \vec{B}(P) \cdot \vec{dl} = \mu_0 I_{\text{enlacé}}
+\]</div>
+<p>其中: <span class="arithmatex">\( I_{\text{enlacé}} \)</span> 表示被回路 <span class="arithmatex">\(\Gamma\)</span> 所包围的总电流, 其表达式为:   </p>
+<div class="arithmatex">\[
+    I_{\text{enlacé}} = \iint_{M \in \Sigma} \vec{j}(M) \cdot \vec{dS}
+\]</div>
+<p><span class="arithmatex">\(\Sigma\)</span> 是任意一个以 <span class="arithmatex">\(\Gamma\)</span> 为边界的曲面 <br />
+微元面积元 <span class="arithmatex">\( d\vec{S} \)</span> 的方向取决于回路 <span class="arithmatex">\(\Gamma\)</span> 所选定的方向 (遵循右手法则)    </p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<p><img alt="1" src="../c3img/4.png" title="4" /></p>
+<div class="arithmatex">\[
+    I_{\text{enlacé}} = I_1 + I_2 - I_3
+\]</div>
+</div>
+<table>
+<thead>
+<tr>
+<th><strong>定理</strong></th>
+<th><strong>高斯定理</strong></th>
+<th><strong>安培环路定理</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>作用对象</strong></td>
+<td>闭合曲面 <span class="arithmatex">\(S\)</span></td>
+<td>闭合回路 <span class="arithmatex">\(\Gamma\)</span></td>
+</tr>
+<tr>
+<td><strong>分析对象和基本单位</strong></td>
+<td>电荷分布和电荷密度 <span class="arithmatex">\(\rho\)</span></td>
+<td>电流分布和电流密度 <span class="arithmatex">\(\vec{j}\)</span></td>
+</tr>
+<tr>
+<td><strong>公式</strong></td>
+<td><span class="arithmatex">\(\Phi = \unicode{x222F} \vec{E}(M) \cdot d\vec{S}(M) = \frac{Q_{\text{int}}}{\varepsilon_0}\)</span></td>
+<td><span class="arithmatex">\(C_B = \oint_{P \in \Gamma} \vec{B}(P) \cdot \vec{dl} = \mu_0 I_{\text{enlacé}}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>接下来, 我们将研究几个重要的模型 </p>
+<h3 id="23-fil-rectiligne-infini">2.3 Fil rectiligne infini (无限长直导线)<a class="headerlink" href="#23-fil-rectiligne-infini" title="Permanent link">&para;</a></h3>
+<p><img alt="1" src="../c3img/5.png" title="5" /></p>
+<p>在此研究一根半径为 <span class="arithmatex">\( a \)</span> 的导线, 其中电流密度 <span class="arithmatex">\( \vec{j} \)</span> 在导线内部 (<span class="arithmatex">\( r &lt; a \)</span>) 是均匀的, 在导线外部为零            <br />
+由于 <span class="arithmatex">\( \vec{j} \)</span> 在导线内均匀分布, 我们可以设其方向沿 <span class="arithmatex">\( z \)</span> 轴, 即: <span class="arithmatex">\(\vec{j} = j \vec{e}_z\)</span>                     <br />
+在导线截面上, 总电流为: <span class="arithmatex">\(I = j \pi a^2\)</span>                     <br />
+我们选择圆柱坐标系, 点 <span class="arithmatex">\( M \)</span> 的坐标表示为: <span class="arithmatex">\(M(r, \theta, z)\)</span></p>
+<p>对称性: <span class="arithmatex">\((M,\vec{u_r},\vec{u_z})\)</span> 对于电流分布是对称平面, 故: <span class="arithmatex">\(\vec{B}(M) = B(M) \vec{u_\theta}\)</span>                     </p>
+<p>不变性: 对于轴 <span class="arithmatex">\(\vec{u_z}\)</span> 和绕轴 <span class="arithmatex">\(\vec{u_z}\)</span> 的角 <span class="arithmatex">\(\theta\)</span> , 有平移和旋转不变性, 故: <span class="arithmatex">\(\vec{B}(M) = B(r) \vec{u_\theta}\)</span></p>
+<p>我们选择如下图所示的闭合回路 <span class="arithmatex">\(\Gamma\)</span> , 且分成两种情况讨论:      </p>
+<div class="arithmatex">\[
+    C_{\vec{B}} = \int_{P \in \Gamma} \vec{B}(P) \vec{dl}(P) = \int_0^{2 \pi} B(r) \vec{u_\theta} r d\theta \vec{u_\theta} = B(r) r 2 \pi
+\]</div>
+<ul>
+<li><span class="arithmatex">\(r &lt; a\)</span> (<span class="arithmatex">\(M\)</span> 在导线内部) :             </li>
+</ul>
+<div class="arithmatex">\[
+    I_{\text{enlacé}} = j \pi r^2
+\]</div>
+<div class="arithmatex">\[
+    B(r) = \frac{\mu_0 j r}{2} = \frac{\mu_0 I r}{2 a^2}
+\]</div>
+<ul>
+<li><span class="arithmatex">\(r &gt; a\)</span> (<span class="arithmatex">\(M\)</span> 在导线外部) :             </li>
+</ul>
+<div class="arithmatex">\[
+    I_{\text{enlacé}} = j \pi a^2
+\]</div>
+<div class="arithmatex">\[
+    B(r) = \frac{\mu_0 j a^2}{2r} = \frac{\mu_0 I}{2 \pi r}
+\]</div>
+<p>我们得到:         </p>
+<div class="arithmatex">\[
+    \begin{cases}
+    \vec{B}(M) = \frac{\mu_0 I r}{2 a^2} \vec{u_\theta}, \quad r &lt; a \\
+    \vec{B}(M) = \frac{\mu_0 I}{2 \pi r} \vec{u_\theta}, \quad r &gt; a 
+    \end{cases}
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>备注: 第二个表达式 <span class="arithmatex">\((r&gt;a)\)</span> 与 <span class="arithmatex">\( a \)</span> 无关, 我们可以得出由一根无限细的导线 (当 <span class="arithmatex">\( a \to 0 \)</span> 时) 所产生的磁场, 该导线中流经电流 <span class="arithmatex">\( I \)</span>:   </p>
+<div class="arithmatex">\[
+    \vec{B} = \frac{\mu_0 I}{2\pi r} \vec{u}_{\theta}
+\]</div>
+</div>
+<h3 id="24-solenoide-infini">2.4 Solénoïde infini (无限长螺线管)<a class="headerlink" href="#24-solenoide-infini" title="Permanent link">&para;</a></h3>
+<p><img alt="1" src="../c3img/6.png" title="6" /></p>
+<p><img alt="1" src="../c3img/7.png" title="7" /></p>
+<p>我们选择圆柱坐标系, 点 <span class="arithmatex">\( M \)</span> 的坐标表示为: <span class="arithmatex">\(M(r, \theta, z)\)</span></p>
+<p>对称性: <span class="arithmatex">\((M,\vec{u_r},\vec{u_\theta})\)</span> 对于电流分布是对称平面, 故: <span class="arithmatex">\(\vec{B}(M) = B(M) \vec{u_z}\)</span>                     </p>
+<p>不变性: 对于轴 <span class="arithmatex">\(\vec{u_z}\)</span> 和绕轴 <span class="arithmatex">\(\vec{u_z}\)</span> 的角 <span class="arithmatex">\(\theta\)</span> , 有平移和旋转不变性, 故: <span class="arithmatex">\(\vec{B}(M) = B(r) \vec{u_z}\)</span></p>
+<p>我们在 <span class="arithmatex">\( \theta = cste \)</span> 平面内选取一个闭合回路, 如下图所示, 沿矩形回路计算磁场环量, 并分两种情况讨论:              </p>
+<p><img alt="1" src="../c3img/8.png" title="8" /></p>
+<div class="arithmatex">\[
+    C_B = \int_{P \in \Gamma} \vec{B}(P) \cdot \vec{dl}(P) = \int_{P \in [A,B]} \vec{B}(P) \cdot \vec{dl}(P) + \int_{P \in [B,C]} \vec{B}(P) \cdot \vec{dl}(P) + \int_{P \in [C,D]} \vec{B}(P) \cdot \vec{dl}(P) + \int_{P \in [D,A]} \vec{B}(P) \cdot \vec{dl}(P) 
+\]</div>
+<p>分别计算:                   </p>
+<div class="arithmatex">\[
+    \int_{P \in [A,B]} \vec{B}(P) \cdot \vec{dl}(P) = \int_{z_B}^{z_A} B(r_1) \vec{u_z} \cdot (-dz) \vec{u_z} = - B(r_1)(z_A - z_B) = - B(r_1)h              
+\]</div>
+<div class="arithmatex">\[
+    \int_{P \in [B,C]} \vec{B}(P) \cdot \vec{dl}(P) = \int B(r) \vec{u_z} \cdot dr \vec{u_r} = 0                         
+\]</div>
+<div class="arithmatex">\[
+    \int_{P \in [C,D]} \vec{B}(P) \cdot \vec{dl}(P) = \int_{z_C}^{z_D} B(r_2) \vec{u_z} \cdot dz \vec{u_z} = B(r_2)(z_D - z_C) = B(r_2)h              
+\]</div>
+<div class="arithmatex">\[
+    \int_{P \in [D,A]} \vec{B}(P) \cdot \vec{dl}(P) = \int B(r) \vec{u_z} \cdot dr \vec{u_r} = 0                         
+\]</div>
+<p>代入:   </p>
+<div class="arithmatex">\[
+    C_B = h (B(r_2) - B(r_1))
+\]</div>
+<ul>
+<li><span class="arithmatex">\(r_1 &gt; a\)</span> (所选回路在导线外部) :             </li>
+</ul>
+<div class="arithmatex">\[
+    I_{\text{enlacé}} = 0
+\]</div>
+<div class="arithmatex">\[
+    B(r_1) = B(r_2) = 0
+\]</div>
+<p>故对于一根无限长的螺线管, 其外部的静磁场均为零               </p>
+<ul>
+<li><span class="arithmatex">\(r_1 &lt; a &lt; r_2\)</span> (所选回路被螺线管表面穿过) :             </li>
+</ul>
+<div class="arithmatex">\[
+    I_{\text{enlacé}} = - i \frac{N}{\ell} \cdot h
+\]</div>
+<blockquote>
+<p>需要注意此处电流方向是对所选回路使用右手定确定的, 而螺线管穿过的电流方向相反, 故有负号</p>
+</blockquote>
+<p>由前一种情况我们知道螺线管外部磁场为零, 故有 <span class="arithmatex">\(B(r_2) = 0\)</span>, 代入安培环路定理: </p>
+<div class="arithmatex">\[
+    h(0 - B(r_1)) = \mu_0 I_{\text{enlacé}} = -\mu_0 i \frac{N}{\ell} \cdot h
+\]</div>
+<p>螺线管内部磁场:                </p>
+<div class="arithmatex">\[
+    B_{\text{int}} = \frac{\mu_0 N i}{\ell} = \mu_0 n i , \quad 设 n = \frac{N}{\ell} 为螺线管每单位长度的匝数
+\]</div>
+<details class="note">
+<summary>Extra-note: Loi de Biot et Savart (毕奥-萨伐尔定律)</summary>
+<p>毕奥-萨伐尔定律描述了电流元在空间某一点产生的磁场, 其数学表达式为:     </p>
+<div class="arithmatex">\[
+    d\vec{B} = \frac{\mu_0}{4\pi} \frac{i \, d\vec{l} \wedge \vec{r}}{r^3}
+\]</div>
+<p>其中: </p>
+<ul>
+<li><span class="arithmatex">\( d\vec{B} \)</span> 是由电流元 <span class="arithmatex">\( i \, d\vec{l} \)</span> 在空间一点产生的微小磁场             </li>
+<li><span class="arithmatex">\( d\vec{l} \)</span> 是电流元的长度方向向量             </li>
+<li><span class="arithmatex">\( \vec{r} \)</span> 是从电流元指向场点的位矢                </li>
+<li><span class="arithmatex">\( r \)</span> 是该位矢的模                  </li>
+</ul>
+<p>毕奥-萨伐尔定律表明电流产生的磁场类似于库仑定律中点电荷产生的电场, 但磁场方向由右手定则确定              <br />
+它适用于计算直导线, 环形电流, 螺线管等系统的磁场分布</p>
+</details>
+<h2 id="3dipole-magnetique">3.Dipôle magnétique<a class="headerlink" href="#3dipole-magnetique" title="Permanent link">&para;</a></h2>
+<h3 id="31-moment-magnetique">3.1 Moment magnétique (磁矩)<a class="headerlink" href="#31-moment-magnetique" title="Permanent link">&para;</a></h3>
+<p>对于一个细导线回路, 当有电流 <span class="arithmatex">\( I \)</span> 通过, 并围住一个法向单位向量为 <span class="arithmatex">\( \vec{n} \)</span>, 面积为 <span class="arithmatex">\( S \)</span> 的表面时, 其磁矩定义为: </p>
+<div class="arithmatex">\[
+    \vec{\mathcal{M}} = I S \vec{n}
+\]</div>
+<p>磁矩的单位为安培·平方米 <span class="arithmatex">\((A·m²)\)</span> </p>
+<p><span class="arithmatex">\( \vec{n} \)</span> 的方向由右手法则确定                                 </p>
+<p>对于一个由多匝线圈组成的螺线管, 其总磁矩等于每个线圈磁矩的总和</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<ul>
+<li>原子的磁矩 (玻尔磁子) : <span class="arithmatex">\(\mu_B = \frac{e \hbar}{2m} \approx 10^{-23} \text{ A·m²}\)</span></li>
+<li>指南针的磁矩: <span class="arithmatex">\(\mathcal{M} \approx 1 \text{ A·m²}\)</span></li>
+</ul>
+</div>
+<h3 id="32-champ-cree-par-un-dipole-magnetique">3.2 Champ crée par un dipôle magnétique (磁偶极子产生的磁场)<a class="headerlink" href="#32-champ-cree-par-un-dipole-magnetique" title="Permanent link">&para;</a></h3>
+<p><img alt="1" src="../c3img/9.png" title="9" /></p>
+<p>磁偶极子的近似: 电流 <span class="arithmatex">\( I \)</span> 通过的回路的 "特征尺寸" (La taille caractéristique) <span class="arithmatex">\( a = \sqrt{S} \)</span> 相对于回路与观察点之间的距离 <span class="arithmatex">\( r \)</span> 非常小, 即 <span class="arithmatex">\( a \ll r \)</span>, 在这种近似下, 回路被称为磁偶极子, 并且只通过其磁矩来表示</p>
+<p>与静电偶极子类似, 可以在磁偶极子的近似下确定磁偶极子所产生的磁场, 表达式如下: </p>
+<div class="arithmatex">\[
+    \vec{B}(M) = \frac{\mu_0}{4\pi} \frac{3(\vec{\mathcal{M}} \cdot \vec{OM}) \vec{OM} - OM^2 \vec{\mathcal{M}}}{OM^5}
+\]</div>
+<p>该表达式与电偶极子的电场表达式类似, 仅需进行如下替换:                </p>
+<ul>
+<li>将 <span class="arithmatex">\( \frac{1}{4\pi\epsilon_0} \)</span> 替换为 <span class="arithmatex">\( \frac{\mu_0}{4\pi} \)</span>                 </li>
+<li>将 电偶极矩 <span class="arithmatex">\( \vec{p} \)</span> 替换为 磁矩 <span class="arithmatex">\( \vec{\mathcal{M}} \)</span></li>
+</ul>
+<hr />
+<p>我们可以画出由位于图中心的磁偶极子所产生的磁场线的形态，磁偶极子通过其垂直向上的磁矩表示                     </p>
+<p><img alt="1" src="../c3img/10.png" title="10" /></p>
+<p>需要注意的是在中心阴影区域, 磁场 <span class="arithmatex">\( \vec{B} \)</span> 的值未知, 因为磁偶极子近似在该区域不适用                         <br />
+并且磁场线的方向与磁矩一致                              </p>
+<h3 id="33-actions-subies-par-un-dipole-magnetique">3.3 Actions subies par un dipôle magnétique<a class="headerlink" href="#33-actions-subies-par-un-dipole-magnetique" title="Permanent link">&para;</a></h3>
+<p>考虑一个磁偶极矩 <span class="arithmatex">\(\vec{M}\)</span> 处于一个均匀磁场 <span class="arithmatex">\(\vec{B}\)</span> 中                                 </p>
+<blockquote>
+<p>磁偶极矩所产生的磁场不影响该偶极子, <span class="arithmatex">\(\vec{B}\)</span> 是在没有偶极子的情况下存在的磁场, 且我们不详细探讨其来源       </p>
+</blockquote>
+<p>该磁偶极子受力矩 <span class="arithmatex">\(\vec{\Gamma} = \vec{M} \wedge \vec{B}\)</span> 的作用     <br />
+它具有与磁场 <span class="arithmatex">\(\vec{B}\)</span> 相互作用的势能:       </p>
+<div class="arithmatex">\[
+    E_p = - \vec{M} \cdot \vec{B} 
+\]</div>
+<p>就像电偶极子在电场中的势能一样, 当磁偶极矩与磁场 <span class="arithmatex">\(\vec{B}\)</span> 同向 (平行排列) 时, 势能最小, 此时平衡是稳定的          <br />
+而当磁偶极矩与磁场 <span class="arithmatex">\(\vec{B}\)</span> 相反 (反平行排列) 时, 尽管它们是对齐的, 但方向相反, 此时平衡是不稳定的        </p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.expand", "navigation.indexes", "navigation.path", "navigation.top", "content.footnote.tooltips"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
