@@ -8,8 +8,6 @@
   <img align="center" src="https://readme-typing-svg.demolab.com?font=Protest+Revolution&pause=1000&color=F77878FF&background=FFAFDF00&center=true&width=500&lines=An attempt to go up Mount Taihang is frustrated by snow."/>
 </div>
 
-[源码仓库](https://github.com/Tw1stzz666/SummerNotes)
-
 <div class="grid cards" markdown>
 
 -   :material-github:{ .lg .middle } __My Github__

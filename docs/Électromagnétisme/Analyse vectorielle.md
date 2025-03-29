@@ -132,7 +132,12 @@ permanent ou statique )
         y = \frac{k_2}{k_1} x + C
         $$
 
+        <figure markdown="span">
         ![4](../Électromagnétisme/c1img/4.png "4")
+        <figcaption>
+        asd
+        </figcaption>
+        </figure>
 
         <!-- <div align=center><img src="../Électromagnétisme/c1img/4.png" width=50%/></div> -->
 
@@ -267,7 +272,7 @@ $$
         \oiint_S \vec{A} \cdot \vec{n} \, dS = \iiint_V div(\vec{A}) \, dV
     \]
 
-    $\oiint_S$ 表示积分曲面封闭
+    $\oiint_S$ 表示积分曲面封闭   
 
 ### 3.4 Le laplacien (拉普拉斯算子)
 

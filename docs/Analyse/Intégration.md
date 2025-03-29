@@ -1,3 +1,3 @@
 # Integraton
-!!!note “Definition” subdivision
+!!! note “Definition” subdivision
     

@@ -3,7 +3,19 @@ window.MathJax = {
       inlineMath: [["\\(", "\\)"]],
       displayMath: [["\\[", "\\]"]],
       processEscapes: true,
-      processEnvironments: true
+      processEnvironments: true,
+      packages: {'[+]': ['physics']},
+      packages: {'[+]': ['mathtools']},
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '0.8em',
+      multlineWidth: '85%',
+      equationNumbers: {
+        autoNumber: "AMS",
+      },
+      unicode: {
+        fonts: "STIXGeneral,'Arial Unicode MS'"
+      }
     },
     options: {
       ignoreHtmlClass: ".*|",

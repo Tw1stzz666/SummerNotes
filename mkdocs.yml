@@ -8,10 +8,12 @@ theme:
     icon:
       logo: fontawesome/solid/mug-hot
     features:
-      - navigation.tabs # 导航栏
+      - navigation.tabs
       - navigation.expand # 导航栏展开
+      - navigation.indexes
       - navigation.path   # 导航栏路径
       - navigation.top  # 回到顶部
+      - content.footnote.tooltips # 脚注提示
       # - toc.integrate
     palette: 
         # Palette toggle for light mode
@@ -84,26 +86,62 @@ markdown_extensions:
 
         
 extra_javascript:
-    - javascripts/katex.js
-    - https://unpkg.com/katex@0/dist/katex.min.js
-    - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
-    - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/katex.min.js
-    - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/contrib/auto-render.min.js
-    - javascripts/mathjax.js
+    # - javascripts/katex.js
+    # - https://unpkg.com/katex@0/dist/katex.min.js
+    # - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+    # - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/katex.min.js
+    # - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/contrib/auto-render.min.js
+    
+    # - javascripts/mathjax.js 垃圾辣鸡拉吉拉基腊鸡拉机蜡基
     - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
     - https://polyfill.io/v3/polyfill.min.js?features=es6
     - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js
 
 extra_css:
-  - https://unpkg.com/katex@0/dist/katex.min.css
+  - stylesheets/extra.css
+
+# extra_css:
+#   - css/custom.css
+#   - https://unpkg.com/katex@0/dist/katex.min.css
+#   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
+#   - https://cdn.jsdelivr.net/npm/jetbrains-mono@1.0.6/css/jetbrains-mono.css
+#   - https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
+
 
 nav:
     - Homepage: index.md
-    - Algèbre:
-        - Chapitre 4 Permutations: Algèbre/Permutations.md
-    - Analyse:
-        - Chapitre 7 Intégration: Analyse/Intégration.md
-    - Géométrie:
-        - Chapitre 1 Espace Vectoriels: Géométrie/Espace Vectoriels.md
-    - Électromagnétisme:
-        - Chapitre 1 Analyse vectorielle: Électromagnétisme/Analyse vectorielle.md
+    - Mathématiques:
+        - Mathsindex.md
+        # - Chapitre 1 Ensembles applications: Algèbre/ensembles applications.md
+        # - Chapitre 2 Topologie de R: Analyse/Topologie de R.md
+        # - Chapitre 3 Arithmetique: Algèbre/Arithmetique.md
+        # - Chapitre 4 Suites: Analyse/Suites.md
+        # - Chapitre 5 Groupes: Algèbre/Groupes.md
+        # - Chapitre 6 Series: Analyse/Series.md
+        # - Chapitre 7 Permutations: Algèbre/Permutations.md
+        # - Chapitre 8 Fonctions: Analyse/Fonctions.md
+        # - Chapitre 9 Anneaux et corps: Algèbre/Anneaux et corps.md
+        # - Chapitre 10 Polynomes: Algèbre/Polynomes.md
+        # - Chapitre 11 Analyse asymptotique: Analyse/Analyse asymptotique.md
+        # - Chapitre 12 Equations differentielles: Analyse/Equations differentielles.md
+        # - Chapitre 13 Matrices: Algèbre/Matrices.md
+        # - Chapitre 14 Intégration: Analyse/Intégration.md
+        - Chapitre 15 Espace Vectoriels: Géométrie/Espace Vectoriels.md
+        # - Chapitre 16 Courbes paramétrée: Analyse/Courbes paramétrée.md
+        # - Chapitre 17 Espaces vectoriels de dim finie: Algèbre/Espaces vectoriels de dim finie.md
+        - Chapitre 18 Fonctions de deux variables: Analyse/Fonctions de deux variables.md
+    - Physique:
+        - Électronique:
+            - Électronique/index.md
+            # - Chapitre 1 Lois fondamentales dans l'ARQS: Électronique/Lois fondamentales dans l'ARQS.md 
+            # - Chapitre 2 Circuits du premier ordre: Électronique/Circuits du premier ordre.md 
+            # - Chapitre 3 Circuits du second ordre: Électronique/Circuits du second ordre.md 
+            # - Chapitre 4 Régime sinusoidal forcé et filtres linéaires: Électronique/Régime sinusoidal forcé et filtres linéaires.md 
+            # - Chapitre 5 Amplificateurs Opérationnels: Électronique/Amplificateurs Opérationnels.md 
+            # - Chapitre 6 Modulation demodulation: Électronique/Modulation demodulation.md 
+        - Électromagnétisme:
+            - Électromagnétisme/index.md
+            - Chapitre 1 Analyse vectorielle: Électromagnétisme/Analyse vectorielle.md
+            - Chapitre 2 Electrostatique: Électromagnétisme/Electrostatique.md
+            - Chapitre 3 Magnétostatique: Électromagnétisme/Magnétostatique.md
+            # - Chapitre 4 Mouvements de particules chargées: Électromagnétisme/Mouvements de particules chargées.md
