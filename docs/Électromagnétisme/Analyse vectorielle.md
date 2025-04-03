@@ -42,11 +42,11 @@ $(\vec{e_r},\vec{e_\theta},\vec{e_z})$ 是该坐标系的基底, 有如下性质
 * 将 $\vec{e_r}$ 和 $\vec{e_\theta}$ 根据笛卡尔坐标系分解:   
         
 \[
-    \vec{e_r} = cos(\theta) \vec{e_x} + sin(\theta) \vec{e_y}
+    \vec{e_r} = \cos(\theta) \vec{e_x} + \sin(\theta) \vec{e_y}
 \]
 
 \[
-    \vec{e_\theta} = - sin(\theta) \vec{e_x} + cos(\theta) \vec{e_y}
+    \vec{e_\theta} = - \sin(\theta) \vec{e_x} + \cos(\theta) \vec{e_y}
 \]
 
 进而得出: $d \vec{e_r} = d \theta \vec{e_\theta}$ (因为 $\vec{e_r}$ 会随 $M$ 位置改变而改变, 所以 $d\vec{e_r}$ 不为零, 而对于基底中的 $z$ 方向的分量, 因为 $\vec{e_z}$ 不会发生改变, 所以有 $d\vec{e_z} = 0$)
@@ -70,8 +70,8 @@ $(\vec{e_r},\vec{e_\theta},\vec{e_\phi})$ 是该坐标系的基底, 有如下性
 
 那么:            
 
-* 点 $M$ 的微小位移可以表示为 $\vec{dOM} = dr\vec{e_r} + rd\theta \vec{e_\theta} + rsin(\theta)d \phi\vec{e_\phi}$              
-* 点 $M$ 的速度可以表示为 $\vec{v} = \frac{d\vec{OM}}{dt} = \frac{dr}{dt}\vec{e_r} + r \frac{d\theta}{dt} \vec{e_\theta} + rsin(\theta) \frac{d\phi}{dt} \vec{e_\phi} = \dot{r}\vec{e_r} + r \dot{\theta} \vec{e_\theta} + rsin(\theta)\dot{\phi} \vec{e_\phi}$
+* 点 $M$ 的微小位移可以表示为 $\vec{dOM} = dr\vec{e_r} + rd\theta \vec{e_\theta} + r\sin(\theta)d \phi\vec{e_\phi}$              
+* 点 $M$ 的速度可以表示为 $\vec{v} = \frac{d\vec{OM}}{dt} = \frac{dr}{dt}\vec{e_r} + r \frac{d\theta}{dt} \vec{e_\theta} + r\sin(\theta) \frac{d\phi}{dt} \vec{e_\phi} = \dot{r}\vec{e_r} + r \dot{\theta} \vec{e_\theta} + r\sin(\theta)\dot{\phi} \vec{e_\phi}$
 
 ## 2.Notion de champ 
 
@@ -90,7 +90,7 @@ permanent ou statique )
 
 * 在笛卡尔坐标系中 $\vec{dOM} = dx\vec{e_x} + dy\vec{e_y} + dz\vec{e_z}$   
 * 在圆柱坐标系中 $\vec{dOM} = dr\vec{e_r} + rd\theta \vec{e_\theta} + dz\vec{e_z}$       
-* 在球坐标系中 $\vec{dOM} = dr\vec{e_r} + rd\theta \vec{e_\theta} + rsin(\theta)d \phi\vec{e_\phi}$         
+* 在球坐标系中 $\vec{dOM} = dr\vec{e_r} + rd\theta \vec{e_\theta} + r\sin(\theta)d \phi\vec{e_\phi}$         
 
 若场在某点 $M$ 处为零, 则该点 $M$ 的场线会缩减为点 $M$ 本身                   
 
@@ -172,23 +172,23 @@ tube de champ
 
 * 笛卡尔坐标系: $\vec{grad}(U) = \frac{\partial U}{\partial x} \vec{e_x} + \frac{\partial U}{\partial y} \vec{e_y} + \frac{\partial U}{\partial z} \vec{e_z}$
 * 圆柱坐标系: $\vec{grad}(U) = \frac{\partial U}{\partial r} \vec{e_r} + \frac{1}{r} \frac{\partial U}{\partial \theta} \vec{e_\theta} + \frac{\partial U}{\partial z} \vec{e_z}$
-* 圆坐标系: $\vec{grad}(U) = \frac{\partial U}{\partial r} \vec{e_r} + \frac{1}{r} \frac{\partial U}{\partial \theta} \vec{e_\theta} + \frac{1}{rsin\theta} \frac{\partial U}{\partial \phi} \vec{e_\phi}$
+* 圆坐标系: $\vec{grad}(U) = \frac{\partial U}{\partial r} \vec{e_r} + \frac{1}{r} \frac{\partial U}{\partial \theta} \vec{e_\theta} + \frac{1}{r\sin\theta} \frac{\partial U}{\partial \phi} \vec{e_\phi}$
 
 在笛卡尔坐标系中, 我们引入算子 $\vec{\nabla} = \frac{\partial}{\partial x} \vec{e_x} + \frac{\partial}{\partial y} \vec{e_y} + \frac{\partial}{\partial z} \vec{e_z}$           
 从而, 我们可以简化等式: $\vec{grad}(U) = \vec{\nabla}(U) = \vec{\nabla} U$                      
 
 !!! example "Exemple"  
     === "Problème"               
-        计算 $\vec{grad}(V)$ , $V = \frac{mr^2}{e\tau^2} - \frac{k}{e}r^2sin\theta + \frac{mgz}{e}cos\theta$         
+        计算 $\vec{grad}(V)$ , $V = \frac{mr^2}{e\tau^2} - \frac{k}{e}r^2\sin\theta + \frac{mgz}{e}\cos\theta$         
         $m, \tau, k, e, g$ 都是带有量纲的常数                     
     === "Solution"
 
         \[
-            \vec{grad}(V) = \frac{\partial}{\partial r} (\frac{mr^2}{e\tau^2} - \frac{k}{e}r^2sin\theta + \frac{mgz}{e}cos\theta) \vec{e_r} + \frac{1}{r} \frac{\partial}{\partial \theta} (\frac{mr^2}{e\tau^2} - \frac{k}{e}r^2sin\theta + \frac{mgz}{e}cos\theta) \vec{e_\theta} + \frac{\partial}{\partial z} (\frac{mr^2}{e\tau^2} - \frac{k}{e}r^2sin\theta + \frac{mgz}{e}cos\theta) \vec{e_z}
+            \vec{grad}(V) = \frac{\partial}{\partial r} (\frac{mr^2}{e\tau^2} - \frac{k}{e}r^2\sin\theta + \frac{mgz}{e}\cos\theta) \vec{e_r} + \frac{1}{r} \frac{\partial}{\partial \theta} (\frac{mr^2}{e\tau^2} - \frac{k}{e}r^2\sin\theta + \frac{mgz}{e}\cos\theta) \vec{e_\theta} + \frac{\partial}{\partial z} (\frac{mr^2}{e\tau^2} - \frac{k}{e}r^2\sin\theta + \frac{mgz}{e}\cos\theta) \vec{e_z}
         \]
 
         \[
-            = (\frac{2mr}{e\tau^2}-\frac{2kr}{e}sin\theta)\vec{e_r} - \frac{1}{r}(\frac{k}{e}r^2cos\theta+\frac{mgz}{e}sin\theta)\vec{e_\theta} + \frac{mg}{e}cos\theta \vec{e_z}
+            = (\frac{2mr}{e\tau^2}-\frac{2kr}{e}\sin\theta)\vec{e_r} - \frac{1}{r}(\frac{k}{e}r^2\cos\theta+\frac{mgz}{e}\sin\theta)\vec{e_\theta} + \frac{mg}{e}\cos\theta \vec{e_z}
         \]
 
 ### 3.2 Le rotationnel (旋度)
@@ -228,7 +228,7 @@ tube de champ
 
 * 笛卡尔坐标系: $\vec{rot}(\vec{A}) = (\frac{\partial A_z}{\partial y} - \frac{\partial A_y}{\partial z}) \vec{e_x} + (\frac{\partial A_x}{\partial z} - \frac{\partial A_z}{\partial x})  \vec{e_y} + (\frac{\partial A_y}{\partial x} - \frac{\partial A_x}{\partial y})  \vec{e_z}$                     
 * 圆柱坐标系: $\vec{rot}(\vec{A}) = \left( \frac{1}{r} \frac{\partial A_z}{\partial \theta} - \frac{\partial A_\theta}{\partial z} \right) \vec{e_r} + \left( \frac{\partial A_r}{\partial z} - \frac{\partial A_z}{\partial r} \right) \vec{e_\theta} + \frac{1}{r} \left( \frac{\partial (r A_\theta)}{\partial r} - \frac{\partial A_r}{\partial \theta} \right) \vec{e_z}$                          
-* 圆坐标系: $\vec{rot}(\vec{A}) =\frac{1}{r \sin \theta}\left[\frac{\partial(A_\phi \sin \phi)}{\partial \theta} - \frac{\partial A_\theta}{\partial \phi}\right] \vec{e_r}+ \frac{1}{r}\left[\frac{1}{\sin \theta} \frac{\partial A_r}{\partial \phi} - \frac{\partial}{\partial r}(r A_\phi)\right] \vec{e_\theta}+ \frac{1}{r}\left[\frac{\partial (r A_\theta)}{\partial r} - \frac{\partial A_r}{\partial \theta}\right] \vec{e_\phi}$                    
+* 圆坐标系: $\vec{rot}(\vec{A}) =\frac{1}{r \\sin \theta}\left[\frac{\partial(A_\phi \\sin \phi)}{\partial \theta} - \frac{\partial A_\theta}{\partial \phi}\right] \vec{e_r}+ \frac{1}{r}\left[\frac{1}{\\sin \theta} \frac{\partial A_r}{\partial \phi} - \frac{\partial}{\partial r}(r A_\phi)\right] \vec{e_\theta}+ \frac{1}{r}\left[\frac{\partial (r A_\theta)}{\partial r} - \frac{\partial A_r}{\partial \theta}\right] \vec{e_\phi}$                    
 
 !!! note "Théorème de Stokes"
     沿封闭且有向的曲线 $\Gamma$ 的向量场 $A$ 的环量等于 $\vec{rot}(\vec{A})$ 的在任意由 $\Gamma$ 圈出的曲面的通量, 曲面的方向取决于 $\Gamma$ 的方向 (依据右手螺旋法则)                           
@@ -253,7 +253,7 @@ tube de champ
 
 * 笛卡尔坐标系: $div(\vec{A}) = \frac{\partial A_x}{\partial x} + \frac{\partial A_y}{\partial y} + \frac{\partial A_z}{\partial z}$                     
 * 圆柱坐标系: $div(\vec{A}) = \frac{1}{r} \frac{\partial (r A_r)}{\partial r} + \frac{1}{r} \frac{\partial A_\theta}{\partial \theta} + \frac{\partial A_z}{\partial z}$                          
-* 圆坐标系: $div(\vec{A}) = \frac{1}{r^2} \frac{\partial (r^2 A_r)}{\partial r} + \frac{1}{r \sin\theta} \frac{\partial (\sin\theta A_\theta)}{\partial \theta} + \frac{1}{r \sin\theta} \frac{\partial A_\phi}{\partial \phi}$               
+* 圆坐标系: $div(\vec{A}) = \frac{1}{r^2} \frac{\partial (r^2 A_r)}{\partial r} + \frac{1}{r \\sin\theta} \frac{\partial (\\sin\theta A_\theta)}{\partial \theta} + \frac{1}{r \\sin\theta} \frac{\partial A_\phi}{\partial \phi}$               
 
 在笛卡尔坐标系中: $div(\vec{A}) = \vec{\nabla} \cdot \vec{A}$
 **注意** : $\vec{\nabla} \cdot \vec{A} \neq \vec{\nabla} \vec{A}$              
@@ -269,10 +269,10 @@ $$
     向量场 $\vec{A}$ 通过封闭曲面 $S$ 的通量 (曲面局部朝外的单位法向量为 $\vec{n}$ ) 等于该曲面所围成的体积内散度 $div(\vec{A})$ 的积分
 
     \[
-        \oiint_S \vec{A} \cdot \vec{n} \, dS = \iiint_V div(\vec{A}) \, dV
+        \unicode{x222F} \vec{A} \cdot \vec{n} \, dS = \iiint_V div(\vec{A}) \, dV
     \]
 
-    $\oiint_S$ 表示积分曲面封闭   
+    $\unicode{x222F}_S$ 表示积分曲面封闭   
 
 ### 3.4 Le laplacien (拉普拉斯算子)
 
@@ -284,7 +284,7 @@ $$
 
 * 笛卡尔坐标系: $\Delta U = \frac{\partial^2 U}{\partial x^2} + \frac{\partial^2 U}{\partial y^2} + \frac{\partial^2 U}{\partial z^2}$                     
 * 圆柱坐标系: $\Delta U = \frac{1}{r} \frac{\partial}{\partial r} \left( r \frac{\partial U}{\partial r} \right) + \frac{1}{r^2} \frac{\partial^2 U}{\partial \theta^2} + \frac{\partial^2 U}{\partial z^2}$                          
-* 圆坐标系: $\Delta U = \frac{1}{r^2} \frac{\partial}{\partial r} \left( r^2 \frac{\partial U}{\partial r} \right) + \frac{1}{r^2 \sin\theta} \frac{\partial}{\partial \theta} \left( \sin\theta \frac{\partial U}{\partial \theta} \right) + \frac{1}{r^2 \sin^2\theta} \frac{\partial^2 U}{\partial \phi^2}$    
+* 圆坐标系: $\Delta U = \frac{1}{r^2} \frac{\partial}{\partial r} \left( r^2 \frac{\partial U}{\partial r} \right) + \frac{1}{r^2 \\sin\theta} \frac{\partial}{\partial \theta} \left( \\sin\theta \frac{\partial U}{\partial \theta} \right) + \frac{1}{r^2 \\sin^2\theta} \frac{\partial^2 U}{\partial \phi^2}$    
 
 最后, 我们引入向量拉普拉斯算子 $\vec{\Delta}$ , 定义如下: 
 

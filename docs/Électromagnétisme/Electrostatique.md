@@ -755,26 +755,26 @@ $E(0) = 0$ 是由于对称性造成的, 放置在球心的电荷所受到来自�
 由 $r \gg a$ : 
 
 \[
-    PM^2 = (\vec{PM})^2 = (\vec{PO} + \vec{OM})^2 = \vec{PO}^2 + \vec{OM}^2 + 2 \vec{PO} \vec{OM} = \frac{a^2}{4} - arcos\theta + r^2
+    PM^2 = (\vec{PM})^2 = (\vec{PO} + \vec{OM})^2 = \vec{PO}^2 + \vec{OM}^2 + 2 \vec{PO} \vec{OM} = \frac{a^2}{4} - ar\cos\theta + r^2
 \]
 
 \[
-    \frac{1}{PM} = \frac{1}{\sqrt{\frac{a^2}{4} - arcos\theta + r^2}} = \frac{1}{r \sqrt{1 - \frac{acos\theta}{r} + \frac{a^2}{4r^2}}} = \frac{1}{r} (1 + \frac{acos\theta}{2r})
+    \frac{1}{PM} = \frac{1}{\sqrt{\frac{a^2}{4} - ar\cos\theta + r^2}} = \frac{1}{r \sqrt{1 - \frac{a\cos\theta}{r} + \frac{a^2}{4r^2}}} = \frac{1}{r} (1 + \frac{a\cos\theta}{2r})
 \]
 
 同样的: 
 
 \[
-    \frac{1}{NM} = \frac{1}{r} (1 - \frac{acos\theta}{2r})
+    \frac{1}{NM} = \frac{1}{r} (1 - \frac{a\cos\theta}{2r})
 \]
 
 代入: 
 
 \[
-    V(M) = \frac{qacos\theta}{4\pi \epsilon_0 r^2}
+    V(M) = \frac{qa\cos\theta}{4\pi \epsilon_0 r^2}
 \]
 
-我们还有: $\vec{p} = q \vec{NP}, \vec{p} \cdot \vec{OM} = qarcos\theta$                   
+我们还有: $\vec{p} = q \vec{NP}, \vec{p} \cdot \vec{OM} = qar\cos\theta$                   
 故:  
 
 \[
@@ -788,10 +788,10 @@ $E(0) = 0$ 是由于对称性造成的, 放置在球心的电荷所受到来自�
     \vec{E} = - \vec{grad}(V) = - \frac{\partial V}{\partial r} \vec{u_r} - \frac{1}{r} \frac{\partial V}{\partial \theta} \vec{u_\theta}
 \]
 
-计算 $\frac{\partial V}{\partial r} = - \frac{qacos\theta}{2\pi \epsilon_0 r^3}, \frac{\partial V}{\partial \theta} = - \frac{qasin\theta}{4\pi \epsilon_0 r^2}$ , 代入:    
+计算 $\frac{\partial V}{\partial r} = - \frac{qa\cos\theta}{2\pi \epsilon_0 r^3}, \frac{\partial V}{\partial \theta} = - \frac{qa\sin\theta}{4\pi \epsilon_0 r^2}$ , 代入:    
 
 \[
-    \vec{E} = \frac{qa}{4\pi \epsilon_0 r^3} (2cos\theta \vec{u_r} + sin\theta \vec{u_\theta})
+    \vec{E} = \frac{qa}{4\pi \epsilon_0 r^3} (2\cos\theta \vec{u_r} + \sin\theta \vec{u_\theta})
 \]
 
 \[

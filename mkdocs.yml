@@ -86,13 +86,13 @@ markdown_extensions:
 
         
 extra_javascript:
-    # - javascripts/katex.js
+    # - javascripts/katex.js 垃圾辣鸡拉吉拉基腊鸡拉机蜡基
     # - https://unpkg.com/katex@0/dist/katex.min.js
     # - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
     # - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/katex.min.js
     # - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/contrib/auto-render.min.js
     
-    # - javascripts/mathjax.js 垃圾辣鸡拉吉拉基腊鸡拉机蜡基
+    - javascripts/mathjax.js 
     - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
     - https://polyfill.io/v3/polyfill.min.js?features=es6
     - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js
@@ -126,9 +126,9 @@ nav:
         # - Chapitre 12 Equations differentielles: Analyse/Equations differentielles.md
         # - Chapitre 13 Matrices: Algèbre/Matrices.md
         # - Chapitre 14 Intégration: Analyse/Intégration.md
-        - Chapitre 15 Espace Vectoriels: Géométrie/Espace Vectoriels.md
+        - Chapitre 15 Espace vectoriels: Géométrie/Espace vectoriels.md
         # - Chapitre 16 Courbes paramétrée: Analyse/Courbes paramétrée.md
-        # - Chapitre 17 Espaces vectoriels de dim finie: Algèbre/Espaces vectoriels de dim finie.md
+        - Chapitre 17 Espaces vectoriels de dimension finie: Géométrie/Espaces vectoriels de dimension finie.md
         - Chapitre 18 Fonctions de deux variables: Analyse/Fonctions de deux variables.md
     - Physique:
         - Électronique:
@@ -144,4 +144,4 @@ nav:
             - Chapitre 1 Analyse vectorielle: Électromagnétisme/Analyse vectorielle.md
             - Chapitre 2 Electrostatique: Électromagnétisme/Electrostatique.md
             - Chapitre 3 Magnétostatique: Électromagnétisme/Magnétostatique.md
-            # - Chapitre 4 Mouvements de particules chargées: Électromagnétisme/Mouvements de particules chargées.md
+            - Chapitre 4 Mouvements de particules chargées: Électromagnétisme/Mouvements de particules chargées.md

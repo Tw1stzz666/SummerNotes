@@ -1,11 +1,11 @@
 # Fonctions de deux variables 
 
-# 1.Topologie de $\mathbb{R}^2$
+## 1.Topologie de $\mathbb{R}^2$
 
 一般来说, 拓扑是指一组被称为开集的子集集合        
 在此, 拓扑来源于 **赋范向量空间** (espace vectoriel normé) 的结构, 即具有范数 (norme)          
 
-## 1.1 Normé sur $\mathbb{R}^2$
+### 1.1 Normé sur $\mathbb{R}^2$
 
 <div class="grid cards" markdown>
 
@@ -230,7 +230,7 @@
 
     下图为三种常见范数对应的单位球, 即以 \(\vec{0}\) (为中心, 半径为 1 的开球)
 
-    ![1](../Analyse/c9img/1.png "1")   
+    ![1](../Analyse/c18img/1.png "1")   
 
     需要注意的是: 如果我们知道与某个范数 \( N \) 相关的球面 \( S \) , 那么该范数就可以被完全确定                 
 
@@ -320,7 +320,7 @@
             B_{\|\cdot\|_1} (\vec{0}, r) \subseteq B_{\|\cdot\|_2} (\vec{0}, r) \subseteq B_{\|\cdot\|_{\infty}} (\vec{0}, r) \subseteq B_{\|\cdot\|_1} (\vec{0}, 2r)
         \]
 
-        ![1](../Analyse/c9img/2.png "2")   
+        ![1](../Analyse/c18img/2.png "2")   
 
 <div class="grid cards" markdown>
 
@@ -400,7 +400,7 @@
 
         因此, \( \vec{y} \in B_N(\vec{c}, r) \), 且对于所有 \( \vec{y} \in B_N(\vec{x}, \rho) \) 都成立   
         命题得证
-        ![1](../Analyse/c9img/3.png "3")  
+        ![1](../Analyse/c18img/3.png "3")  
 
 <div class="grid cards" markdown>
 
@@ -585,7 +585,7 @@
 
     即开集 (拓扑) 和收敛性是互相确定的 
 
-# 1.2 Fonctions de deux variables
+### 1.2 Fonctions de deux variables
 
 我们可以将一个二元函数理解为一族单变量函数            
 设 \(X, Y, Z\) 是三个集合, 对于任意函数  
