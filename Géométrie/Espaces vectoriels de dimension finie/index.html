@@ -1,0 +1,2733 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Espace%20vectoriels/">
+      
+      
+        <link rel="next" href="../../Analyse/Fonctions%20de%20deux%20variables/">
+      
+      
+      <link rel="icon" href="../../assets/mmc.jpg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.6">
+    
+    
+      
+        <title>Chapitre 17 Espaces vectoriels de dimension finie - Summer & Capoo's Home</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#espaces-vectoriels-de-dimension-finie" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="Summer &amp; Capoo&#39;s Home" class="md-header__button md-logo" aria-label="Summer & Capoo's Home" data-md-component="logo">
+      
+  <img src="../../assets/mmc.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Summer & Capoo's Home
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapitre 17 Espaces vectoriels de dimension finie
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Homepage
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../Mathsindex/" class="md-tabs__link">
+          
+  
+    
+  
+  Mathématiques
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%C3%89lectronique/" class="md-tabs__link">
+          
+  
+    
+  
+  Physique
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Summer &amp; Capoo&#39;s Home" class="md-nav__button md-logo" aria-label="Summer & Capoo's Home" data-md-component="logo">
+      
+  <img src="../../assets/mmc.jpg" alt="logo">
+
+    </a>
+    Summer & Capoo's Home
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Homepage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Mathématiques
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Mathématiques
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mathsindex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mathématiques
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Espace%20vectoriels/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 15 Espace vectoriels
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Chapitre 17 Espaces vectoriels de dimension finie
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 17 Espaces vectoriels de dimension finie
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1theorie-de-la-dimension" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.Théorie de la dimension
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.Théorie de la dimension">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例 3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1712" class="md-nav__link">
+    <span class="md-ellipsis">
+      命题 17.1.2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="命题 17.1.2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      证明
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1713" class="md-nav__link">
+    <span class="md-ellipsis">
+      命题 17.1.3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1712_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      定义 17.1.2：维数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1711" class="md-nav__link">
+    <span class="md-ellipsis">
+      定理 17.1.1（提取基）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      证明
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      注记
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      该定理的重要性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1712_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      定理 17.1.2（不完整基）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="定理 17.1.2（不完整基）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      证明
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1714" class="md-nav__link">
+    <span class="md-ellipsis">
+      命题 17.1.4
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="命题 17.1.4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      证明
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1715" class="md-nav__link">
+    <span class="md-ellipsis">
+      命题 17.1.5
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="命题 17.1.5">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      证明
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2rangs-et-calcul-matriciel" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.Rangs et calcul matriciel
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.Rangs et calcul matriciel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      矩阵的列族在整个讨论中起着重要作用
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1721" class="md-nav__link">
+    <span class="md-ellipsis">
+      命题 17.2.1（矩阵运算的性质）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      例子
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      矩阵向量乘法的例子
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      矩阵乘法的例子
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1721_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      定义 17.2.1：一个向量族的秩
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1722" class="md-nav__link">
+    <span class="md-ellipsis">
+      定义 17.2.2：矩阵的秩
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3calcul-matriciel-et-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.Calcul matriciel et applications
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.Calcul matriciel et applications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-matrices-echelonnees-matrices-echelonnees-reduites" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Matrices échelonnées, matrices échelonnées réduites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-famille-libre-famille-generatrice-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Famille libre, famille génératrice, base
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-changement-de-bases" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Changement de bases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-relation-de-dependance-lineaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 Relation de dépendance linéaire
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-passage-dun-systeme-dequations-a-une-famille-generatrice" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5 Passage d’un système d’équations à une famille génératrice
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-passage-dune-famille-generatrice-a-un-systeme-dequations" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6 Passage d’une famille génératrice à un système d’équations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4sommes-et-supplementaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.Sommes et supplémentaire
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Analyse/Fonctions%20de%20deux%20variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 18 Fonctions de deux variables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Physique
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Physique
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../%C3%89lectronique/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Électronique
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Électronique
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../%C3%89lectromagn%C3%A9tisme/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Électromagnétisme
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Électromagnétisme
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%C3%89lectromagn%C3%A9tisme/Analyse%20vectorielle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 1 Analyse vectorielle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%C3%89lectromagn%C3%A9tisme/Electrostatique/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 2 Electrostatique
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%C3%89lectromagn%C3%A9tisme/Magn%C3%A9tostatique/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 3 Magnétostatique
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%C3%89lectromagn%C3%A9tisme/Mouvements%20de%20particules%20charg%C3%A9es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 4 Mouvements de particules chargées
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1theorie-de-la-dimension" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.Théorie de la dimension
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.Théorie de la dimension">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例 3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1712" class="md-nav__link">
+    <span class="md-ellipsis">
+      命题 17.1.2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="命题 17.1.2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      证明
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1713" class="md-nav__link">
+    <span class="md-ellipsis">
+      命题 17.1.3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1712_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      定义 17.1.2：维数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1711" class="md-nav__link">
+    <span class="md-ellipsis">
+      定理 17.1.1（提取基）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      证明
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      注记
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      该定理的重要性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1712_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      定理 17.1.2（不完整基）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="定理 17.1.2（不完整基）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      证明
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1714" class="md-nav__link">
+    <span class="md-ellipsis">
+      命题 17.1.4
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="命题 17.1.4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      证明
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1715" class="md-nav__link">
+    <span class="md-ellipsis">
+      命题 17.1.5
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="命题 17.1.5">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      证明
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2rangs-et-calcul-matriciel" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.Rangs et calcul matriciel
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.Rangs et calcul matriciel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      矩阵的列族在整个讨论中起着重要作用
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1721" class="md-nav__link">
+    <span class="md-ellipsis">
+      命题 17.2.1（矩阵运算的性质）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      例子
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      矩阵向量乘法的例子
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      矩阵乘法的例子
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1721_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      定义 17.2.1：一个向量族的秩
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1722" class="md-nav__link">
+    <span class="md-ellipsis">
+      定义 17.2.2：矩阵的秩
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3calcul-matriciel-et-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.Calcul matriciel et applications
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.Calcul matriciel et applications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-matrices-echelonnees-matrices-echelonnees-reduites" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Matrices échelonnées, matrices échelonnées réduites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-famille-libre-famille-generatrice-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Famille libre, famille génératrice, base
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-changement-de-bases" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Changement de bases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-relation-de-dependance-lineaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 Relation de dépendance linéaire
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-passage-dun-systeme-dequations-a-une-famille-generatrice" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5 Passage d’un système d’équations à une famille génératrice
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-passage-dune-famille-generatrice-a-un-systeme-dequations" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6 Passage d’une famille génératrice à un système d’équations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4sommes-et-supplementaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.Sommes et supplémentaire
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="espaces-vectoriels-de-dimension-finie">Espaces vectoriels de dimension finie<a class="headerlink" href="#espaces-vectoriels-de-dimension-finie" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>本章中, <span class="arithmatex">\(\mathbb{K}\)</span> 均定义为一个域</p>
+</blockquote>
+<h2 id="1theorie-de-la-dimension">1.Théorie de la dimension<a class="headerlink" href="#1theorie-de-la-dimension" title="Permanent link">&para;</a></h2>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>Définition: Matrice représentative d’un vecteur dans une base</strong> </p>
+<hr />
+<p>设 <span class="arithmatex">\( E \)</span> 是一个 <span class="arithmatex">\( \mathbb{K} \)</span>-向量空间, 且整数 <span class="arithmatex">\( n \geq 1 \)</span> , 假设 <span class="arithmatex">\( E \)</span> 存在一组基</p>
+<div class="arithmatex">\[
+    \mathcal{B} = (e_1, \dots, e_n)
+\]</div>
+<p>对于任意 <span class="arithmatex">\( u \in E \)</span>, 设 <span class="arithmatex">\( x_1, \dots, x_n \in \mathbb{K} \)</span> 是 <span class="arithmatex">\( u \)</span> 在基 <span class="arithmatex">\( B \)</span> 下的坐标, 则列矩阵  </p>
+<div class="arithmatex">\[
+\text{mat}_B(u) =  
+\begin{pmatrix}  
+x_1 \\  
+\vdots \\  
+x_n  
+\end{pmatrix}  
+\in M_{n,1}(\mathbb{K})  
+\]</div>
+<p>称为 <span class="arithmatex">\( u \)</span> 在基 <span class="arithmatex">\( B \)</span> 下的表示矩阵   </p>
+<p>换句话说, <span class="arithmatex">\( u \)</span> 可以表示为: <span class="arithmatex">\(u = x_1 e_1 + \dots + x_n e_n\)</span></p>
+</li>
+</ul>
+</div>
+<details class="example">
+<summary>Exemple</summary>
+<h3 id="1">示例 1<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<p>设 <span class="arithmatex">\( E \)</span> 是一个 <span class="arithmatex">\( K \)</span> 上的向量空间。假设 <span class="arithmatex">\( B = (e_1, e_2, e_3) \)</span> 和 <span class="arithmatex">\( B' = (f_1, f_2, f_3) \)</span> 是 <span class="arithmatex">\( E \)</span> 的两个基，并且向量 <span class="arithmatex">\( u \in E \)</span> 满足：<br />
+[
+u = 2e_1 - 4e_3
+]
+[
+u = f_1 + \frac{1}{2} f_2
+]
+那么 <span class="arithmatex">\( u \)</span> 在基 <span class="arithmatex">\( B \)</span> 下的矩阵表示为：<br />
+[
+\text{mat}<em B_="B'">B(u) =
+\begin{pmatrix}
+2 \
+0 \
+-4
+\end{pmatrix}
+]
+而 <span class="arithmatex">\( u \)</span> 在基 <span class="arithmatex">\( B' \)</span> 下的矩阵表示为：<br />
+[
+\text{mat}</em>(u) =
+\begin{pmatrix}
+1 \
+\frac{1}{2} \
+0
+\end{pmatrix}
+]</p>
+<hr />
+<h3 id="2">示例 2<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<p>在 <span class="arithmatex">\( \mathbb{R}^4 \)</span> 的标准基 <span class="arithmatex">\( C \)</span> 下，向量<br />
+[
+v = (1, -4, 3, 1)
+]
+的矩阵表示为：<br />
+[
+\text{mat}_C(v) =
+\begin{pmatrix}
+1 \
+-4 \
+3 \
+1
+\end{pmatrix}
+]</p>
+<hr />
+<h3 id="3">示例 3<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<p>设 <span class="arithmatex">\( E \)</span> 是一个 <span class="arithmatex">\( K \)</span> 上的向量空间，配备基 <span class="arithmatex">\( B = (e_1, e_2, e_3, e_4) \)</span>。若向量 <span class="arithmatex">\( u \in E \)</span> 满足：<br />
+[
+\text{mat}_B(u) =
+\begin{pmatrix}
+1 \
+-1 \
+2 \
+0
+\end{pmatrix}
+]
+则 <span class="arithmatex">\( u \)</span> 在基 <span class="arithmatex">\( B \)</span> 下展开为：<br />
+[
+u = e_1 - e_2 + 2e_3
+]</p>
+</details>
+<div class="admonition note">
+<p class="admonition-title">Proposition</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="1theorie-de-la-dimension-contenu" name="__tabbed_1" type="radio" /><input id="1theorie-de-la-dimension-démonstration" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="1theorie-de-la-dimension-contenu">Contenu</label><label for="1theorie-de-la-dimension-démonstration">Démonstration</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><strong>命题 17.1.1</strong>  </p>
+<p>设 <span class="arithmatex">\( E \)</span> 是一个 <span class="arithmatex">\( K \)</span>-向量空间，且 <span class="arithmatex">\( n \geq 1 \)</span> 为一整数。假设 <span class="arithmatex">\( E \)</span> 存在一组基<br />
+[ B = (e_1, \dots, e_n). ]<br />
+设 <span class="arithmatex">\( m \geq 1 \)</span> 为一整数，且 <span class="arithmatex">\( u_1, \dots, u_m \in E \)</span>。则：  </p>
+<ol>
+<li>族 <span class="arithmatex">\( (u_1, \dots, u_m) \)</span> 线性无关当且仅当族 <span class="arithmatex">\( (\text{mat}_B(u_1), \dots, \text{mat}_B(u_m)) \)</span> 线性无关。  </li>
+<li>族 <span class="arithmatex">\( (u_1, \dots, u_m) \)</span> 生成 <span class="arithmatex">\( E \)</span> 当且仅当族 <span class="arithmatex">\( (\text{mat}_B(u_1), \dots, \text{mat}_B(u_m)) \)</span> 生成 <span class="arithmatex">\( M_{n,1}(K) \)</span>。  </li>
+<li>对任意 <span class="arithmatex">\( k \in \mathbb{N} \)</span>，对于所有不同的指标 <span class="arithmatex">\( i_1, \dots, i_k \in \{1, \dots, m\} \)</span>，子族 <span class="arithmatex">\( (u_{i_1}, \dots, u_{i_k}) \)</span> 是 <span class="arithmatex">\( \text{vect}(u_1, \dots, u_m) \)</span> 的一组基当且仅当族 <span class="arithmatex">\( (\text{mat}_B(u_{i_1}), \dots, \text{mat}_B(u_{i_k})) \)</span> 是 <span class="arithmatex">\( \text{vect}(\text{mat}_B(u_1), \dots, \text{mat}_B(u_m)) \)</span> 的一组基。  </li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>设 <span class="arithmatex">\( m \geq 1 \)</span>，且 <span class="arithmatex">\( u_1, \dots, u_m \in E \)</span>。由于 <span class="arithmatex">\( 0_E = 0 \cdot e_1 + \dots + 0 \cdot e_n \)</span>，可知<br />
+[
+\text{mat}<em n_1="n,1">B(0_E) = 0</em>.
+]<br />
+通过以下等价关系可得结论：  </li>
+</ol>
+<p>[
+\text{族 } (u_1, \dots, u_m) \text{ 线性无关}
+]<br />
+[
+\iff \forall (\lambda_1, \dots, \lambda_m) \in K^m, \lambda_1 u_1 + \dots + \lambda_m u_m = 0_E \Rightarrow \lambda_1 = \dots = \lambda_m = 0
+]<br />
+[
+\overset{\text{习题 17.1.1 (4) }}{\iff} \forall (\lambda_1, \dots, \lambda_m) \in K^m, \text{mat}<em n_1="n,1">B(\lambda_1 u_1 + \dots + \lambda_m u_m) = \text{mat}_B(0_E) \Rightarrow \lambda_1 = \dots = \lambda_m = 0
+]<br />
+[
+\iff \forall (\lambda_1, \dots, \lambda_m) \in K^m, \text{mat}_B(\lambda_1 u_1 + \dots + \lambda_m u_m) = 0</em> \Rightarrow \lambda_1 = \dots = \lambda_m = 0
+]<br />
+[
+\overset{\text{习题 17.1.1 (3) }}{\iff} \forall (\lambda_1, \dots, \lambda_m) \in K^m, \lambda_1 \text{mat}<em n_1="n,1">B(u_1) + \dots + \lambda_m \text{mat}_B(u_m) = 0</em> \Rightarrow \lambda_1 = \dots = \lambda_m = 0
+]<br />
+[
+\iff \text{族 } (\text{mat}_B(u_1), \dots, \text{mat}_B(u_m)) \text{ 线性无关}.
+]  </p>
+<ol>
+<li>设 <span class="arithmatex">\( u_1, \dots, u_m \in E \)</span>，我们采用双向推理：  </li>
+</ol>
+<p><strong><span class="arithmatex">\( \Rightarrow \)</span> 方向：</strong> 假设族 <span class="arithmatex">\( (u_1, \dots, u_m) \)</span> 是一组生成集。对于任意<br />
+[
+X =
+\begin{pmatrix}
+x_1 \ \vdots \ x_n
+\end{pmatrix}
+\in M_{n,1}(K),
+]<br />
+我们证明 <span class="arithmatex">\( X \in \text{vect}(\text{mat}_B(u_1), \dots, \text{mat}_B(u_m)) \)</span>。设<br />
+[
+u = x_1 e_1 + \dots + x_n e_n. \quad \quad (17.1)
+]<br />
+由于假设 <span class="arithmatex">\( \text{vect}(u_1, \dots, u_m) = E \)</span>，存在 <span class="arithmatex">\( \lambda_1, \dots, \lambda_m \in K \)</span> 使得<br />
+[
+u = \lambda_1 u_1 + \dots + \lambda_m u_m. \quad \quad (17.2)
+]<br />
+由 (17.1) 可知 <span class="arithmatex">\( X = \text{mat}_B(u) \)</span>，由 (17.2) 及习题 17.1.1 (3) 可得<br />
+[
+\text{mat}_B(u) = \lambda_1 \text{mat}_B(u_1) + \dots + \lambda_m \text{mat}_B(u_m),
+]<br />
+因此<br />
+[
+X \in \text{vect}(\text{mat}_B(u_1), \dots, \text{mat}_B(u_m)).
+]<br />
+由此可得，族 <span class="arithmatex">\( (\text{mat}_B(u_1), \dots, \text{mat}_B(u_m)) \)</span> 生成。  </p>
+<p><strong><span class="arithmatex">\( \Leftarrow \)</span> 方向：</strong> 假设族 <span class="arithmatex">\( (\text{mat}_B(u_1), \dots, \text{mat}_B(u_m)) \)</span> 是一组生成集，则对于任意 <span class="arithmatex">\( u \in E \)</span>，由假设<br />
+[
+\text{vect}(\text{mat}<em n_1="n,1">B(u_1), \dots, \text{mat}_B(u_m)) = M</em>(K),
+]<br />
+存在 <span class="arithmatex">\( \lambda_1, \dots, \lambda_m \in K \)</span> 使得<br />
+[
+\text{mat}_B(u) = \lambda_1 \text{mat}_B(u_1) + \dots + \lambda_m \text{mat}_B(u_m).
+]<br />
+由习题 17.1.1 (3) 可得<br />
+[
+\text{mat}_B(u) = \text{mat}_B(\lambda_1 u_1 + \dots + \lambda_m u_m),
+]<br />
+再由习题 17.1.1 (4) 可得<br />
+[
+u = \lambda_1 u_1 + \dots + \lambda_m u_m.
+]<br />
+这意味着 <span class="arithmatex">\( u \in \text{vect}(u_1, \dots, u_m) \)</span>，即族 <span class="arithmatex">\( (u_1, \dots, u_m) \)</span> 也是生成集。  </p>
+<ol>
+<li>设 <span class="arithmatex">\( u_1, \dots, u_m \in E \)</span>，且 <span class="arithmatex">\( k \in \mathbb{N} \)</span>。设 <span class="arithmatex">\( i_1, \dots, i_k \in \{1, \dots, m\} \)</span> 为互不相同的指标。  </li>
+</ol>
+<p>由 (1) 可知，族 <span class="arithmatex">\( (u_{i_1}, \dots, u_{i_k}) \)</span> 线性无关当且仅当族 <span class="arithmatex">\( (\text{mat}_B(u_{i_1}), \dots, \text{mat}_B(u_{i_k})) \)</span> 线性无关。  </p>
+<p>通过类似 (2) 的推理，可得族 <span class="arithmatex">\( (u_{i_1}, \dots, u_{i_k}) \)</span> 生成 <span class="arithmatex">\( \text{vect}(u_1, \dots, u_m) \)</span> 当且仅当族 <span class="arithmatex">\( (\text{mat}_B(u_{i_1}), \dots, \text{mat}_B(u_{i_k})) \)</span> 生成 <span class="arithmatex">\( \text{vect}(\text{mat}_B(u_1), \dots, \text{mat}_B(u_m)) \)</span>。  </p>
+<p>综上所述，结论成立。     </p>
+</div>
+</div>
+</div>
+</div>
+<h3 id="1712">命题 17.1.2<a class="headerlink" href="#1712" title="Permanent link">&para;</a></h3>
+<p>设 <span class="arithmatex">\( n \geq 1 \)</span> 为整数。则在 <span class="arithmatex">\( M_{n,1}(K) \)</span> 中，任何包含 <span class="arithmatex">\( n+1 \)</span> 个向量的族都是线性相关的。  </p>
+<h4 id="_1">证明<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<p>我们使用数学归纳法对 <span class="arithmatex">\( n \)</span> 进行证明。  </p>
+<p><strong>基例（初始情况）</strong>：设 <span class="arithmatex">\( (u, v) \)</span> 是 <span class="arithmatex">\( M_{1,1}(K) \)</span> 中的两个向量，我们区分两种情况：<br />
+- <strong>情况 1</strong>：若 <span class="arithmatex">\( u = 0 \)</span>，则有线性关系：
+  [
+  1 \cdot u + 0 \cdot v = 0_{1,1}
+  ]
+  这表明 <span class="arithmatex">\( (u, v) \)</span> 是线性相关的。<br />
+- <strong>情况 2</strong>：若 <span class="arithmatex">\( u \neq 0 \)</span>，则 <span class="arithmatex">\( u \)</span> 仅有的系数 <span class="arithmatex">\( x \in K \)</span> 是非零的，设 <span class="arithmatex">\( v \)</span> 的唯一系数为 <span class="arithmatex">\( y \in K \)</span>，则
+  [
+  \frac{y}{x} \cdot u + (-1) \cdot v = 0_{1,1}
+  ]
+  这表明 <span class="arithmatex">\( (u, v) \)</span> 仍然是线性相关的。  </p>
+<p><strong>归纳假设</strong>：假设对于某个 <span class="arithmatex">\( n \geq 1 \)</span>，<span class="arithmatex">\( M_{n,1}(K) \)</span> 中的任何 <span class="arithmatex">\( n+1 \)</span> 个向量的族都是线性相关的。  </p>
+<p><strong>归纳步骤</strong>：我们需要证明 <span class="arithmatex">\( M_{n+1,1}(K) \)</span> 中的任何 <span class="arithmatex">\( n+2 \)</span> 个向量的族也是线性相关的。  </p>
+<p>设 <span class="arithmatex">\( u_1, \dots, u_{n+2} \)</span> 是 <span class="arithmatex">\( M_{n+1,1}(K) \)</span> 中的向量：
+[
+u_1 =
+\begin{pmatrix}
+x_{1,1} \
+x_{2,1} \
+\vdots \
+x_{n+1,1}
+\end{pmatrix}, \quad
+\dots, \quad
+u_{n+2} =
+\begin{pmatrix}
+x_{1,n+2} \
+x_{2,n+2} \
+\vdots \
+x_{n+1,n+2}
+\end{pmatrix}
+]
+我们再次区分两种情况：  </p>
+<ul>
+<li>
+<p><strong>情况 1</strong>：所有向量的最后一个分量均为 0，即：
+  [
+  u_1 =
+  \begin{pmatrix}
+  x_{1,1} \
+  x_{2,1} \
+  \vdots \
+  x_{n,1} \
+  0
+  \end{pmatrix}, \quad
+  \dots, \quad
+  u_{n+2} =
+  \begin{pmatrix}
+  x_{1,n+2} \
+  x_{2,n+2} \
+  \vdots \
+  x_{n,n+2} \
+  0
+  \end{pmatrix}
+  ]
+  忽略最后一个分量后，我们得到 <span class="arithmatex">\( M_{n,1}(K) \)</span> 中的 <span class="arithmatex">\( n+2 \)</span> 个向量：
+  [
+  v_1 =
+  \begin{pmatrix}
+  x_{1,1} \
+  x_{2,1} \
+  \vdots \
+  x_{n,1}
+  \end{pmatrix}, \quad
+  \dots, \quad
+  v_{n+2} =
+  \begin{pmatrix}
+  x_{1,n+2} \
+  x_{2,n+2} \
+  \vdots \
+  x_{n,n+2}
+  \end{pmatrix}
+  ]
+  根据归纳假设，<span class="arithmatex">\( (v_1, \dots, v_{n+2}) \)</span> 是线性相关的，即存在 <span class="arithmatex">\( \lambda_1, \dots, \lambda_{n+2} \in K \)</span>，使得：
+  [
+  \lambda_1 v_1 + \dots + \lambda_{n+2} v_{n+2} = 0_{n,1}
+  ]
+  这意味着：
+  [
+  \lambda_1 u_1 + \dots + \lambda_{n+2} u_{n+2} = 0_{n+1,1}
+  ]
+  由此可知，<span class="arithmatex">\( (u_1, \dots, u_{n+2}) \)</span> 是线性相关的。  </p>
+</li>
+<li>
+<p><strong>情况 2</strong>：至少有一个向量的最后一个分量非零。我们假设 <span class="arithmatex">\( u_{n+2} \)</span> 满足 <span class="arithmatex">\( x_{n+1,n+2} \neq 0 \)</span>，其它情况类似处理。对所有 <span class="arithmatex">\( i = 1, \dots, n+1 \)</span>，定义：
+  [
+  w_i = u_i - \frac{x_{n+1,i}}{x_{n+1,n+2}} u_{n+2}
+  ]
+  构造的向量 <span class="arithmatex">\( w_1, \dots, w_{n+1} \)</span> 的最后一个分量都是 0，因此它们在 <span class="arithmatex">\( M_{n,1}(K) \)</span> 中定义了向量 <span class="arithmatex">\( v_1, \dots, v_{n+1} \)</span>。根据归纳假设，这些向量是线性相关的，即存在非全为零的 <span class="arithmatex">\( \lambda_1, \dots, \lambda_{n+1} \)</span> 使得：
+  [
+  \lambda_1 v_1 + \dots + \lambda_{n+1} v_{n+1} = 0_{n,1}
+  ]
+  由此可得：
+  [
+  \sum_{i=1}^{n+1} \lambda_i w_i = 0_{n+1,1}
+  ]
+  代入 <span class="arithmatex">\( w_i \)</span> 的表达式：
+  [
+  \sum_{i=1}^{n+1} \lambda_i \left( u_i - \frac{x_{n+1,i}}{x_{n+1,n+2}} u_{n+2} \right) = 0_{n+1,1}
+  ]
+  展开后：
+  [
+  \sum_{i=1}^{n+1} \lambda_i u_i - \left( \sum_{i=1}^{n+1} \lambda_i \frac{x_{n+1,i}}{x_{n+1,n+2}} \right) u_{n+2} = 0_{n+1,1}
+  ]
+  记
+  [
+  \lambda_{n+2} = - \sum_{i=1}^{n+1} \lambda_i \frac{x_{n+1,i}}{x_{n+1,n+2}}
+  ]
+  由于 <span class="arithmatex">\( \lambda_1, \dots, \lambda_{n+1} \)</span> 不全为零，因此 <span class="arithmatex">\( (\lambda_1, \dots, \lambda_{n+2}) \)</span> 也不全为零，这表明 <span class="arithmatex">\( (u_1, \dots, u_{n+2}) \)</span> 是线性相关的。  </p>
+</li>
+</ul>
+<p>由此归纳证明完成。</p>
+<hr />
+<h3 id="1713">命题 17.1.3<a class="headerlink" href="#1713" title="Permanent link">&para;</a></h3>
+<p>设 <span class="arithmatex">\( E \)</span> 是一个 <span class="arithmatex">\( K \)</span> 上的向量空间，且 <span class="arithmatex">\( n, m \geq 1 \)</span> 为整数。设<br />
+[
+e_1, \dots, e_n, f_1, \dots, f_m \in E
+]
+如果 <span class="arithmatex">\( (e_1, \dots, e_n) \)</span> 和 <span class="arithmatex">\( (f_1, \dots, f_m) \)</span> 都是 <span class="arithmatex">\( E \)</span> 的基，则有 <span class="arithmatex">\( n = m \)</span>。</p>
+<p><strong>证明</strong>：<br />
+假设 <span class="arithmatex">\( n \neq m \)</span>，且 <span class="arithmatex">\( m &gt; n \)</span>。在基 <span class="arithmatex">\( B = (e_1, \dots, e_n) \)</span> 下，<span class="arithmatex">\( (f_1, \dots, f_{n+1}) \)</span> 的矩阵表示：
+[
+\text{mat}<em n_1="n+1">B(f_1), \dots, \text{mat}_B(f</em>)
+]
+根据命题 17.1.2，这些向量是线性相关的，从而 <span class="arithmatex">\( (f_1, \dots, f_m) \)</span> 也是线性相关的，矛盾。因此 <span class="arithmatex">\( n = m \)</span>。</p>
+<p><strong>命题 17.1.2</strong><br />
+设 <span class="arithmatex">\( n \geq 1 \)</span> 为整数，则任意 <span class="arithmatex">\( n+1 \)</span> 个属于 <span class="arithmatex">\( M_{n,1}(K) \)</span> 的向量构成的族都是线性相关的。  </p>
+<p><strong>证明</strong><br />
+我们对 <span class="arithmatex">\( n \)</span> 进行数学归纳法证明。  </p>
+<p><strong>初始情况</strong>：<br />
+设 <span class="arithmatex">\( (u, v) \)</span> 是 <span class="arithmatex">\( M_{1,1}(K) \)</span> 中的两个向量，我们分以下两种情况讨论：<br />
+- 如果 <span class="arithmatex">\( u = 0 \)</span>，则有线性关系：
+  [
+  1 \cdot u + 0 \cdot v = 0_{1,1}
+  ]
+  说明 <span class="arithmatex">\( (u, v) \)</span> 线性相关。<br />
+- 如果 <span class="arithmatex">\( u \neq 0 \)</span>，设 <span class="arithmatex">\( u \)</span> 唯一的系数为 <span class="arithmatex">\( x \neq 0 \)</span>，设 <span class="arithmatex">\( v \)</span> 的唯一系数为 <span class="arithmatex">\( y \)</span>，则有：
+  [
+  \frac{y}{x} \cdot u + (-1) \cdot v = 0_{1,1}
+  ]
+  说明 <span class="arithmatex">\( (u, v) \)</span> 线性相关。  </p>
+<p><strong>归纳假设</strong>：<br />
+设 <span class="arithmatex">\( n \geq 1 \)</span>，假设 <span class="arithmatex">\( M_{n,1}(K) \)</span> 中任意 <span class="arithmatex">\( n+1 \)</span> 个向量构成的族都是线性相关的，我们需要证明对于 <span class="arithmatex">\( M_{n+1,1}(K) \)</span>，任意 <span class="arithmatex">\( n+2 \)</span> 个向量构成的族也是线性相关的。  </p>
+<p>设 <span class="arithmatex">\( u_1, \dots, u_{n+2} \in M_{n+1,1}(K) \)</span>，其中：
+[
+u_i =
+\begin{pmatrix}
+x_{1,i} \
+x_{2,i} \
+\vdots \
+x_{n+1,i}
+\end{pmatrix}
+]
+其中 <span class="arithmatex">\( x_{j,i} \in K \)</span>。我们分两种情况讨论：  </p>
+<ol>
+<li>
+<p><strong>情况 1</strong>：所有向量的最后一个分量均为零，即：
+   [
+   u_i =
+   \begin{pmatrix}
+   x_{1,i} \
+   x_{2,i} \
+   \vdots \
+   x_{n,i} \
+   0
+   \end{pmatrix}, \quad i = 1, \dots, n+2.
+   ]
+   去掉最后一个分量后，得到 <span class="arithmatex">\( n+2 \)</span> 个 <span class="arithmatex">\( M_{n,1}(K) \)</span> 中的向量：
+   [
+   v_i =
+   \begin{pmatrix}
+   x_{1,i} \
+   x_{2,i} \
+   \vdots \
+   x_{n,i}
+   \end{pmatrix}, \quad i = 1, \dots, n+2.
+   ]
+   由归纳假设，<span class="arithmatex">\( (v_1, \dots, v_{n+2}) \)</span> 是线性相关的，即存在不全为零的 <span class="arithmatex">\( \lambda_1, \dots, \lambda_{n+2} \in K \)</span> 使得：
+   [
+   \lambda_1 v_1 + \dots + \lambda_{n+2} v_{n+2} = 0_{n,1}.
+   ]
+   在 <span class="arithmatex">\( M_{n+1,1}(K) \)</span> 中，我们有：
+   [
+   \lambda_1 u_1 + \dots + \lambda_{n+2} u_{n+2} =
+   \begin{pmatrix}
+   0 \
+   0 \
+   \vdots \
+   0 \
+   0
+   \end{pmatrix} = 0_{n+1,1}.
+   ]
+   这表明 <span class="arithmatex">\( (u_1, \dots, u_{n+2}) \)</span> 是线性相关的。  </p>
+</li>
+<li>
+<p><strong>情况 2</strong>：至少有一个向量的最后一个分量不为零。假设 <span class="arithmatex">\( u_{n+2} \)</span> 满足 <span class="arithmatex">\( x_{n+1, n+2} \neq 0 \)</span>（其他情况类似）。对所有 <span class="arithmatex">\( i \in \{1, \dots, n+1\} \)</span>，定义：
+   [
+   w_i = u_i - \frac{x_{n+1,i}}{x_{n+1,n+2}} u_{n+2}.
+   ]
+   由定义，<span class="arithmatex">\( w_1, \dots, w_{n+1} \)</span> 的最后一个分量均为零。去掉最后一个分量后，得到 <span class="arithmatex">\( n+1 \)</span> 个 <span class="arithmatex">\( M_{n,1}(K) \)</span> 中的向量 <span class="arithmatex">\( v_1, \dots, v_{n+1} \)</span>，由归纳假设，它们是线性相关的，即存在不全为零的 <span class="arithmatex">\( \lambda_1, \dots, \lambda_{n+1} \in K \)</span> 使得：
+   [
+   \lambda_1 v_1 + \dots + \lambda_{n+1} v_{n+1} = 0_{n,1}.
+   ]
+   注意到：
+   [
+   \sum_{i=1}^{n+1} \lambda_i w_i = 0_{n+1,1}
+   ]
+   即：
+   [
+   \sum_{i=1}^{n+1} \lambda_i \left( u_i - \frac{x_{n+1,i}}{x_{n+1,n+2}} u_{n+2} \right) = 0_{n+1,1}.
+   ]
+   展开后得：
+   [
+   \sum_{i=1}^{n+1} \lambda_i u_i - \left( \sum_{i=1}^{n+1} \lambda_i \frac{x_{n+1,i}}{x_{n+1,n+2}} \right) u_{n+2} = 0_{n+1,1}.
+   ]
+   由于 <span class="arithmatex">\( \lambda_1, \dots, \lambda_{n+1} \)</span> 不是全零，因此：
+   [
+   \lambda_1, \dots, \lambda_{n+1}, - \sum_{i=1}^{n+1} \lambda_i \frac{x_{n+1,i}}{x_{n+1,n+2}}
+   ]
+   不是全零，因此 <span class="arithmatex">\( (u_1, \dots, u_{n+2}) \)</span> 线性相关。  </p>
+</li>
+</ol>
+<p><strong>命题 17.1.3</strong><br />
+设 <span class="arithmatex">\( E \)</span> 是一个 <span class="arithmatex">\( K \)</span>-向量空间，设 <span class="arithmatex">\( n \geq 1 \)</span> 和 <span class="arithmatex">\( m \geq 1 \)</span> 为两个整数。设：
+[
+e_1, \dots, e_n, f_1, \dots, f_m \in E.
+]
+如果 <span class="arithmatex">\( (e_1, \dots, e_n) \)</span> 和 <span class="arithmatex">\( (f_1, \dots, f_m) \)</span> 均是 <span class="arithmatex">\( E \)</span> 的基，则 <span class="arithmatex">\( n = m \)</span>。  </p>
+<p><strong>证明</strong><br />
+反证法。假设 <span class="arithmatex">\( n \neq m \)</span>，不失一般性，设 <span class="arithmatex">\( m &gt; n \)</span>。考虑向量 <span class="arithmatex">\( (f_1, \dots, f_{n+1}) \)</span> 在基 <span class="arithmatex">\( B = (e_1, \dots, e_n) \)</span> 下的坐标：
+[
+\operatorname{mat}<em n_1="n+1">B(f_1), \dots, \operatorname{mat}_B(f</em>).
+]
+由命题 17.1.2，<span class="arithmatex">\( M_{n,1}(K) \)</span> 中的 <span class="arithmatex">\( n+1 \)</span> 个向量线性相关，因此 <span class="arithmatex">\( (f_1, \dots, f_{n+1}) \)</span> 线性相关，与基的定义矛盾。因此 <span class="arithmatex">\( n = m \)</span>。  </p>
+<p><strong>注记</strong><br />
+因此，在一个具有基大小为 <span class="arithmatex">\( n \geq 1 \)</span> 的 <span class="arithmatex">\( K \)</span>-向量空间中，所有基的大小均为 <span class="arithmatex">\( n \)</span>。此外，唯一大小为零的族是空集 <span class="arithmatex">\( \emptyset \)</span>，它是零空间 <span class="arithmatex">\( \{0_E\} \)</span> 的基。由于任何包含 <span class="arithmatex">\( 0_E \)</span> 的族都是线性相关的，因此空集是 <span class="arithmatex">\( \{0_E\} \)</span> 的唯一基。</p>
+<h3 id="1712_1"><strong>定义 17.1.2：维数</strong><a class="headerlink" href="#1712_1" title="Permanent link">&para;</a></h3>
+<p>设 <span class="arithmatex">\( E \)</span> 是一个 <span class="arithmatex">\( K \)</span>-向量空间。  </p>
+<p>— 如果 <span class="arithmatex">\( E \)</span> 存在大小为 <span class="arithmatex">\( n \)</span> 的基，其中 <span class="arithmatex">\( n \)</span> 为某个自然数 <span class="arithmatex">\( n \in \mathbb{N} \)</span>，则称 <span class="arithmatex">\( E \)</span> 为**有限维** <span class="arithmatex">\( K \)</span>-向量空间，整数 <span class="arithmatex">\( n \)</span> 称为 <span class="arithmatex">\( E \)</span> 的**维数**，记作 <span class="arithmatex">\( \dim_K(E) \)</span> 或 <span class="arithmatex">\( \dim(E) \)</span>。<br />
+— 如果 <span class="arithmatex">\( E \)</span> 没有任何有限大小的基，则称 <span class="arithmatex">\( E \)</span> 为**无限维** <span class="arithmatex">\( K \)</span>-向量空间，记作 <span class="arithmatex">\( \dim_K(E) = \infty \)</span> 或 <span class="arithmatex">\( \dim(E) = \infty \)</span>。  </p>
+<h3 id="_2"><strong>示例</strong><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>— 对于所有 <span class="arithmatex">\( n \geq 1 \)</span>，<span class="arithmatex">\( K^n \)</span> 的**标准基**包含 <span class="arithmatex">\( n \)</span> 个向量，因此：<br />
+  [
+  \dim(K^n) = n.
+  ]<br />
+  同样地，<br />
+— 对于所有整数 <span class="arithmatex">\( n \geq 1 \)</span> 和 <span class="arithmatex">\( m \geq 1 \)</span>，有：<br />
+  [
+  \dim(M_{n,m}(K)) = nm.
+  ]<br />
+— 多项式环 <span class="arithmatex">\( K[X] \)</span> 是无限维的，因此：<br />
+  [
+  \dim(K[X]) = \infty.
+  ]<br />
+— 对于所有 <span class="arithmatex">\( n \in \mathbb{N} \)</span>，记<br />
+  [
+  K_n[X] = {P \in K[X] \mid \deg P \leq n},
+  ]<br />
+  则其维数为：<br />
+  [
+  \dim(K_n[X]) = n + 1.
+  ]  </p>
+<hr />
+<h3 id="1711"><strong>定理 17.1.1（提取基）</strong><a class="headerlink" href="#1711" title="Permanent link">&para;</a></h3>
+<p>设 <span class="arithmatex">\( E \)</span> 是一个 <span class="arithmatex">\( K \)</span>-向量空间。设 <span class="arithmatex">\( A \subset E \)</span> 和 <span class="arithmatex">\( B \subset E \)</span> 为两个子集，满足：<br />
+- <span class="arithmatex">\( A \)</span> 是**有限**且**线性无关**的；<br />
+- <span class="arithmatex">\( B \)</span> 是**有限**且**生成整个空间** <span class="arithmatex">\( E \)</span> 的。  </p>
+<p>则存在 <span class="arithmatex">\( C \subset B \)</span>，使得 <span class="arithmatex">\( A \cup C \)</span> 形成 <span class="arithmatex">\( E \)</span> 的一个**基**。  </p>
+<hr />
+<h3 id="_3"><strong>证明</strong><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>我们分两种情况讨论：  </p>
+<ol>
+<li>
+<p><strong>情况 1</strong>：如果 <span class="arithmatex">\( A \)</span> 是一个生成集，则取 <span class="arithmatex">\( C = \emptyset \)</span>，此时 <span class="arithmatex">\( A \cup C = A \)</span> 本身已是 <span class="arithmatex">\( E \)</span> 的一个基，结论成立。  </p>
+</li>
+<li>
+<p><strong>情况 2</strong>：如果 <span class="arithmatex">\( A \)</span> 不是生成集，则 <span class="arithmatex">\( B \not\subset \text{vect}(A) \)</span>（即 <span class="arithmatex">\( B \)</span> 中至少有一个向量不在 <span class="arithmatex">\( A \)</span> 生成的子空间中）。根据**命题 15.2.3**（第 15 章第 14 页），我们有等价关系：
+   [
+   B \subset \text{vect}(A) \quad \Longleftrightarrow \quad \text{vect}(B) \subset \text{vect}(A).
+   ]
+   由于 <span class="arithmatex">\( B \)</span> 生成整个 <span class="arithmatex">\( E \)</span>，即 <span class="arithmatex">\( \text{vect}(B) = E \)</span>，所以：
+   [
+   B \subset \text{vect}(A) \quad \Longleftrightarrow \quad E \subset \text{vect}(A).
+   ]
+   因此，<span class="arithmatex">\( \text{vect}(A) \neq E \)</span> 意味着 <span class="arithmatex">\( B \not\subset \text{vect}(A) \)</span>。<br />
+   这说明存在 <span class="arithmatex">\( u \in B \)</span> 使得 <span class="arithmatex">\( u \notin \text{vect}(A) \)</span>。  </p>
+</li>
+</ol>
+<p>由于：
+   - <span class="arithmatex">\( A \)</span> 是**线性无关**的；<br />
+   - <span class="arithmatex">\( u \notin \text{vect}(A) \)</span>，  </p>
+<p>根据性质（17.5），可以得到：
+   [
+   A \cup {u} \text{ 是线性无关的}。
+   ]
+   这意味着集合<br />
+   [
+   \Omega = { C \subset B \mid A \cup C \text{ 是线性无关的} }
+   ]
+   <strong>非空</strong>，因为 <span class="arithmatex">\( \{u\} \in \Omega \)</span>。  </p>
+<p>现在，我们选择一个**最大**的集合 <span class="arithmatex">\( C \in \Omega \)</span>（即 <span class="arithmatex">\( C \)</span> 的**元素个数最大**）。  </p>
+<p><strong>为了证明结论，我们需验证 <span class="arithmatex">\( A \cup C \)</span> 是生成集</strong>。  </p>
+<p>我们采用**反证法**：假设 <span class="arithmatex">\( A \cup C \)</span> 不是生成集，则存在 <span class="arithmatex">\( v \in B \)</span> 使得：
+   [
+   v \notin \text{vect}(A \cup C).
+   ]
+   由前述推理，可得：
+   [
+   A \cup C \cup {v} \text{ 是线性无关的}。
+   ]
+   但这意味着 <span class="arithmatex">\( C \cup \{v\} \)</span> 仍属于 <span class="arithmatex">\( \Omega \)</span>，即：
+   [
+   C \cup {v} \in \Omega.
+   ]
+   这与 <span class="arithmatex">\( C \)</span> 是 <span class="arithmatex">\( \Omega \)</span> 中**最大**的集合相矛盾！  </p>
+<p>因此，我们得出结论：<span class="arithmatex">\( A \cup C \)</span> 必须是**生成集**，即形成 <span class="arithmatex">\( E \)</span> 的一个**基**。  </p>
+<hr />
+<h3 id="_4"><strong>注记</strong><a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>在特殊情况下，如果 <span class="arithmatex">\( A = \emptyset \)</span>，则定理 17.1.1 通常表述为：  </p>
+<blockquote>
+<p><strong>从任何生成族中，都可以提取一个基。</strong>  </p>
+</blockquote>
+<p>此外，**有限维 <span class="arithmatex">\( K \)</span>-向量空间的定义**可以表述为：  </p>
+<blockquote>
+<p>一个有限维 <span class="arithmatex">\( K \)</span>-向量空间是存在**某个有限生成且线性无关**的向量族的 <span class="arithmatex">\( K \)</span>-向量空间。  </p>
+</blockquote>
+<p>要证明一个向量空间是**有限维的**，定理 17.1.1 告诉我们：  </p>
+<blockquote>
+<p><strong>只要存在一个有限生成集，即可证明该向量空间是有限维的。</strong>  </p>
+</blockquote>
+<hr />
+<h3 id="_5"><strong>该定理的重要性</strong><a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>这个定理在很多数学领域都有重要应用，例如：<br />
+- 证明所有有限维向量空间的基大小相等；<br />
+- 研究线性代数中的秩-零空间定理；<br />
+- 在抽象代数和泛函分析中，用于构造适当的基。</p>
+<h3 id="1712_2"><strong>定理 17.1.2（不完整基）</strong><a class="headerlink" href="#1712_2" title="Permanent link">&para;</a></h3>
+<p>设 <span class="arithmatex">\( E \)</span> 是一个有限维 <span class="arithmatex">\( K \)</span>-向量空间，维数 <span class="arithmatex">\( n \geq 1 \)</span>。对任意 <span class="arithmatex">\( k \in \mathbb{N} \)</span>，<br />
+<span class="arithmatex">\( E \)</span> 中的任意线性无关向量组 <span class="arithmatex">\( (e_1, \dots, e_k) \)</span> 都可以补充成一个基：<br />
+存在 <span class="arithmatex">\( e_{k+1}, \dots, e_n \in E \)</span> 使得 <span class="arithmatex">\( (e_1, \dots, e_k, e_{k+1}, \dots, e_n) \)</span> 是 <span class="arithmatex">\( E \)</span> 的一个基。  </p>
+<h4 id="_6"><strong>证明</strong><a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<p>由于 <span class="arithmatex">\( E \)</span> 是有限维的，其维数为 <span class="arithmatex">\( n \)</span>，因此存在向量 <span class="arithmatex">\( f_1, \dots, f_n \in E \)</span> 使得 <span class="arithmatex">\( (f_1, \dots, f_n) \)</span> 是一个生成集。<br />
+根据**定理 17.1.1（提取基）**，存在不重复的索引 <span class="arithmatex">\( i_{k+1}, \dots, i_n \in \{1, \dots, n\} \)</span>，使得<br />
+[
+(e_1, \dots, e_k, f_{i_{k+1}}, \dots, f_{i_n})
+]<br />
+是 <span class="arithmatex">\( E \)</span> 的一个基。  </p>
+<hr />
+<h3 id="1714"><strong>命题 17.1.4</strong><a class="headerlink" href="#1714" title="Permanent link">&para;</a></h3>
+<p>设 <span class="arithmatex">\( E \)</span> 是一个有限维 <span class="arithmatex">\( K \)</span>-向量空间，设 <span class="arithmatex">\( F \subset E \)</span> 是一个子空间，则：<br />
+1. <span class="arithmatex">\( \dim(F) \leq \dim(E) \)</span>。<br />
+2. 若且仅若 <span class="arithmatex">\( \dim(F) = \dim(E) \)</span>，则 <span class="arithmatex">\( F = E \)</span>。  </p>
+<h4 id="_7"><strong>证明</strong><a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>设 <span class="arithmatex">\( B \)</span> 是 <span class="arithmatex">\( F \)</span> 的一个基，则 <span class="arithmatex">\( B \)</span> 的大小等于 <span class="arithmatex">\( \dim(F) \)</span>。由于 <span class="arithmatex">\( B \)</span> 是 <span class="arithmatex">\( E \)</span> 中的一个线性无关集，根据**不完整基定理 17.1.2**，我们可以向 <span class="arithmatex">\( B \)</span> 添加一些向量，使其成为 <span class="arithmatex">\( E \)</span> 的一个基。这样得到的基大小至少为 <span class="arithmatex">\( \dim(F) \)</span>，因此有<br />
+   [
+   \dim(E) \geq \dim(F).
+   ]  </p>
+</li>
+<li>
+<p>方向“<span class="arithmatex">\( \Rightarrow \)</span>”显然成立。我们用**反证法**证明“<span class="arithmatex">\( \Leftarrow \)</span>”：<br />
+   假设 <span class="arithmatex">\( F \)</span> <strong>严格包含于</strong> <span class="arithmatex">\( E \)</span>，即 <span class="arithmatex">\( F \neq E \)</span>。设 <span class="arithmatex">\( B \)</span> 是 <span class="arithmatex">\( F \)</span> 的一个基，则有<br />
+   [
+   \text{vect}(B) = F.
+   ]<br />
+   由于 <span class="arithmatex">\( F \neq E \)</span>，<span class="arithmatex">\( B \)</span> 不是 <span class="arithmatex">\( E \)</span> 的一个生成集。根据**不完整基定理**，我们必须向 <span class="arithmatex">\( B \)</span> 至少添加一个向量才能构成 <span class="arithmatex">\( E \)</span> 的一个基。因此，<span class="arithmatex">\( E \)</span> 的基大小至少为 <span class="arithmatex">\( \dim(F) + 1 \)</span>，即<br />
+   [
+   \dim(E) &gt; \dim(F).
+   ]<br />
+   这与假设 <span class="arithmatex">\( \dim(F) = \dim(E) \)</span> 矛盾，因此只能有 <span class="arithmatex">\( F = E \)</span>。  </p>
+</li>
+</ol>
+<hr />
+<h3 id="1715"><strong>命题 17.1.5</strong><a class="headerlink" href="#1715" title="Permanent link">&para;</a></h3>
+<p>设 <span class="arithmatex">\( E \)</span> 是一个有限维 <span class="arithmatex">\( K \)</span>-向量空间，维数 <span class="arithmatex">\( n \geq 1 \)</span>。设 <span class="arithmatex">\( e_1, \dots, e_n \in E \)</span> 是一些向量，则：<br />
+1. 如果 <span class="arithmatex">\( (e_1, \dots, e_n) \)</span> 是线性无关的，则它是 <span class="arithmatex">\( E \)</span> 的一个基。<br />
+2. 如果 <span class="arithmatex">\( (e_1, \dots, e_n) \)</span> 是生成集，则它是 <span class="arithmatex">\( E \)</span> 的一个基。  </p>
+<h4 id="_8"><strong>证明</strong><a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>假设 <span class="arithmatex">\( (e_1, \dots, e_n) \)</span> 线性无关。<br />
+   注意到 <span class="arithmatex">\( (e_1, \dots, e_n) \)</span> 是子空间 <span class="arithmatex">\( \text{vect}(e_1, \dots, e_n) \)</span> 的一个生成集，因此它是该子空间的基，从而有<br />
+   [
+   \dim(\text{vect}(e_1, \dots, e_n)) = n.
+   ]<br />
+   由于 <span class="arithmatex">\( \text{vect}(e_1, \dots, e_n) \subseteq E \)</span> 且它的维数等于 <span class="arithmatex">\( \dim(E) \)</span>，根据**命题 17.1.4**，可得<br />
+   [
+   \text{vect}(e_1, \dots, e_n) = E.
+   ]<br />
+   也就是说，<span class="arithmatex">\( (e_1, \dots, e_n) \)</span> 是 <span class="arithmatex">\( E \)</span> 的一个生成集。因此，它是 <span class="arithmatex">\( E \)</span> 的一个基。  </p>
+</li>
+<li>
+<p>假设 <span class="arithmatex">\( (e_1, \dots, e_n) \)</span> 是生成集。<br />
+   根据**定理 17.1.1（提取基）<strong>，我们可以从其中选出一个子集 <span class="arithmatex">\( I \subset \{1, \dots, n\} \)</span>，使得 <span class="arithmatex">\( (e_i)_{i \in I} \)</span> 形成 <span class="arithmatex">\( E \)</span> 的一个基。<br />
+   如果 <span class="arithmatex">\( I \neq \{1, \dots, n\} \)</span>，那么 <span class="arithmatex">\( E \)</span> 存在一个基，其大小严格小于 <span class="arithmatex">\( \dim(E) \)</span>，这显然是**矛盾的</strong>。<br />
+   因此，必须有 <span class="arithmatex">\( I = \{1, \dots, n\} \)</span>，即 <span class="arithmatex">\( (e_1, \dots, e_n) \)</span> 本身就是 <span class="arithmatex">\( E \)</span> 的一个基。  </p>
+</li>
+</ol>
+<hr />
+<h3 id="_9"><strong>示例</strong><a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>复数域 <span class="arithmatex">\( \mathbb{C} \)</span> 既是一个**实数向量空间**，也是一个**复数向量空间**，但其维数不同：<br />
+[
+\dim_{\mathbb{R}}(\mathbb{C}) = 2, \quad \dim_{\mathbb{C}}(\mathbb{C}) = 1.
+]<br />
+在这种情况下，我们必须明确指定标量域（即基础数域）才能确定维数。</p>
+<h2 id="2rangs-et-calcul-matriciel">2.Rangs et calcul matriciel<a class="headerlink" href="#2rangs-et-calcul-matriciel" title="Permanent link">&para;</a></h2>
+<h3 id="_10"><strong>矩阵的列族在整个讨论中起着重要作用</strong><a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p>对于矩阵<br />
+[
+A =
+\begin{pmatrix}<br />
+1 &amp; 1 &amp; 2 &amp; 0 \<br />
+2 &amp; 0 &amp; 1 &amp; 0 \<br />
+4 &amp; 1 &amp; 0 &amp; 0<br />
+\end{pmatrix}<br />
+\in M_{3,4}(K)
+]<br />
+我们规定，写作<br />
+[
+A =
+\begin{pmatrix}<br />
+C_1 &amp; C_2 &amp; C_3 &amp; C_4<br />
+\end{pmatrix}
+]<br />
+表示我们称 <span class="arithmatex">\(C_1, C_2, C_3, C_4 \in M_{4,1}(K)\)</span> 为矩阵 <span class="arithmatex">\(A\)</span> 的列矩阵，其中：
+[
+C_1 =
+\begin{pmatrix}<br />
+1 \ 2 \ 4<br />
+\end{pmatrix},<br />
+C_2 =
+\begin{pmatrix}<br />
+1 \ 0 \ 1<br />
+\end{pmatrix},<br />
+C_3 =
+\begin{pmatrix}<br />
+2 \ 1 \ 0<br />
+\end{pmatrix},<br />
+C_4 =
+\begin{pmatrix}<br />
+0 \ 0 \ 0<br />
+\end{pmatrix}.
+]
+对于任意大小的矩阵，我们使用类似的记号。</p>
+<hr />
+<h3 id="1721"><strong>命题 17.2.1（矩阵运算的性质）</strong><a class="headerlink" href="#1721" title="Permanent link">&para;</a></h3>
+<p>设 <span class="arithmatex">\( n \geq 1, m \geq 1, p \geq 1 \)</span> 是三个正整数。  </p>
+<ol>
+<li>
+<p>对于任意矩阵 <span class="arithmatex">\( M \in M_{n,m}(K) \)</span>，若记作<br />
+   [
+   M =
+   \begin{pmatrix}<br />
+   C_1 &amp; \cdots &amp; C_m<br />
+   \end{pmatrix}
+   ]
+   并定义标准基向量<br />
+   [
+   e_1 =
+   \begin{pmatrix}<br />
+   1 \ 0 \ \vdots \ 0<br />
+   \end{pmatrix},<br />
+   \ldots,<br />
+   e_m =
+   \begin{pmatrix}<br />
+   0 \ \vdots \ 0 \ 1<br />
+   \end{pmatrix}
+   ]
+   其中 <span class="arithmatex">\((e_1, \dots, e_m)\)</span> 是 <span class="arithmatex">\( M_{m,1}(K) \)</span> 的标准基，则对于任意索引 <span class="arithmatex">\( j \in \{1, \dots, m\} \)</span>，有：
+   [
+   M e_j = C_j.
+   ]</p>
+</li>
+<li>
+<p>对于任意矩阵 <span class="arithmatex">\( M \in M_{n,m}(K) \)</span>，若记作<br />
+   [
+   M =
+   \begin{pmatrix}<br />
+   C_1 &amp; \cdots &amp; C_m<br />
+   \end{pmatrix},
+   ]<br />
+   那么对于任意标量 <span class="arithmatex">\( x_1, \dots, x_m \in K \)</span>，在 <span class="arithmatex">\( M_{m,1}(K) \)</span> 中：
+   [
+   M
+   \begin{pmatrix}<br />
+   x_1 \ x_2 \ \vdots \ x_m<br />
+   \end{pmatrix}
+   =
+   \begin{pmatrix}<br />
+   C_1 &amp; \cdots &amp; C_m<br />
+   \end{pmatrix}
+   \begin{pmatrix}<br />
+   x_1 \ x_2 \ \vdots \ x_m<br />
+   \end{pmatrix}
+   = x_1 C_1 + \cdots + x_m C_m.
+   ]</p>
+</li>
+<li>
+<p>对于任意矩阵 <span class="arithmatex">\( A \in M_{n,m}(K) \)</span>，<span class="arithmatex">\( B \in M_{m,p}(K) \)</span>，若记作<br />
+   [
+   B =
+   \begin{pmatrix}<br />
+   C_1 &amp; \cdots &amp; C_m<br />
+   \end{pmatrix},
+   ]
+   则在 <span class="arithmatex">\( M_{n,p}(K) \)</span> 中：
+   [
+   AB = A
+   \begin{pmatrix}<br />
+   C_1 &amp; \cdots &amp; C_m<br />
+   \end{pmatrix}
+   =
+   \begin{pmatrix}<br />
+   AC_1 &amp; \cdots &amp; AC_m<br />
+   \end{pmatrix}.
+   ]
+<strong>证明</strong>：这些性质直接来自矩阵加法和乘法的定义。  </p>
+</li>
+</ol>
+<blockquote>
+<p><strong>注意</strong>：此处的记号并非标准记号，建议在使用之前先说明其意义。</p>
+</blockquote>
+<hr />
+<h3 id="_11"><strong>例子</strong><a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p>[
+\begin{pmatrix}<br />
+1 &amp; 0 &amp; 1 \<br />
+2 &amp; 1 &amp; 3<br />
+\end{pmatrix}
+\begin{pmatrix}<br />
+1 \ 0 \ 0<br />
+\end{pmatrix}
+=
+\begin{pmatrix}<br />
+1 \ 2<br />
+\end{pmatrix},<br />
+]
+[
+\begin{pmatrix}<br />
+1 &amp; 0 &amp; 1 \<br />
+2 &amp; 1 &amp; 3<br />
+\end{pmatrix}
+\begin{pmatrix}<br />
+0 \ 1 \ 0<br />
+\end{pmatrix}
+=
+\begin{pmatrix}<br />
+0 \ 1<br />
+\end{pmatrix},<br />
+]
+[
+\begin{pmatrix}<br />
+1 &amp; 0 &amp; 1 \<br />
+2 &amp; 1 &amp; 3<br />
+\end{pmatrix}
+\begin{pmatrix}<br />
+0 \ 0 \ 1<br />
+\end{pmatrix}
+=
+\begin{pmatrix}<br />
+1 \ 3<br />
+\end{pmatrix}.
+]</p>
+<hr />
+<h3 id="_12"><strong>矩阵向量乘法的例子</strong><a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[
+\begin{pmatrix}  
+2 &amp; -1 \\  
+4 &amp; 0 \\  
+1 &amp; 1  
+\end{pmatrix}
+\begin{pmatrix}  
+-3 \\ 2  
+\end{pmatrix}
+= -3
+\begin{pmatrix}  
+2 \\ 4 \\ 1  
+\end{pmatrix}
++ 2
+\begin{pmatrix}  
+-1 \\ 0 \\ 1  
+\end{pmatrix}
+=
+\begin{pmatrix}  
+-8 \\ -12 \\ -1  
+\end{pmatrix}.
+\]</div>
+<hr />
+<h3 id="_13"><strong>矩阵乘法的例子</strong><a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[
+\begin{pmatrix}  
+1 &amp; 0 \\  
+0 &amp; 2 \\  
+1 &amp; 1 \\  
+0 &amp; 2  
+\end{pmatrix}
+\begin{pmatrix}  
+1 &amp; 0 &amp; 4 &amp; 0 \\  
+-1 &amp; 2 &amp; -8 &amp; 0  
+\end{pmatrix}
+=
+\begin{pmatrix}  
+1 &amp; 0 &amp; 4 &amp; 0 \\  
+-2 &amp; 4 &amp; -16 &amp; 0 \\  
+0 &amp; 2 &amp; -4 &amp; 0 \\  
+-2 &amp; 4 &amp; -16 &amp; 0  
+\end{pmatrix}.
+\]</div>
+<hr />
+<h3 id="1721_1"><strong>定义 17.2.1：一个向量族的秩</strong><a class="headerlink" href="#1721_1" title="Permanent link">&para;</a></h3>
+<p>设 <span class="arithmatex">\( E \)</span> 是一个 <span class="arithmatex">\( K \)</span>-向量空间，<span class="arithmatex">\( F \)</span> 是 <span class="arithmatex">\( E \)</span> 中的一个向量族。那么由 <span class="arithmatex">\( F \)</span> 中向量生成的子空间的维数被称为 <span class="arithmatex">\( F \)</span> 的秩，记作：
+[
+\text{rg}(F) = \dim(\text{vect}(F)).
+]</p>
+<hr />
+<h3 id="1722"><strong>定义 17.2.2：矩阵的秩</strong><a class="headerlink" href="#1722" title="Permanent link">&para;</a></h3>
+<p>设 <span class="arithmatex">\( n \geq 1 \)</span>, <span class="arithmatex">\( m \geq 1 \)</span> 是两个正整数。对于任意矩阵<br />
+[
+A =
+\begin{pmatrix}<br />
+C_1 &amp; \cdots &amp; C_m<br />
+\end{pmatrix}
+\in M_{n,m}(K),
+]
+矩阵 <span class="arithmatex">\( A \)</span> 的秩被定义为列向量族 <span class="arithmatex">\( (C_1, \dots, C_m) \)</span> 在 <span class="arithmatex">\( M_{n,1}(K) \)</span> 中的秩，记作：
+[
+\text{rg}(A) = \dim(\text{vect}(C_1, \dots, C_m)).
+]</p>
+<p><strong>定义 17.2.3：一组向量的表示矩阵</strong>  </p>
+<p>设 <span class="arithmatex">\( E \)</span> 是一个维数为 <span class="arithmatex">\( n \geq 1 \)</span> 的 <span class="arithmatex">\( K \)</span>-向量空间，<span class="arithmatex">\( B \)</span> 是 <span class="arithmatex">\( E \)</span> 的一个基。设 <span class="arithmatex">\( m \geq 1 \)</span> 为整数，令<br />
+[ F = (u_1, \dots, u_m) ]<br />
+是一组 <span class="arithmatex">\( E \)</span> 中的 <span class="arithmatex">\( m \)</span> 个向量。矩阵 <span class="arithmatex">\( \text{mat}_B(F) \in M_{n,m}(K) \)</span> 定义如下：  </p>
+<div class="arithmatex">\[
+\text{mat}_B(F) =
+\begin{pmatrix}
+\text{mat}_B(u_1) &amp; \cdots &amp; \text{mat}_B(u_m)
+\end{pmatrix}
+\]</div>
+<p>称其为**<span class="arithmatex">\( F \)</span> 在基 <span class="arithmatex">\( B \)</span> 下的表示矩阵**，也可记作 <span class="arithmatex">\( \text{mat}_B(u_1, \dots, u_m) \)</span>。  </p>
+<p>换句话说，对于每个 <span class="arithmatex">\( j \in \{1, \dots, m\} \)</span>，矩阵 <span class="arithmatex">\( \text{mat}_B(F) \)</span> 的第 <span class="arithmatex">\( j \)</span> 列包含向量 <span class="arithmatex">\( u_j \)</span> 在基 <span class="arithmatex">\( B \)</span> 下的坐标。  </p>
+<hr />
+<p><strong>命题 17.2.2（对基的选择无关性）</strong>  </p>
+<p>设 <span class="arithmatex">\( E \)</span> 是一个维数为 <span class="arithmatex">\( n \geq 1 \)</span> 的 <span class="arithmatex">\( K \)</span>-向量空间，<span class="arithmatex">\( B \)</span> 是 <span class="arithmatex">\( E \)</span> 的一个基，<span class="arithmatex">\( F \)</span> 是 <span class="arithmatex">\( E \)</span> 中的一个有限向量组，则有：<br />
+[
+\operatorname{rg}(F) = \operatorname{rg}(\text{mat}_B(F))
+]  </p>
+<p><strong>证明</strong>：<br />
+设<br />
+[
+B = (e_1, \dots, e_n), \quad F = (u_1, \dots, u_m)
+]<br />
+其中 <span class="arithmatex">\( m \geq 1 \)</span>，且 <span class="arithmatex">\( e_1, \dots, e_n \in E \)</span>，<span class="arithmatex">\( u_1, \dots, u_m \in E \)</span>。设 <span class="arithmatex">\( k = \operatorname{rg}(F) \)</span>，即：<br />
+[
+\operatorname{rg}(F) = \dim(\operatorname{vect}(u_1, \dots, u_m)),
+]
+[
+\operatorname{rg}(\text{mat}<em i_1="i_1">B(F)) = \dim(\operatorname{vect}(\text{mat}_B(u_1), \dots, \text{mat}_B(u_m))).
+]<br />
+由**定理 17.1.1（基的提取）**，可以选择一个整数 <span class="arithmatex">\( k \)</span> 及 <span class="arithmatex">\( k \)</span> 个互不相同的索引 <span class="arithmatex">\( i_1, \dots, i_k \in \{1, \dots, m\} \)</span>，使得向量组<br />
+[
+(u</em>)
+]}, \dots, u_{i_k<br />
+构成 <span class="arithmatex">\( \operatorname{vect}(u_1, \dots, u_m) \)</span> 的一组基。  </p>
+<p>根据**命题 17.1.1**（第 3 页），向量组<br />
+[
+(\text{mat}<em i_1="i_1">B(u</em>}), \dots, \text{mat<em i_k="i_k">B(u</em>))
+]<br />
+构成 <span class="arithmatex">\( \operatorname{vect}(\text{mat}_B(u_1), \dots, \text{mat}_B(u_m)) \)</span> 的一组基。因此，<br />
+[
+\dim(\operatorname{vect}(\text{mat}_B(u_1), \dots, \text{mat}_B(u_m))) = k.
+]<br />
+最终得出：<br />
+[
+\operatorname{rg}(\text{mat}_B(F)) = k = \operatorname{rg}(F).
+]  </p>
+<hr />
+<p><strong>注释</strong>  </p>
+<p>习题 17.1.1（第 2 页）和命题 17.1.1（第 3 页）的一种理解方式如下：在维数 <span class="arithmatex">\( n \geq 1 \)</span> 的 <span class="arithmatex">\( K \)</span>-向量空间中进行推理和计算，本质上等同于在 <span class="arithmatex">\( M_{n,1}(K) \)</span> 中进行推理和计算。  </p>
+<p>类似地，命题 17.2.2 说明：计算一个维数为 <span class="arithmatex">\( n \geq 1 \)</span> 的 <span class="arithmatex">\( K \)</span>-向量空间中 <span class="arithmatex">\( m \geq 1 \)</span> 个向量的秩，本质上等同于计算一个 <span class="arithmatex">\( M_{n,m}(K) \)</span> 矩阵的秩。</p>
+<p><strong>命题 17.2.3（基变换公式）</strong>  </p>
+<p>设 <span class="arithmatex">\( E \)</span> 是一个维数为 <span class="arithmatex">\( n \geq 1 \)</span> 的 <span class="arithmatex">\( K \)</span>-向量空间，且 <span class="arithmatex">\( B \)</span> 和 <span class="arithmatex">\( B' \)</span> 是 <span class="arithmatex">\( E \)</span> 的两个基。<br />
+1. 对于任意向量 <span class="arithmatex">\( u \in E \)</span>，有：<br />
+[
+\text{mat}<em B_="B'">{B'}(B) \, \text{mat}_B(u) = \text{mat}</em>(u)
+]
+2. 对于任意有限向量组 <span class="arithmatex">\( F = (u_1, \dots, u_m) \)</span>，有：<br />
+[
+\text{mat}<em B_="B'">{B'}(B) \, \text{mat}_B(F) = \text{mat}</em>(F)
+]</p>
+<p><strong>证明</strong>  </p>
+<ol>
+<li>
+<p>设 <span class="arithmatex">\( u \in E \)</span>，令 <span class="arithmatex">\( B = (e_1, \dots, e_n) \)</span>，<span class="arithmatex">\( B' = (e_1', \dots, e_n') \)</span>，<br />
+[
+\text{mat}<em 1_1="1,1">{B'}(B) = \begin{pmatrix} a</em>, \quad
+\text{mat}} &amp; \dots &amp; a_{1,n} \ \vdots &amp; \ddots &amp; \vdots \ a_{n,1} &amp; \dots &amp; a_{n,n} \end{pmatrix<em B_="B'">B(u) = \begin{pmatrix} x_1 \ \vdots \ x_n \end{pmatrix}, \quad
+\text{mat}</em>(K)
+]
+根据 }(u) = \begin{pmatrix} x_1' \ \vdots \ x_n' \end{pmatrix} \in M_{n,1<span class="arithmatex">\( \text{mat}_{B'}(B) \)</span>、<span class="arithmatex">\( \text{mat}_B(u) \)</span>、<span class="arithmatex">\( \text{mat}_{B'}(u) \)</span> 的定义，<br />
+有<br />
+[
+u = x_1 e_1 + \dots + x_n e_n \tag{17.7}
+]<br />
+和<br />
+[
+u = x_1' e_1' + \dots + x_n' e_n' \tag{17.8}
+]<br />
+对于每个 <span class="arithmatex">\( i \in \{1, \dots, n\} \)</span>，有：<br />
+[
+e_i = a_{i,1} e_1' + \dots + a_{i,n} e_n' \tag{17.9}
+]<br />
+从 (17.7) 开始，使用 (17.9) 可以写成：<br />
+[
+u = x_1 (a_{1,1} e_1' + \dots + a_{n,1} e_n') + \dots + x_n (a_{1,n} e_1' + \dots + a_{n,n} e_n')
+]<br />
+得到<br />
+[
+u = (x_1 a_{1,1} + \dots + x_n a_{1,n}) e_1' + \dots + (x_1 a_{n,1} + \dots + x_n a_{n,n}) e_n' \tag{17.10}
+]<br />
+由向量在基中的唯一表示性，(17.8) 和 (17.10) 说明：<br />
+对于所有 <span class="arithmatex">\( i \in \{1, \dots, n\} \)</span>，<br />
+[
+x_1 a_{i,1} + \dots + x_n a_{i,n} = x_i'
+]<br />
+即，矩阵乘积 <span class="arithmatex">\( \text{mat}_{B'}(B) \, \text{mat}_B(u) \)</span> 等于 <span class="arithmatex">\( \text{mat}_{B'}(u) \)</span>。</p>
+</li>
+<li>
+<p>这个结果是第一个结论以及命题 17.2.1（第 11 页）的直接结果。</p>
+</li>
+</ol>
+<hr />
+<p><strong>命题 17.2.4</strong>  </p>
+<p>设 <span class="arithmatex">\( E \)</span> 是一个维数为 <span class="arithmatex">\( n \geq 1 \)</span> 的 <span class="arithmatex">\( K \)</span>-向量空间，且 <span class="arithmatex">\( B \)</span> 和 <span class="arithmatex">\( B' \)</span> 是 <span class="arithmatex">\( E \)</span> 的两个基，则矩阵 <span class="arithmatex">\( \text{mat}_{B'}(B) \in M_n(K) \)</span> 是可逆的，且其逆矩阵是 <span class="arithmatex">\( \text{mat}_B(B') \)</span>。</p>
+<p><strong>证明</strong>：<br />
+根据命题 17.2.3，第 2 点，<br />
+[
+\text{mat}<em B_="B'">B(B') \, \text{mat}</em>}(B) = \text{mat<em n-1="n-1">B(B)
+]<br />
+令 <span class="arithmatex">\( B = (e_1, \dots, e_n) \)</span>，则有：<br />
+[
+e_1 = 1 \cdot e_1 + 0 \cdot e_2 + \dots + 0 \cdot e_n, \quad \dots, \quad e_n = 0 \cdot e_1 + \dots + 0 \cdot e</em> + 1 \cdot e_n
+]<br />
+因此，<br />
+[
+\text{mat}<em B_="B'">B(e_1) = \begin{pmatrix} 1 \ 0 \ \vdots \ 0 \end{pmatrix}, \dots, \text{mat}_B(e_n) = \begin{pmatrix} 0 \ \vdots \ 0 \ 1 \end{pmatrix}
+]<br />
+即，<span class="arithmatex">\( \text{mat}_B(B) \)</span>，即 <span class="arithmatex">\( \text{mat}_B(e_1, \dots, e_n) \)</span>，是单位矩阵 <span class="arithmatex">\( I_n \in M_n(K) \)</span>。同样，可以证明<br />
+[
+\text{mat}</em>}(B) \, \text{mat<em B_="B'">B(B') = \text{mat}</em>(B') = I_n
+]<br />
+因此，矩阵 <span class="arithmatex">\( \text{mat}_{B'}(B) \in M_n(K) \)</span> 是可逆的，且其逆矩阵是 <span class="arithmatex">\( \text{mat}_B(B') \)</span>。</p>
+<hr />
+<p><strong>命题 17.2.5</strong>  </p>
+<p>设 <span class="arithmatex">\( n \geq 1 \)</span> 是一个整数，<span class="arithmatex">\( m \geq 1 \)</span> 是另一个整数，<span class="arithmatex">\( F = (u_1, \dots, u_m) \)</span> 是 <span class="arithmatex">\( K^n \)</span> 中的一组 <span class="arithmatex">\( m \)</span> 个向量。则 <span class="arithmatex">\( F \)</span> 是线性无关的当且仅当 <span class="arithmatex">\( \operatorname{rg}(F) = m \)</span>。</p>
+<p><strong>证明</strong>：<br />
+我们通过双向推理来证明：<br />
+<span class="arithmatex">\( \Rightarrow \)</span> 假设 <span class="arithmatex">\( (u_1, \dots, u_m) \)</span> 是线性无关的。因为 <span class="arithmatex">\( (u_1, \dots, u_m) \)</span> 是 <span class="arithmatex">\( \operatorname{vect}(u_1, \dots, u_m) \)</span> 的一组生成元，所以它是 <span class="arithmatex">\( \operatorname{vect}(u_1, \dots, u_m) \)</span> 的一组基，因此<br />
+[
+\dim(\operatorname{vect}(u_1, \dots, u_m)) = m
+]<br />
+而且 <span class="arithmatex">\( \operatorname{rg}(F) = \dim(\operatorname{vect}(u_1, \dots, u_m)) \)</span>，因此 <span class="arithmatex">\( \operatorname{rg}(F) = m \)</span>。</p>
+<p><span class="arithmatex">\( \Leftarrow \)</span> 假设 <span class="arithmatex">\( \operatorname{rg}(F) = m \)</span>，即<br />
+[
+\dim(\operatorname{vect}(u_1, \dots, u_m)) = m
+]<br />
+因为 <span class="arithmatex">\( (u_1, \dots, u_m) \)</span> 是 <span class="arithmatex">\( \operatorname{vect}(u_1, \dots, u_m) \)</span> 的一组生成元，所以根据命题 17.1.5（第 8 页），我们得出 <span class="arithmatex">\( (u_1, \dots, u_m) \)</span> 是 <span class="arithmatex">\( \operatorname{vect}(u_1, \dots, u_m) \)</span> 的一组基。因此，<span class="arithmatex">\( (u_1, \dots, u_m) \)</span> 是线性无关的。</p>
+<hr />
+<p><strong>命题 17.2.6</strong>  </p>
+<p>设 <span class="arithmatex">\( n \geq 1 \)</span> 是一个整数，<span class="arithmatex">\( m \geq 1 \)</span> 是另一个整数，<span class="arithmatex">\( F = (u_1, \dots, u_m) \)</span> 是 <span class="arithmatex">\( K^n \)</span> 中的一组 <span class="arithmatex">\( m \)</span> 个向量。则 <span class="arithmatex">\( F \)</span> 是生成元当且仅当 <span class="arithmatex">\( \operatorname{rg}(F) = n \)</span>。</p>
+<p><strong>证明</strong>：<br />
+通过双向推理来证明：<br />
+<span class="arithmatex">\( \Rightarrow \)</span> 假设 <span class="arithmatex">\( (u_1, \dots, u_m) \)</span> 是生成元。则<br />
+[
+\operatorname{vect}(u_1, \dots, u_m) = K^n
+]<br />
+因此<br />
+[
+\dim(\operatorname{vect}(u_1, \dots, u_m)) = n
+]<br />
+而且 <span class="arithmatex">\( \operatorname{rg}(F) = \dim(\operatorname{vect}(u_1, \dots, u_m)) \)</span>，因此 <span class="arithmatex">\( \operatorname{rg}(F) = n \)</span>。</p>
+<p><span class="arithmatex">\( \Leftarrow \)</span> 假设 <span class="arithmatex">\( \operatorname{rg}(F) = n \)</span>，即<br />
+[
+\dim(\operatorname{vect}(u_1, \dots, u_m)) = n
+]<br />
+因为 <span class="arithmatex">\( \operatorname{vect}(u_1, \dots, u_m) \)</span> 是 <span class="arithmatex">\( K^n \)</span> 的子空间，而 <span class="arithmatex">\( \dim(K^n) = n \)</span>，所以根据命题 17.1.4（第 8 页），我们得出<br />
+[
+\operatorname{vect}(u_1, \dots, u_m) = K^n
+]<br />
+因此，<span class="arithmatex">\( (u_1, \dots, u_m) \)</span> 是生成元。  </p>
+<hr />
+<p><strong>注释</strong><br />
+通过组合前两个命题，我们得出，对于任何整数 <span class="arithmatex">\( n \geq 1 \)</span>，对于 <span class="arithmatex">\( K^n \)</span> 中的任意 <span class="arithmatex">\( n \)</span> 个向量的有限组 <span class="arithmatex">\( F = (u_1, \dots, u_n) \)</span>，如果 <span class="arithmatex">\( F \)</span> 是 <span class="arithmatex">\( K^n \)</span> 的基，当且仅当 <span class="arithmatex">\( \operatorname{rg}(F) = n \)</span>。此时，<span class="arithmatex">\( K^n \)</span> 可以替换为任何维数为 <span class="arithmatex">\( n \geq 1 \)</span> 的 <span class="arithmatex">\( K \)</span>-向量空间。</p>
+<p><strong>命题 17.2.7</strong>。设 <span class="arithmatex">\( n \geq 1 \)</span> 为整数，定义</p>
+<p>[
+M = 
+\begin{pmatrix}
+C_1 &amp; \cdots &amp; C_n
+\end{pmatrix} \in M_n(K)
+]
+为一个方阵。以下条件是等价的：</p>
+<ol>
+<li><span class="arithmatex">\( M \)</span> 可逆；</li>
+<li><span class="arithmatex">\( M \)</span> 的列 <span class="arithmatex">\( C_1, \dots, C_n \)</span> 构成 <span class="arithmatex">\( M_{n,1}(K) \)</span> 的一组基；</li>
+<li><span class="arithmatex">\( \text{rg}(M) = n \)</span>。</li>
+</ol>
+<p><strong>证明：</strong></p>
+<p><strong>1 ⇒ 2</strong>：假设 <span class="arithmatex">\( M \)</span> 是可逆的。设 <span class="arithmatex">\( M^{-1} = 
+\begin{pmatrix}
+D_1 &amp; \cdots &amp; D_n
+\end{pmatrix}
+\)</span>。令 <span class="arithmatex">\( e_1, \dots, e_n \)</span> 为 <span class="arithmatex">\( M_{n,1}(K) \)</span> 的标准基，其中</p>
+<div class="arithmatex">\[
+e_1 = \begin{pmatrix} 1 \\ 0 \\ \vdots \\ 0 \end{pmatrix}, \quad e_n = \begin{pmatrix} 0 \\ \vdots \\ 0 \\ 1 \end{pmatrix}。
+\]</div>
+<p>由 <span class="arithmatex">\( MM^{-1} = I_n \)</span>，可以写成：</p>
+<div class="arithmatex">\[
+M \begin{pmatrix} D_1 &amp; \cdots &amp; D_n \end{pmatrix} = \begin{pmatrix} e_1 &amp; \cdots &amp; e_n \end{pmatrix}。
+\]</div>
+<p>进一步根据 <strong>命题 17.2.1 第 3 条</strong>，有：</p>
+<div class="arithmatex">\[
+MD_1 = e_1, \dots, MD_n = e_n \quad \text{(公式 17.11)}。
+\]</div>
+<p>另一方面，根据 <strong>命题 17.2.1 第 2 条</strong>，对任意 <span class="arithmatex">\( i \in \{1, \dots, n\} \)</span>，有</p>
+<div class="arithmatex">\[
+MD_i \in \text{vect}(C_1, \dots, C_n) \quad \text{(公式 17.12)}。
+\]</div>
+<p>由 <span class="arithmatex">\( MD_1 = e_1, \dots, MD_n = e_n \)</span> 和 <span class="arithmatex">\( MD_i \in \text{vect}(C_1, \dots, C_n) \)</span>，可以推得</p>
+<div class="arithmatex">\[
+e_1, \dots, e_n \in \text{vect}(C_1, \dots, C_n)，
+\]</div>
+<p>因此 <span class="arithmatex">\( \text{vect}(e_1, \dots, e_n) \subset \text{vect}(C_1, \dots, C_n) \)</span>。由于 <span class="arithmatex">\( \text{vect}(e_1, \dots, e_n) = M_{n,1}(K) \)</span>，可以得出 <span class="arithmatex">\( (C_1, \dots, C_n) \)</span> 是 <span class="arithmatex">\( M_{n,1}(K) \)</span> 的一组生成元。由于 <span class="arithmatex">\( \dim(M_{n,1}(K)) = n \)</span>，根据 <strong>命题 17.1.5 第 2 条</strong>，可以得出 <span class="arithmatex">\( (C_1, \dots, C_n) \)</span> 是 <span class="arithmatex">\( M_{n,1}(K) \)</span> 的一组基。</p>
+<p><strong>2 ⇒ 3</strong>：如果 <span class="arithmatex">\( C_1, \dots, C_n \)</span> 是 <span class="arithmatex">\( M_{n,1}(K) \)</span> 的一组基，则 <span class="arithmatex">\( \text{rg}(M) = \dim(\text{vect}(C_1, \dots, C_n)) = \dim(M_{n,1}(K)) = n \)</span>。</p>
+<p><strong>3 ⇒ 1</strong>：假设 <span class="arithmatex">\( \text{rg}(M) = n \)</span>。即 <span class="arithmatex">\( \dim(\text{vect}(C_1, \dots, C_n)) = n \)</span>。由于 <span class="arithmatex">\( (C_1, \dots, C_n) \)</span> 是 <span class="arithmatex">\( \text{vect}(C_1, \dots, C_n) \)</span> 的一组生成元，因此根据 <strong>命题 17.1.4 第 2 条</strong>，可以得出 <span class="arithmatex">\( \text{vect}(C_1, \dots, C_n) = M_{n,1}(K) \)</span>。特别地，<span class="arithmatex">\( (C_1, \dots, C_n) \)</span> 是 <span class="arithmatex">\( M_{n,1}(K) \)</span> 的一组基。</p>
+<p>如果记 <span class="arithmatex">\( C = (C_1, \dots, C_n) \)</span> 为 <span class="arithmatex">\( M_{n,1}(K) \)</span> 的标准基，则</p>
+<div class="arithmatex">\[
+M = \begin{pmatrix} C_1 &amp; \dots &amp; C_n \end{pmatrix} = \text{mat}_C(C_1, \dots, C_n) = \text{mat}_C(B)。
+\]</div>
+<p>根据 <strong>命题 17.2.4</strong>，可以得出 <span class="arithmatex">\( M \)</span> 是可逆的，且其逆矩阵为 <span class="arithmatex">\( \text{mat}_B(C) \)</span>。</p>
+<p><strong>备注：</strong></p>
+<p>在特殊情况下，对于 <span class="arithmatex">\( 2 \times 2 \)</span> 矩阵</p>
+<div class="arithmatex">\[
+A = \begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix} \in M_2(K),
+\]</div>
+<p>其行列式定义为 <span class="arithmatex">\( \det(A) = ad - bc \)</span>，并且有以下准则：</p>
+<ul>
+<li><span class="arithmatex">\( A \)</span> 可逆当且仅当 <span class="arithmatex">\( \det(A) \neq 0 \)</span>。</li>
+</ul>
+<p><strong>例子：</strong></p>
+<p>以下矩阵不是可逆的：</p>
+<div class="arithmatex">\[
+\begin{pmatrix} 1 &amp; 5 \\ 10 &amp; 50 \end{pmatrix}, \quad
+\begin{pmatrix} -1 &amp; 5 \\ -1 &amp; 6 \\ 5 &amp; 6 \end{pmatrix}, \quad
+\begin{pmatrix} 6 &amp; -6 \\ -2 &amp; 2 \end{pmatrix}, \quad
+\begin{pmatrix} 0 &amp; 2 \\ 0 &amp; 2 \end{pmatrix}, \quad
+\begin{pmatrix} 0 &amp; 0 \\ 0 &amp; 0 \end{pmatrix}.
+\]</div>
+<p>以下矩阵是可逆的：</p>
+<div class="arithmatex">\[
+\begin{pmatrix} 1 &amp; 5 \\ 10 &amp; 49 \end{pmatrix}, \quad
+\begin{pmatrix} -1 &amp; 5 \\ -1 &amp; 6 \\ 5 &amp; 12 \end{pmatrix}, \quad
+\begin{pmatrix} 6 &amp; 6 \\ -2 &amp; 2 \end{pmatrix}, \quad
+\begin{pmatrix} 1 &amp; 2 \\ 0 &amp; 2 \end{pmatrix}, \quad
+\begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{pmatrix}.
+\]</div>
+<p><strong>例子：</strong></p>
+<p>对于任何 <span class="arithmatex">\( \theta \in \mathbb{R} \)</span>，定义矩阵</p>
+<div class="arithmatex">\[
+R_\theta = \begin{pmatrix} \cos(\theta) &amp; -\sin(\theta) \\ \sin(\theta) &amp; \cos(\theta) \end{pmatrix} \in M_2(\mathbb{R}),
+\]</div>
+<p>它是可逆的，因为</p>
+<div class="arithmatex">\[
+\det(R_\theta) = \cos^2(\theta) + \sin^2(\theta) = 1 \neq 0。
+\]</div>
+<p>接下来的三个结果在接下来的证明中会用到。虽然它们不必须立即了解，但它们是有用的。需要注意的是，对于任意整数 <span class="arithmatex">\( n \geq 1 \)</span>，<span class="arithmatex">\( GL_n(K) \subset M_n(K) \)</span> 表示可逆矩阵的集合。</p>
+<p><strong>命题 17.2.8</strong>。设 <span class="arithmatex">\( E \)</span> 是一个有限维 <span class="arithmatex">\( K \)</span>-向量空间，维数为 <span class="arithmatex">\( n \geq 1 \)</span>，并且 <span class="arithmatex">\( M \in GL_n(K) \)</span>。对于任意 <span class="arithmatex">\( E \)</span> 的基 <span class="arithmatex">\( B \)</span>，存在一个唯一的基 <span class="arithmatex">\( B' \)</span> 使得 <span class="arithmatex">\( M = \text{mat}_{B'}(B) \)</span>。</p>
+<p><strong>证明</strong>：</p>
+<p>后续只使用存在性，但通过以下分析-综合的推理可以得到唯一性。设 <span class="arithmatex">\( B = (e_1, \dots, e_n) \)</span> 是 <span class="arithmatex">\( E \)</span> 的基。</p>
+<p><strong>分析</strong>：假设存在 <span class="arithmatex">\( B' = (f_1, \dots, f_n) \)</span> 使得 <span class="arithmatex">\( M = \text{mat}_{B'}(B) \)</span>。那么 <span class="arithmatex">\( M^{-1} = \text{mat}_B(B') \)</span>。对于任意 <span class="arithmatex">\( j \in \{1, \dots, n\} \)</span>， <span class="arithmatex">\( M^{-1} \)</span> 的第 <span class="arithmatex">\( j \)</span> 列给出了 <span class="arithmatex">\( f_j \)</span> 在基 <span class="arithmatex">\( B \)</span> 中的坐标，即</p>
+<div class="arithmatex">\[
+f_j = \sum_{i=1}^n M^{-1}_{i,j} e_i \quad (17.13)。
+\]</div>
+<p>如果 <span class="arithmatex">\( B' \)</span> 存在，(17.13) 显示了 <span class="arithmatex">\( B' \)</span> 完全由 <span class="arithmatex">\( M \)</span> 和 <span class="arithmatex">\( B \)</span> 决定，这也就证明了唯一性。</p>
+<p><strong>综合</strong>：根据 (17.13) 设定 <span class="arithmatex">\( f_1, \dots, f_n \)</span>。根据定义，</p>
+<div class="arithmatex">\[
+M^{-1} = \begin{pmatrix} \text{mat}_B(f_1) &amp; \cdots &amp; \text{mat}_B(f_n) \end{pmatrix} \quad (17.14)。
+\]</div>
+<p>根据 <strong>命题 17.2.7</strong>，由于 <span class="arithmatex">\( M^{-1} \)</span> 是可逆的，<span class="arithmatex">\( M^{-1} \)</span> 的列 <span class="arithmatex">\( \text{mat}_B(f_1), \dots, \text{mat}_B(f_n) \)</span> 形成 <span class="arithmatex">\( M_{n,1}(K) \)</span> 的一组基。根据 <strong>命题 17.1.1</strong>，可以得出 <span class="arithmatex">\( B' = (f_1, \dots, f_n) \)</span> 是 <span class="arithmatex">\( E \)</span> 的一组基。根据 (17.14)，有 <span class="arithmatex">\( M^{-1} = \text{mat}_B(B') \)</span>。因此，存在性得以证明。</p>
+<p><strong>命题 17.2.9</strong>。设 <span class="arithmatex">\( E \)</span> 是一个有限维 <span class="arithmatex">\( K \)</span>-向量空间，维数为 <span class="arithmatex">\( n \geq 1 \)</span>，并且 <span class="arithmatex">\( B \)</span> 是 <span class="arithmatex">\( E \)</span> 的基。设 <span class="arithmatex">\( F \)</span> 是 <span class="arithmatex">\( E \)</span> 中的一个有限向量集。对于任意可逆矩阵 <span class="arithmatex">\( M \in GL_n(K) \)</span>，存在一个基 <span class="arithmatex">\( B' \)</span>，使得</p>
+<div class="arithmatex">\[
+M \, \text{mat}_B(F) = \text{mat}_{B'}(F)。
+\]</div>
+<p><strong>证明</strong>：根据 <strong>命题 17.2.8</strong>，设 <span class="arithmatex">\( B' \)</span> 为 <span class="arithmatex">\( E \)</span> 的基，使得 <span class="arithmatex">\( M = \text{mat}_{B'}(B) \)</span>。则</p>
+<div class="arithmatex">\[
+M \, \text{mat}_B(F) = \text{mat}_B(B) \, \text{mat}_B(F) = \text{mat}_{B'}(F)。
+\]</div>
+<p><strong>命题 17.2.10</strong>。设 <span class="arithmatex">\( n \geq 1 \)</span> 为整数，且 <span class="arithmatex">\( M \in GL_n(K) \)</span>，<span class="arithmatex">\( N \in M_n(K) \)</span>。则有 <span class="arithmatex">\( \text{rg}(MN) = \text{rg}(N) \)</span>。</p>
+<p><strong>证明</strong>：设 <span class="arithmatex">\( C_1, \dots, C_n \in M_{n,1}(K) \)</span> 为 <span class="arithmatex">\( N \)</span> 的列向量。如果 <span class="arithmatex">\( C \)</span> 是 <span class="arithmatex">\( M_{n,1}(K) \)</span> 的标准基，则</p>
+<div class="arithmatex">\[
+N = \begin{pmatrix} C_1 &amp; \cdots &amp; C_n \end{pmatrix} = \text{mat}_C(C_1, \dots, C_n)。
+\]</div>
+<p>根据 <strong>命题 17.2.9</strong>，选择 <span class="arithmatex">\( M_{n,1}(K) \)</span> 的一组基 <span class="arithmatex">\( B \)</span>，使得 <span class="arithmatex">\( M = \text{mat}_B(C) \)</span>。则</p>
+<div class="arithmatex">\[
+MN = \text{mat}_B(C) \, \text{mat}_C(C_1, \dots, C_n) = \text{mat}_B(C_1, \dots, C_n)。
+\]</div>
+<p>根据 <strong>命题 17.2.2</strong>，得出</p>
+<div class="arithmatex">\[
+\text{rg}(MN) = \text{rg}(\text{mat}_B(C_1, \dots, C_n)) = \text{rg}(C_1, \dots, C_n) = \text{rg}(\text{mat}_C(C_1, \dots, C_n)) = \text{rg}(N)。
+\]</div>
+<h2 id="3calcul-matriciel-et-applications">3.Calcul matriciel et applications<a class="headerlink" href="#3calcul-matriciel-et-applications" title="Permanent link">&para;</a></h2>
+<h3 id="31-matrices-echelonnees-matrices-echelonnees-reduites">3.1 Matrices échelonnées, matrices échelonnées réduites<a class="headerlink" href="#31-matrices-echelonnees-matrices-echelonnees-reduites" title="Permanent link">&para;</a></h3>
+<h3 id="32-famille-libre-famille-generatrice-base">3.2 Famille libre, famille génératrice, base<a class="headerlink" href="#32-famille-libre-famille-generatrice-base" title="Permanent link">&para;</a></h3>
+<h3 id="33-changement-de-bases">3.3 Changement de bases<a class="headerlink" href="#33-changement-de-bases" title="Permanent link">&para;</a></h3>
+<h3 id="34-relation-de-dependance-lineaire">3.4 Relation de dépendance linéaire<a class="headerlink" href="#34-relation-de-dependance-lineaire" title="Permanent link">&para;</a></h3>
+<h3 id="35-passage-dun-systeme-dequations-a-une-famille-generatrice">3.5 Passage d’un système d’équations à une famille génératrice<a class="headerlink" href="#35-passage-dun-systeme-dequations-a-une-famille-generatrice" title="Permanent link">&para;</a></h3>
+<h3 id="36-passage-dune-famille-generatrice-a-un-systeme-dequations">3.6 Passage d’une famille génératrice à un système d’équations<a class="headerlink" href="#36-passage-dune-famille-generatrice-a-un-systeme-dequations" title="Permanent link">&para;</a></h3>
+<h2 id="4sommes-et-supplementaire">4.Sommes et supplémentaire<a class="headerlink" href="#4sommes-et-supplementaire" title="Permanent link">&para;</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.expand", "navigation.indexes", "navigation.path", "navigation.top", "content.footnote.tooltips"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1421 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Magn%C3%A9tostatique/">
+      
+      
+      
+      <link rel="icon" href="../../assets/mmc.jpg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.6">
+    
+    
+      
+        <title>Chapitre 4 Mouvements de particules chargées - Summer & Capoo's Home</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mouvements-de-particules-chargees" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="Summer &amp; Capoo&#39;s Home" class="md-header__button md-logo" aria-label="Summer & Capoo's Home" data-md-component="logo">
+      
+  <img src="../../assets/mmc.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Summer & Capoo's Home
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapitre 4 Mouvements de particules chargées
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Homepage
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Mathsindex/" class="md-tabs__link">
+          
+  
+    
+  
+  Mathématiques
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../%C3%89lectronique/" class="md-tabs__link">
+          
+  
+    
+  
+  Physique
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Summer &amp; Capoo&#39;s Home" class="md-nav__button md-logo" aria-label="Summer & Capoo's Home" data-md-component="logo">
+      
+  <img src="../../assets/mmc.jpg" alt="logo">
+
+    </a>
+    Summer & Capoo's Home
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Homepage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Mathématiques
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Mathématiques
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mathsindex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mathématiques
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../G%C3%A9om%C3%A9trie/Espace%20vectoriels/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 15 Espace vectoriels
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../G%C3%A9om%C3%A9trie/Espaces%20vectoriels%20de%20dimension%20finie/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 17 Espaces vectoriels de dimension finie
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Analyse/Fonctions%20de%20deux%20variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 18 Fonctions de deux variables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Physique
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Physique
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../%C3%89lectronique/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Électronique
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Électronique
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Électromagnétisme
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Électromagnétisme
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Analyse%20vectorielle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 1 Analyse vectorielle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Electrostatique/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 2 Electrostatique
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Magn%C3%A9tostatique/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 3 Magnétostatique
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Chapitre 4 Mouvements de particules chargées
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 4 Mouvements de particules chargées
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1particule-chargee-dans-un-champ-electrique-vece" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.Particule chargée dans un champ électrique \(\vec{E}\)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.Particule chargée dans un champ électrique \(\vec{E}\)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-valeur-de-la-vitesse" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Valeur de la vitesse
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-equation-du-mouvement" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Equation du mouvement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-application-deviation-dun-faisceau-de-particules" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Application: Déviation d’un faisceau de particules
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2particule-chargee-dans-un-champ-magnetique-vecb" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.Particule chargée dans un champ magnétique \(\vec{B}\)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.Particule chargée dans un champ magnétique \(\vec{B}\)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-conservation-de-lenergie-cinetique" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Conservation de l’énergie cinétique
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-equation-du-mouvement" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Equation du mouvement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Equation du mouvement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221-methode-classique" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.1 Méthode « classique »
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222-methode-des-complexes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.2 Méthode des complexes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#223-equation-parametrique" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.3 Equation paramétrique
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3cas-particulier-de-la-trajectoire-circulaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.Cas particulier de la trajectoire circulaire
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1particule-chargee-dans-un-champ-electrique-vece" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.Particule chargée dans un champ électrique \(\vec{E}\)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.Particule chargée dans un champ électrique \(\vec{E}\)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-valeur-de-la-vitesse" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Valeur de la vitesse
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-equation-du-mouvement" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Equation du mouvement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-application-deviation-dun-faisceau-de-particules" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Application: Déviation d’un faisceau de particules
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2particule-chargee-dans-un-champ-magnetique-vecb" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.Particule chargée dans un champ magnétique \(\vec{B}\)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.Particule chargée dans un champ magnétique \(\vec{B}\)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-conservation-de-lenergie-cinetique" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Conservation de l’énergie cinétique
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-equation-du-mouvement" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Equation du mouvement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Equation du mouvement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221-methode-classique" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.1 Méthode « classique »
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222-methode-des-complexes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.2 Méthode des complexes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#223-equation-parametrique" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.3 Equation paramétrique
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3cas-particulier-de-la-trajectoire-circulaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.Cas particulier de la trajectoire circulaire
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="mouvements-de-particules-chargees">Mouvements de particules chargées<a class="headerlink" href="#mouvements-de-particules-chargees" title="Permanent link">&para;</a></h1>
+<p>在本章中, 我们关注的是电磁场中电荷的的运动</p>
+<h2 id="1particule-chargee-dans-un-champ-electrique-vece">1.Particule chargée dans un champ électrique <span class="arithmatex">\(\vec{E}\)</span><a class="headerlink" href="#1particule-chargee-dans-un-champ-electrique-vece" title="Permanent link">&para;</a></h2>
+<h3 id="11-valeur-de-la-vitesse">1.1 Valeur de la vitesse<a class="headerlink" href="#11-valeur-de-la-vitesse" title="Permanent link">&para;</a></h3>
+<p>tu</p>
+<p>我们在先前的章节我们已经见过在两块金属板之间产生的匀强电场 <span class="arithmatex">\(\vec{E}\)</span> , 我们再次研究这样一个模型, 两个板分别为阳极 (anode) 和阴极 (cathode) , 板间距为 <span class="arithmatex">\(d\)</span>
+因此, 电场 𝐸⃗ 可表示为: <span class="arithmatex">\(\vec{E} = E \vec{u_z}\)</span> , 其方向由阳极指向阴极 (沿电势递减的方向) , 我们可以得出如下关系:          </p>
+<div class="arithmatex">\[
+    \vec{E} = E \vec{u_z} 
+\]</div>
+<div class="arithmatex">\[
+    V_{\text{Anode}} - V_{\text{Cathode}} = U 
+\]</div>
+<div class="arithmatex">\[
+    U = - \int_{\text{Cathode}}^{\text{Anode}} \vec{E} \cdot \vec{dl} = Ed 
+\]</div>
+<div class="arithmatex">\[
+    E = \frac{U}{d}
+\]</div>
+<hr />
+<div class="arithmatex">\[
+    \vec{E} = - \vec{grad}(V)
+\]</div>
+<div class="arithmatex">\[
+    E \vec{u_z} = - \frac{dV}{dz} \vec{u_z}
+\]</div>
+<div class="arithmatex">\[
+    E = -\frac{dV}{dz}
+\]</div>
+<div class="arithmatex">\[
+    V(z) = - E_z + A
+\]</div>
+<div class="arithmatex">\[
+    U = V(0) - V(d) = Ed
+\]</div>
+<div class="arithmatex">\[
+    E = \frac{U}{d}
+\]</div>
+<p>以上使用了两种方法得出 <span class="arithmatex">\(E\)</span> 和 <span class="arithmatex">\(U\)</span> 之间的关系                  </p>
+<p>我们考虑在极板间有一个初速度为零的电子                                     </p>
+<div class="arithmatex">\[
+    \vec{F} = q \vec{E} = - e \vec{E}
+\]</div>
+<p>由动能定理:    </p>
+<div class="arithmatex">\[
+    \Delta E_c = W
+\]</div>
+<div class="arithmatex">\[
+    E_c(\text{Anode}) - E_c(\text{Cathode}) = E_c(\text{Anode}) - 0 = W
+\]</div>
+<div class="arithmatex">\[
+    W = e E d = e U = E_c(\text{Anode}) = \frac{1}{2} m v_a^2
+\]</div>
+<div class="arithmatex">\[
+    v_a = \sqrt{\frac{2 e U}{m}}
+\]</div>
+<p>对于一个电子: <span class="arithmatex">\(e = 1.6 \times 10^{-19} C, \quad m = 9 \times 10^{-31} kg\)</span> , 极板间电压 <span class="arithmatex">\(U = 220 V\)</span></p>
+<div class="arithmatex">\[
+    v_a = 8.8 \times 10^6 m \cdot s^{-1}
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li><span class="arithmatex">\(E_c = e U\)</span>                                  <br />
+  其中 1 电子伏特 (eV) 等于 <span class="arithmatex">\(1.6 \times 10^{-19} J\)</span>, 因此 <span class="arithmatex">\(E_c\)</span> 的数值与 <span class="arithmatex">\(U\)</span> 相同                                  <br />
+  例如, 若 <span class="arithmatex">\(U = 220V\)</span> , 则 <span class="arithmatex">\(E_c = 220eV\)</span>               </li>
+<li>当电子的速度 <span class="arithmatex">\(v \geq 10^8 m \cdot s^{-1}\)</span> 时, 它变为相对论性电子, 当 <span class="arithmatex">\(U \geq 30 kV\)</span> 时会发生这种情况  </li>
+</ul>
+</div>
+<h3 id="12-equation-du-mouvement">1.2 Equation du mouvement<a class="headerlink" href="#12-equation-du-mouvement" title="Permanent link">&para;</a></h3>
+<p>tu</p>
+<p>设粒子最初位于 <span class="arithmatex">\(O\)</span> 点, 初速度为 <span class="arithmatex">\( \vec{v_0} \)</span> , 其运动位于 <span class="arithmatex">\((yOz)\)</span> 平面内                      </p>
+<p>在假设地球参考系为伽利略参考系的情况下, 应用牛顿第二定律：  </p>
+<div class="arithmatex">\[
+    m \vec{a} = q \vec{E} = \frac{qU}{d} \vec{e_z}
+\]</div>
+<div class="arithmatex">\[
+    \begin{cases}
+    m \ddot{x} = 0 \\
+    m \ddot{y} = 0 \\
+    m \ddot{z} = \frac{qU}{d}
+    \end{cases}
+    \Rightarrow
+    \begin{cases}
+    \dot{x} = A \\
+    \dot{y} = B \\
+    \dot{z} = \frac{qU}{md} + C
+    \end{cases}
+\]</div>
+<p>由初始状态 <span class="arithmatex">\(\vec{v}(0) = \vec{v_0} = v_0 \cos \alpha \vec{e_y} + v_0 \sin \alpha \vec{e_z}\)</span> , 解得:      </p>
+<div class="arithmatex">\[
+    \begin{cases}
+    A = 0 \\
+    B = v_0 \cos \alpha \\
+    C = v_0 \sin \alpha
+    \end{cases}
+\]</div>
+<p>代回速度表达式并在此积分:         </p>
+<div class="arithmatex">\[
+    \begin{cases}
+    x = D \\
+    y = v_0 \cos \alpha t + F \\
+    z = \frac{qU}{2md} t^2 + v_0 \sin \alpha t + G
+    \end{cases}
+\]</div>
+<p>由初始状态 <span class="arithmatex">\(x(0) = y(0) = z(0) = 0 = D = F = G\)</span>                      <br />
+可得:                  </p>
+<div class="arithmatex">\[
+    \begin{cases}
+    x = 0 \\
+    y = v_0 \cos \alpha t \\
+    z = \frac{qU}{2md} t^2 + v_0 \sin \alpha t 
+    \end{cases}
+\]</div>
+<p>得出轨迹方程:                       </p>
+<div class="arithmatex">\[
+    z = \frac{qU}{2md v_0^2 \cos^2 \alpha} y^2 + \tan \alpha y              
+\]</div>
+<p>当 <span class="arithmatex">\(\alpha = \pm \frac{\pi}{2}\)</span> , 则粒子沿 <span class="arithmatex">\(z\)</span> 轴做匀加速直线运动   </p>
+<h3 id="13-application-deviation-dun-faisceau-de-particules">1.3 Application: Déviation d’un faisceau de particules<a class="headerlink" href="#13-application-deviation-dun-faisceau-de-particules" title="Permanent link">&para;</a></h3>
+<p>tu</p>
+<p>在两块金属板之间, 电场 <span class="arithmatex">\(\vec{E} = \frac{U}{d} \vec{e_z}\)</span> , 而在其他区域, 电场 <span class="arithmatex">\(\vec{E} = \vec{0}\)</span>                <br />
+在这种情况下, 我们尝试计算粒子最终打在屏幕上的偏转量 <span class="arithmatex">\(Z\)</span> ：                          </p>
+<p>利用 1.2 中得出的轨迹方程, 其中 <span class="arithmatex">\(\alpha = 0\)</span></p>
+<div class="arithmatex">\[
+    z = \frac{qU}{2md v_0^2} y^2, \quad 0 \leq y \leq p
+\]</div>
+<div class="arithmatex">\[
+    \tan \beta = \frac{v_z (y=p)}{v_y (y=p)} = \frac{Z - z_S}{D}
+\]</div>
+<div class="arithmatex">\[
+    \begin{cases}
+    v_y (y=p) = \dot{y} = v_0 \\       
+    v_z (y=p) = \dot{z} = \frac{Uqp}{mdv_0}
+    \end{cases}
+\]</div>
+<div class="arithmatex">\[
+    \frac{Z-z_S}{D} = \frac{Z - \frac{qUp^2}{2mdv_0^2}}{D} = \frac{v_z (y=p)}{v_y (y=p)} = \frac{\frac{qUp}{mdv_0}}{v_0}
+\]</div>
+<div class="arithmatex">\[
+    Z = \frac{qp}{mdv_0^2} (\frac{p}{2} + D) U
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li><span class="arithmatex">\(Z\)</span> 与 <span class="arithmatex">\(U\)</span> 成正比, 这正是示波器的工作原理         </li>
+<li>该装置还能充当粒子筛选器, 因为 <span class="arithmatex">\(Z\)</span> 与 <span class="arithmatex">\( \frac{q}{m} \)</span> 成正比, 因此, 在 <span class="arithmatex">\(Z\)</span> 处放置一个狭缝, 只允许特定 <span class="arithmatex">\( \frac{q}{m} \)</span> 比值的粒子通过   </li>
+</ul>
+</div>
+<h2 id="2particule-chargee-dans-un-champ-magnetique-vecb">2.Particule chargée dans un champ magnétique <span class="arithmatex">\(\vec{B}\)</span><a class="headerlink" href="#2particule-chargee-dans-un-champ-magnetique-vecb" title="Permanent link">&para;</a></h2>
+<h3 id="21-conservation-de-lenergie-cinetique">2.1 Conservation de l’énergie cinétique<a class="headerlink" href="#21-conservation-de-lenergie-cinetique" title="Permanent link">&para;</a></h3>
+<p>洛伦兹力的磁场部分不做功, 因此粒子的动能保持不变, 即速度大小 <span class="arithmatex">\(v = \text{C}\)</span> 恒定                  <br />
+但要注意, 速度的方向可能会改变, 即 <span class="arithmatex">\( \vec{v} ≠ \vec{C} \)</span>   </p>
+<h3 id="22-equation-du-mouvement">2.2 Equation du mouvement<a class="headerlink" href="#22-equation-du-mouvement" title="Permanent link">&para;</a></h3>
+<p>tu</p>
+<p>设磁场方向为：<span class="arithmatex">\(\vec{B} = B \vec{e_z}\)</span> , 初始速度 <span class="arithmatex">\(\vec{v_0}\)</span> 位于 <span class="arithmatex">\((xOz)\)</span> 平面内, 粒子最初位于 <span class="arithmatex">\(O\)</span> 点   </p>
+<p>在假设地球参考系为伽利略参考系的情况下, 应用牛顿第二定律：         </p>
+<div class="arithmatex">\[
+    m \vec{a} = q \vec{v} \wedge \vec{B}
+\]</div>
+<p>在空间的三个方向上展开, 可得到:      </p>
+<div class="arithmatex">\[
+    m 
+    \begin{pmatrix}
+    \ddot{x} \\
+    \ddot{y} \\
+    \ddot{z}
+    \end{pmatrix}
+    =
+    q 
+    \begin{pmatrix}
+    \dot{x} \\
+    \dot{y} \\
+    \dot{z}
+    \end{pmatrix}
+    \land
+    \begin{pmatrix}
+    0 \\
+    0 \\
+    B
+    \end{pmatrix}
+    \Rightarrow
+    \begin{cases}       
+    m \ddot{x} = q B \dot{y} \\           
+    m \ddot{y} = -q B \dot{x} \\              
+    m \ddot{z} = 0              
+    \end{cases}
+    \Rightarrow
+    \begin{cases}       
+    \ddot{x} = \frac{q B}{m} \dot{y} = \omega \dot{y}, \quad \omega = \frac{qB}{m} \\           
+    \ddot{y} = - \frac{q B}{m} \dot{x} = - \omega \dot{x} \\              
+    \ddot{z} = 0              
+    \end{cases}
+\]</div>
+<div class="arithmatex">\[
+    \dot{x} = \omega y + cste = \omega y + v_0 \sin \alpha
+\]</div>
+<div class="arithmatex">\[
+    \dot{y} = -\omega x + cste = -\omega x           
+\]</div>
+<div class="arithmatex">\[
+    \ddot{x} = -\omega^2 x              
+\]</div>
+<p>下面介绍两种求解方法：  </p>
+<h4 id="221-methode-classique">2.2.1 Méthode « classique »<a class="headerlink" href="#221-methode-classique" title="Permanent link">&para;</a></h4>
+<p>对等式 <span class="arithmatex">\(\ddot{x} = \omega \dot{y}\)</span> 再次微分:         </p>
+<div class="arithmatex">\[
+    \ddot{v_x} = \omega \dot{v_y} = − \omega^2 v_x
+\]</div>
+<p>可知, <span class="arithmatex">\(v_x\)</span> 是简谐振动：</p>
+<div class="arithmatex">\[
+    v_x = A \cos(\omega t) + B \sin(\omega t)
+\]</div>
+<p>由初始条件 <span class="arithmatex">\(v_x(0) = v_0 \sin(\alpha) = A, \quad \dot{v_x}(0) = \omega v_y(0) = 0 = B\)</span>      <br />
+可得：</p>
+<div class="arithmatex">\[
+    \begin{cases}
+    v_x = v_0 \sin(\alpha) \cos(\omega t) \\
+    v_y = -v_0 \sin(\alpha) \sin(\omega t)
+    \end{cases}
+\]</div>
+<h4 id="222-methode-des-complexes">2.2.2 Méthode des complexes<a class="headerlink" href="#222-methode-des-complexes" title="Permanent link">&para;</a></h4>
+<p>定义复变量：</p>
+<div class="arithmatex">\[
+    Z = v_x + jv_y = \dot{x} + j \dot{y}
+\]</div>
+<p>对 <span class="arithmatex">\(Z\)</span> 微分: </p>
+<div class="arithmatex">\[
+    \dot{Z} = \ddot{x} + j \ddot{y} = \omega \dot{y} - j \omega \dot{x} = - j w \left( \dot{x} + j \dot{y} \right) = -j w Z
+\]</div>
+<p>可得出:  </p>
+<div class="arithmatex">\[
+    \dot{Z} + j w Z = 0
+\]</div>
+<p>解一阶微分方程:                   </p>
+<div class="arithmatex">\[
+    Z = A e^{-j w t}
+\]</div>
+<p>由初始状态 <span class="arithmatex">\(Z(0) = v_x (0) + j v_y (0) = v_0 \sin (\alpha)\)</span> , 可得:                          </p>
+<div class="arithmatex">\[
+    A = v_0 \sin (\alpha)
+\]</div>
+<p>代回原式:               </p>
+<div class="arithmatex">\[
+    Z = v_0 \sin (\alpha) \, e^{-j w t} = v_0 \sin (\alpha) \left( \cos (w t) - j \sin (w t) \right)
+\]</div>
+<p>得出:                           </p>
+<div class="arithmatex">\[
+    \begin{cases}
+    v_x = v_0 \sin(\alpha) \cos(\omega t) \\
+    v_y = -v_0 \sin(\alpha) \sin(\omega t)
+    \end{cases}
+\]</div>
+<h4 id="223-equation-parametrique">2.2.3 Equation paramétrique<a class="headerlink" href="#223-equation-parametrique" title="Permanent link">&para;</a></h4>
+<p>我们尝试求出电荷轨迹的参数方程                                     </p>
+<p>对速度表达式积分并根据初始条件 <span class="arithmatex">\( x(0) = y(0) = z(0) = 0 \)</span>, 解出：</p>
+<div class="arithmatex">\[
+    \begin{cases}
+    x = \frac{v_0 \sin(\alpha)}{\omega} \sin(\omega t) \\
+    y = \frac{v_0 \sin(\alpha)}{\omega} (\cos(\omega t) - 1) \\
+    z = v_0 \cos(\alpha) t
+    \end{cases}
+\]</div>
+<p>我们注意到 <span class="arithmatex">\(x,y\)</span> 之间有如下关系：</p>
+<div class="arithmatex">\[
+    x^2 + (y + R)^2 = R^2
+\]</div>
+<p>其中：</p>
+<div class="arithmatex">\[
+    R = \frac{v_0 \sin(\alpha)}{|\omega|} = \frac{v_0 m \sin(\alpha)}{|q|B}
+\]</div>
+<p>电荷的轨迹在 <span class="arithmatex">\((Oxy)\)</span> 平面上形成一个以 <span class="arithmatex">\( C(0, R) \)</span> 为中心, 半径为 <span class="arithmatex">\( R \)</span> 的圆, 而在 z 方向粒子则做匀速直线运动, 因此整体轨迹为螺旋线   </p>
+<p>螺旋线的螺距为：</p>
+<div class="arithmatex">\[
+    h = v_0 \cos(\alpha) T = \frac{2\pi v_0 \cos(\alpha)}{|\omega|}
+\]</div>
+<p>其中螺距表示相邻两圈螺旋的间距 </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>粒子同时进行绕点 <span class="arithmatex">\(C\)</span> 的匀速圆周运动以及沿 <span class="arithmatex">\( O_z \)</span> 方向的匀速直线运动, 因此可以得出结论, 磁场会使带电粒子的轨迹沿磁场方向螺旋运动 </p>
+</div>
+<h2 id="3cas-particulier-de-la-trajectoire-circulaire">3.Cas particulier de la trajectoire circulaire<a class="headerlink" href="#3cas-particulier-de-la-trajectoire-circulaire" title="Permanent link">&para;</a></h2>
+<p>当 <span class="arithmatex">\(\alpha = \frac{\pi}{2}\)</span> 时, 粒子仅在 <span class="arithmatex">\((𝑂𝑥𝑦)\)</span> 平面内运动, 其轨迹为匀速圆周运动, 半径为 <span class="arithmatex">\(R = \frac{v_0}{|\omega|} = \frac{v_0 m}{|q|B}\)</span></p>
+<p>下面给出一些应用的例子</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<ul>
+<li>气泡室：已知磁场 <span class="arithmatex">\( B \)</span>, 测量轨迹半径 <span class="arithmatex">\( R \)</span> 可推导粒子的动量 <span class="arithmatex">\( p = mv_0 \)</span> 或电荷 <span class="arithmatex">\( q \)</span>   </li>
+<li>质谱仪：电离原子后, 利用磁场分离不同同位素, 因为其质量不同     </li>
+<li>非线性粒子加速器, 如回旋加速器  </li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.expand", "navigation.indexes", "navigation.path", "navigation.top", "content.footnote.tooltips"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

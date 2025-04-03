@@ -335,6 +335,8 @@
       
         
       
+        
+      
     
     
       
@@ -380,7 +382,7 @@
         
   
   <span class="md-ellipsis">
-    Mathsindex
+    Mathématiques
     
   </span>
   
@@ -398,11 +400,33 @@
   
   
     <li class="md-nav__item">
-      <a href="../../G%C3%A9om%C3%A9trie/Espace%20Vectoriels/" class="md-nav__link">
+      <a href="../../G%C3%A9om%C3%A9trie/Espace%20vectoriels/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Chapitre 15 Espace Vectoriels
+    Chapitre 15 Espace vectoriels
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../G%C3%A9om%C3%A9trie/Espaces%20vectoriels%20de%20dimension%20finie/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 17 Espaces vectoriels de dimension finie
     
   </span>
   
@@ -565,6 +589,8 @@
       
         
           
+        
+      
         
       
         
@@ -866,6 +892,28 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Mouvements%20de%20particules%20charg%C3%A9es/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapitre 4 Mouvements de particules chargées
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1103,10 +1151,10 @@
 <li>将 <span class="arithmatex">\(\vec{e_r}\)</span> 和 <span class="arithmatex">\(\vec{e_\theta}\)</span> 根据笛卡尔坐标系分解:   </li>
 </ul>
 <div class="arithmatex">\[
-    \vec{e_r} = cos(\theta) \vec{e_x} + sin(\theta) \vec{e_y}
+    \vec{e_r} = \cos(\theta) \vec{e_x} + \sin(\theta) \vec{e_y}
 \]</div>
 <div class="arithmatex">\[
-    \vec{e_\theta} = - sin(\theta) \vec{e_x} + cos(\theta) \vec{e_y}
+    \vec{e_\theta} = - \sin(\theta) \vec{e_x} + \cos(\theta) \vec{e_y}
 \]</div>
 <p>进而得出: <span class="arithmatex">\(d \vec{e_r} = d \theta \vec{e_\theta}\)</span> (因为 <span class="arithmatex">\(\vec{e_r}\)</span> 会随 <span class="arithmatex">\(M\)</span> 位置改变而改变, 所以 <span class="arithmatex">\(d\vec{e_r}\)</span> 不为零, 而对于基底中的 <span class="arithmatex">\(z\)</span> 方向的分量, 因为 <span class="arithmatex">\(\vec{e_z}\)</span> 不会发生改变, 所以有 <span class="arithmatex">\(d\vec{e_z} = 0\)</span>)</p>
 <p>那么:                       </p>
@@ -1126,8 +1174,8 @@
 </ul>
 <p>那么:            </p>
 <ul>
-<li>点 <span class="arithmatex">\(M\)</span> 的微小位移可以表示为 <span class="arithmatex">\(\vec{dOM} = dr\vec{e_r} + rd\theta \vec{e_\theta} + rsin(\theta)d \phi\vec{e_\phi}\)</span>              </li>
-<li>点 <span class="arithmatex">\(M\)</span> 的速度可以表示为 <span class="arithmatex">\(\vec{v} = \frac{d\vec{OM}}{dt} = \frac{dr}{dt}\vec{e_r} + r \frac{d\theta}{dt} \vec{e_\theta} + rsin(\theta) \frac{d\phi}{dt} \vec{e_\phi} = \dot{r}\vec{e_r} + r \dot{\theta} \vec{e_\theta} + rsin(\theta)\dot{\phi} \vec{e_\phi}\)</span></li>
+<li>点 <span class="arithmatex">\(M\)</span> 的微小位移可以表示为 <span class="arithmatex">\(\vec{dOM} = dr\vec{e_r} + rd\theta \vec{e_\theta} + r\sin(\theta)d \phi\vec{e_\phi}\)</span>              </li>
+<li>点 <span class="arithmatex">\(M\)</span> 的速度可以表示为 <span class="arithmatex">\(\vec{v} = \frac{d\vec{OM}}{dt} = \frac{dr}{dt}\vec{e_r} + r \frac{d\theta}{dt} \vec{e_\theta} + r\sin(\theta) \frac{d\phi}{dt} \vec{e_\phi} = \dot{r}\vec{e_r} + r \dot{\theta} \vec{e_\theta} + r\sin(\theta)\dot{\phi} \vec{e_\phi}\)</span></li>
 </ul>
 <h2 id="2notion-de-champ">2.Notion de champ<a class="headerlink" href="#2notion-de-champ" title="Permanent link">&para;</a></h2>
 <h3 id="21-champ-scalaire-et-champ-vectoriel">2.1 Champ scalaire et champ vectoriel (标量场和向量场)<a class="headerlink" href="#21-champ-scalaire-et-champ-vectoriel" title="Permanent link">&para;</a></h3>
@@ -1142,7 +1190,7 @@ permanent ou statique )                       </p>
 <ul>
 <li>在笛卡尔坐标系中 <span class="arithmatex">\(\vec{dOM} = dx\vec{e_x} + dy\vec{e_y} + dz\vec{e_z}\)</span>   </li>
 <li>在圆柱坐标系中 <span class="arithmatex">\(\vec{dOM} = dr\vec{e_r} + rd\theta \vec{e_\theta} + dz\vec{e_z}\)</span>       </li>
-<li>在球坐标系中 <span class="arithmatex">\(\vec{dOM} = dr\vec{e_r} + rd\theta \vec{e_\theta} + rsin(\theta)d \phi\vec{e_\phi}\)</span>         </li>
+<li>在球坐标系中 <span class="arithmatex">\(\vec{dOM} = dr\vec{e_r} + rd\theta \vec{e_\theta} + r\sin(\theta)d \phi\vec{e_\phi}\)</span>         </li>
 </ul>
 <p>若场在某点 <span class="arithmatex">\(M\)</span> 处为零, 则该点 <span class="arithmatex">\(M\)</span> 的场线会缩减为点 <span class="arithmatex">\(M\)</span> 本身                   </p>
 <div class="admonition example">
@@ -1217,7 +1265,7 @@ asd
 <ul>
 <li>笛卡尔坐标系: <span class="arithmatex">\(\vec{grad}(U) = \frac{\partial U}{\partial x} \vec{e_x} + \frac{\partial U}{\partial y} \vec{e_y} + \frac{\partial U}{\partial z} \vec{e_z}\)</span></li>
 <li>圆柱坐标系: <span class="arithmatex">\(\vec{grad}(U) = \frac{\partial U}{\partial r} \vec{e_r} + \frac{1}{r} \frac{\partial U}{\partial \theta} \vec{e_\theta} + \frac{\partial U}{\partial z} \vec{e_z}\)</span></li>
-<li>圆坐标系: <span class="arithmatex">\(\vec{grad}(U) = \frac{\partial U}{\partial r} \vec{e_r} + \frac{1}{r} \frac{\partial U}{\partial \theta} \vec{e_\theta} + \frac{1}{rsin\theta} \frac{\partial U}{\partial \phi} \vec{e_\phi}\)</span></li>
+<li>圆坐标系: <span class="arithmatex">\(\vec{grad}(U) = \frac{\partial U}{\partial r} \vec{e_r} + \frac{1}{r} \frac{\partial U}{\partial \theta} \vec{e_\theta} + \frac{1}{r\sin\theta} \frac{\partial U}{\partial \phi} \vec{e_\phi}\)</span></li>
 </ul>
 <p>在笛卡尔坐标系中, 我们引入算子 <span class="arithmatex">\(\vec{\nabla} = \frac{\partial}{\partial x} \vec{e_x} + \frac{\partial}{\partial y} \vec{e_y} + \frac{\partial}{\partial z} \vec{e_z}\)</span>         <br />
 从而, 我们可以简化等式: <span class="arithmatex">\(\vec{grad}(U) = \vec{\nabla}(U) = \vec{\nabla} U\)</span>                      </p>
@@ -1226,15 +1274,15 @@ asd
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="31-le-gradient-problème" name="__tabbed_2" type="radio" /><input id="31-le-gradient-solution" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="31-le-gradient-problème">Problème</label><label for="31-le-gradient-solution">Solution</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>计算 <span class="arithmatex">\(\vec{grad}(V)\)</span> , <span class="arithmatex">\(V = \frac{mr^2}{e\tau^2} - \frac{k}{e}r^2sin\theta + \frac{mgz}{e}cos\theta\)</span>       <br />
+<p>计算 <span class="arithmatex">\(\vec{grad}(V)\)</span> , <span class="arithmatex">\(V = \frac{mr^2}{e\tau^2} - \frac{k}{e}r^2\sin\theta + \frac{mgz}{e}\cos\theta\)</span>       <br />
 <span class="arithmatex">\(m, \tau, k, e, g\)</span> 都是带有量纲的常数                     </p>
 </div>
 <div class="tabbed-block">
 <div class="arithmatex">\[
-    \vec{grad}(V) = \frac{\partial}{\partial r} (\frac{mr^2}{e\tau^2} - \frac{k}{e}r^2sin\theta + \frac{mgz}{e}cos\theta) \vec{e_r} + \frac{1}{r} \frac{\partial}{\partial \theta} (\frac{mr^2}{e\tau^2} - \frac{k}{e}r^2sin\theta + \frac{mgz}{e}cos\theta) \vec{e_\theta} + \frac{\partial}{\partial z} (\frac{mr^2}{e\tau^2} - \frac{k}{e}r^2sin\theta + \frac{mgz}{e}cos\theta) \vec{e_z}
+    \vec{grad}(V) = \frac{\partial}{\partial r} (\frac{mr^2}{e\tau^2} - \frac{k}{e}r^2\sin\theta + \frac{mgz}{e}\cos\theta) \vec{e_r} + \frac{1}{r} \frac{\partial}{\partial \theta} (\frac{mr^2}{e\tau^2} - \frac{k}{e}r^2\sin\theta + \frac{mgz}{e}\cos\theta) \vec{e_\theta} + \frac{\partial}{\partial z} (\frac{mr^2}{e\tau^2} - \frac{k}{e}r^2\sin\theta + \frac{mgz}{e}\cos\theta) \vec{e_z}
 \]</div>
 <div class="arithmatex">\[
-    = (\frac{2mr}{e\tau^2}-\frac{2kr}{e}sin\theta)\vec{e_r} - \frac{1}{r}(\frac{k}{e}r^2cos\theta+\frac{mgz}{e}sin\theta)\vec{e_\theta} + \frac{mg}{e}cos\theta \vec{e_z}
+    = (\frac{2mr}{e\tau^2}-\frac{2kr}{e}\sin\theta)\vec{e_r} - \frac{1}{r}(\frac{k}{e}r^2\cos\theta+\frac{mgz}{e}\sin\theta)\vec{e_\theta} + \frac{mg}{e}\cos\theta \vec{e_z}
 \]</div>
 </div>
 </div>
@@ -1270,7 +1318,7 @@ asd
 <ul>
 <li>笛卡尔坐标系: <span class="arithmatex">\(\vec{rot}(\vec{A}) = (\frac{\partial A_z}{\partial y} - \frac{\partial A_y}{\partial z}) \vec{e_x} + (\frac{\partial A_x}{\partial z} - \frac{\partial A_z}{\partial x})  \vec{e_y} + (\frac{\partial A_y}{\partial x} - \frac{\partial A_x}{\partial y})  \vec{e_z}\)</span>                     </li>
 <li>圆柱坐标系: <span class="arithmatex">\(\vec{rot}(\vec{A}) = \left( \frac{1}{r} \frac{\partial A_z}{\partial \theta} - \frac{\partial A_\theta}{\partial z} \right) \vec{e_r} + \left( \frac{\partial A_r}{\partial z} - \frac{\partial A_z}{\partial r} \right) \vec{e_\theta} + \frac{1}{r} \left( \frac{\partial (r A_\theta)}{\partial r} - \frac{\partial A_r}{\partial \theta} \right) \vec{e_z}\)</span>                          </li>
-<li>圆坐标系: <span class="arithmatex">\(\vec{rot}(\vec{A}) =\frac{1}{r \sin \theta}\left[\frac{\partial(A_\phi \sin \phi)}{\partial \theta} - \frac{\partial A_\theta}{\partial \phi}\right] \vec{e_r}+ \frac{1}{r}\left[\frac{1}{\sin \theta} \frac{\partial A_r}{\partial \phi} - \frac{\partial}{\partial r}(r A_\phi)\right] \vec{e_\theta}+ \frac{1}{r}\left[\frac{\partial (r A_\theta)}{\partial r} - \frac{\partial A_r}{\partial \theta}\right] \vec{e_\phi}\)</span>                    </li>
+<li>圆坐标系: <span class="arithmatex">\(\vec{rot}(\vec{A}) =\frac{1}{r \\sin \theta}\left[\frac{\partial(A_\phi \\sin \phi)}{\partial \theta} - \frac{\partial A_\theta}{\partial \phi}\right] \vec{e_r}+ \frac{1}{r}\left[\frac{1}{\\sin \theta} \frac{\partial A_r}{\partial \phi} - \frac{\partial}{\partial r}(r A_\phi)\right] \vec{e_\theta}+ \frac{1}{r}\left[\frac{\partial (r A_\theta)}{\partial r} - \frac{\partial A_r}{\partial \theta}\right] \vec{e_\phi}\)</span>                    </li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Théorème de Stokes</p>
@@ -1292,7 +1340,7 @@ asd
 <ul>
 <li>笛卡尔坐标系: <span class="arithmatex">\(div(\vec{A}) = \frac{\partial A_x}{\partial x} + \frac{\partial A_y}{\partial y} + \frac{\partial A_z}{\partial z}\)</span>                     </li>
 <li>圆柱坐标系: <span class="arithmatex">\(div(\vec{A}) = \frac{1}{r} \frac{\partial (r A_r)}{\partial r} + \frac{1}{r} \frac{\partial A_\theta}{\partial \theta} + \frac{\partial A_z}{\partial z}\)</span>                          </li>
-<li>圆坐标系: <span class="arithmatex">\(div(\vec{A}) = \frac{1}{r^2} \frac{\partial (r^2 A_r)}{\partial r} + \frac{1}{r \sin\theta} \frac{\partial (\sin\theta A_\theta)}{\partial \theta} + \frac{1}{r \sin\theta} \frac{\partial A_\phi}{\partial \phi}\)</span>               </li>
+<li>圆坐标系: <span class="arithmatex">\(div(\vec{A}) = \frac{1}{r^2} \frac{\partial (r^2 A_r)}{\partial r} + \frac{1}{r \\sin\theta} \frac{\partial (\\sin\theta A_\theta)}{\partial \theta} + \frac{1}{r \\sin\theta} \frac{\partial A_\phi}{\partial \phi}\)</span>               </li>
 </ul>
 <p>在笛卡尔坐标系中: <span class="arithmatex">\(div(\vec{A}) = \vec{\nabla} \cdot \vec{A}\)</span>
 <strong>注意</strong> : <span class="arithmatex">\(\vec{\nabla} \cdot \vec{A} \neq \vec{\nabla} \vec{A}\)</span>              </p>
@@ -1306,9 +1354,9 @@ asd
 <p class="admonition-title">Théorème de Green-Ostrogradski</p>
 <p>向量场 <span class="arithmatex">\(\vec{A}\)</span> 通过封闭曲面 <span class="arithmatex">\(S\)</span> 的通量 (曲面局部朝外的单位法向量为 <span class="arithmatex">\(\vec{n}\)</span> ) 等于该曲面所围成的体积内散度 <span class="arithmatex">\(div(\vec{A})\)</span> 的积分</p>
 <div class="arithmatex">\[
-    \oiint_S \vec{A} \cdot \vec{n} \, dS = \iiint_V div(\vec{A}) \, dV
+    \unicode{x222F} \vec{A} \cdot \vec{n} \, dS = \iiint_V div(\vec{A}) \, dV
 \]</div>
-<p><span class="arithmatex">\(\oiint_S\)</span> 表示积分曲面封闭   </p>
+<p><span class="arithmatex">\(\unicode{x222F}_S\)</span> 表示积分曲面封闭   </p>
 </div>
 <h3 id="34-le-laplacien">3.4 Le laplacien (拉普拉斯算子)<a class="headerlink" href="#34-le-laplacien" title="Permanent link">&para;</a></h3>
 <p>标量场 <span class="arithmatex">\(\vec{U}\)</span> 的拉普拉斯算子, 记作 <span class="arithmatex">\(\Delta U = div(\vec{grad}(U))\)</span>           <br />
@@ -1318,7 +1366,7 @@ asd
 <ul>
 <li>笛卡尔坐标系: <span class="arithmatex">\(\Delta U = \frac{\partial^2 U}{\partial x^2} + \frac{\partial^2 U}{\partial y^2} + \frac{\partial^2 U}{\partial z^2}\)</span>                     </li>
 <li>圆柱坐标系: <span class="arithmatex">\(\Delta U = \frac{1}{r} \frac{\partial}{\partial r} \left( r \frac{\partial U}{\partial r} \right) + \frac{1}{r^2} \frac{\partial^2 U}{\partial \theta^2} + \frac{\partial^2 U}{\partial z^2}\)</span>                          </li>
-<li>圆坐标系: <span class="arithmatex">\(\Delta U = \frac{1}{r^2} \frac{\partial}{\partial r} \left( r^2 \frac{\partial U}{\partial r} \right) + \frac{1}{r^2 \sin\theta} \frac{\partial}{\partial \theta} \left( \sin\theta \frac{\partial U}{\partial \theta} \right) + \frac{1}{r^2 \sin^2\theta} \frac{\partial^2 U}{\partial \phi^2}\)</span>    </li>
+<li>圆坐标系: <span class="arithmatex">\(\Delta U = \frac{1}{r^2} \frac{\partial}{\partial r} \left( r^2 \frac{\partial U}{\partial r} \right) + \frac{1}{r^2 \\sin\theta} \frac{\partial}{\partial \theta} \left( \\sin\theta \frac{\partial U}{\partial \theta} \right) + \frac{1}{r^2 \\sin^2\theta} \frac{\partial^2 U}{\partial \phi^2}\)</span>    </li>
 </ul>
 <p>最后, 我们引入向量拉普拉斯算子 <span class="arithmatex">\(\vec{\Delta}\)</span> , 定义如下: </p>
 <div class="arithmatex">\[
@@ -1466,6 +1514,8 @@ asd
     
     
       <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
